@@ -1,9 +1,8 @@
- ### *একজন ভালো ফুলস্ট্যাক ডেভেলপার হওয়ার সকল জানার ও শিখার প্রয়োজনীয় রির্সোসসমূহ*
-
+### *একজন ভালো ফুলস্ট্যাক ডেভেলপার হওয়ার সকল জানার ও শিখার প্রয়োজনীয় রির্সোসসমূহ*
 
 **বই টিউটোরিয়াল ও ওয়েবসাইটসমূহ**
 
-* সকল প্রকার গাইডলাইন পার্থ  >> [রোডম্যাপ](https://roadmap.sh/)
+* সকল প্রকার গাইডলাইন পার্থ  >> [`রোডম্যাপ`](https://roadmap.sh/)
 
 #### গাইডলাইন বই
 
@@ -25,21 +24,20 @@
 * Procoder BD
 * Abdullah Nahian
 
-
-
 #### Foreign Channels
 
 * Clever Programmer
 * The Net Ninja
 * Traversy Media
-* CodeWithHarry 
+* CodeWithHarry
 * Dev Ed
 * Yahoo Baba
 * Fireship
 
 #### Websites
 
-* https://Udemy.com
+* https://udemy.com
+* https://www.skillshare.com
 * https://w3schools.com
 * https://geeksforgeeks.org
 * https://javascript.info
@@ -47,3 +45,5 @@
 * https://roadmap.sh
 * https://freecodecamp.org
 * https://developer.mozilla.org/en-US/
+
+[ফুটনোট]
