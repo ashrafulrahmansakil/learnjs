@@ -35,7 +35,8 @@
 * Fireship
 
 #### Websites
-
+* https://devsonket.com/
+* https://js.zonayed.me/
 * https://udemy.com
 * https://www.skillshare.com
 * https://w3schools.com
@@ -45,5 +46,9 @@
 * https://roadmap.sh
 * https://freecodecamp.org
 * https://developer.mozilla.org/en-US/
+* https://dev.to/
+* https://medium.com/
+* https://hashnode.com/
+
 
 [ফুটনোট]
