@@ -969,3 +969,7 @@ console.log(demo(90, 10));
 //arrow function
 var demo = (x, y) => x + y
 console.log(demo(391, 9));
+
+
+// class 
+

@@ -23,6 +23,7 @@
 * Anisul Islam
 * Procoder BD
 * Abdullah Nahian
+* Foyzul Karim
 
 #### Foreign Channels
 
@@ -35,6 +36,7 @@
 * Fireship
 
 #### Websites
+
 * https://devsonket.com/
 * https://js.zonayed.me/
 * https://udemy.com
@@ -49,6 +51,6 @@
 * https://dev.to/
 * https://medium.com/
 * https://hashnode.com/
-
+* https://www.javascripttutorial.net/
 
 [ফুটনোট]
