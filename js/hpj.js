@@ -919,13 +919,53 @@ var kamal = {
     address: 'Gazipur',
     dob:1997,
     age: function (currentYear, msg) {
-        console.log(msg+' ' + this.name + ' he was working ' + this.job + '. he is ' + (currentYear - this.dob) + ' years old!');
+        console.log(msg+' ' + this.name + ' he was working '+ '. he is ' + (currentYear - this.dob) + ' years old!');
     }
     
 }
 
 
 
-kamal.age(2022,'hi it\'s work. ');
+kamal.age(2022,'hi, it\'s work. ');
 console.log(aNull);
 kamal.age.apply(jamal, [2022, 'hi i am.']);
+
+
+// global rule
+
+var person = {
+    name: 'shakib ahmed',
+    age: 22,
+    address: 'gazipur',
+    person2: {
+        name: 'akib khan',
+        value: function () {
+            console.log(' my name is ' + this.name);
+        
+        }
+    }
+}
+
+person.person2.value();
+
+var myObj = {
+   name: 'Zonayed Ahmed',
+   age: 21,
+   timer: ()=> {
+      setTimeout(function() {
+         console.log('My name is ' + this.name);
+      }.bind(myObj), 1000)
+    }
+}
+myObj.timer();
+
+//normal function
+var demo = function(x,y){
+    return x + y;
+  
+}
+console.log(demo(90, 10));
+
+//arrow function
+var demo = (x, y) => x + y
+console.log(demo(391, 9));
