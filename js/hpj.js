@@ -130,13 +130,13 @@ function myFunction() {
 }
 
 // forEach array same by > for loop
-var fruits = ['mango', 'banana', 'apple', 'orange', 'pear', 'grape', 'cherry']
-function myFunction(value) {
-    console.log(value); 
-}
+// var fruits = ['mango', 'banana', 'apple', 'orange', 'pear', 'grape', 'cherry']
+// function myFunction(value) {
+//     console.log(value); 
+// }
 
-fruits.forEach(myFunction);
-console.log(fNull)
+// fruits.forEach(myFunction);
+// console.log(fNull);
 
 //JavaScript Array Methods
 var flower = ['Abutilon','Forsythia','Rose','Sunflower','Daisy']
@@ -204,17 +204,17 @@ for (var i = points.length -1; i > 0; i--) {
 console.log(points);
 
 
-//Challenge [0,0,1,8,0,9,0,0,0,8,7,9,0,0] Ei array ke slice korte hbe but    start index ta hbe 1st value jeta 0 theke boro jemon ekhane index 2 is 1, and end hbe last ke number ta 0theke boro like ekhane 11 index is 9. Ans hbe [1,8,0,9,0,0,0,8,7,9]
+/*Challenge [0,0,1,8,0,9,0,0,0,8,7,9,0,0] Ei array ke slice korte hbe but    start index ta hbe 1st value jeta 0 theke boro jemon ekhane index 2 is 1, and end hbe last ke number ta 0theke boro like ekhane 11 index is 9. Ans hbe [1,8,0,9,0,0,0,8,7,9]
 
- var i = [0,0,1,8,0,9,0,0,0,8,7,9,0,0];
+var i = [0,0,1,8,0,9,0,0,0,8,7,9,0,0];
 
-// function trimZero(arr) {
-// const arrIndex = [];
-// arr.forEach((value, i) => {
-//     value !== 0 && arrIndex.push(i);
-// });
-// return arr.slice(arrIndex[0], arrIndex[arrIndex.length - 1] + 1);
-// }
+function trimZero(arr) {
+const arrIndex = [];
+arr.forEach((value, i) => {
+    value !== 0 && arrIndex.push(i);
+});
+return arr.slice(arrIndex[0], arrIndex[arrIndex.length - 1] + 1);
+}
  
 console.log(i.slice(-12, -2));
 console.log(i.slice(-i.length, -2));
@@ -347,38 +347,38 @@ var mycontact = myNumberss.findIndex(myFunction);
 console.log(mycontact);
 
 console.log(Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ'));
-// const myFriends = [
-//     'Ayman',
-//     'Ashik',
-//     'Abir',
-//     'Emad',
-//     'Emran',
-//     'Boby',
-//     'Bashir',
-//     'Bochiya',
-//     'Ferdaus',
-//     'Faraz',
-//     'Salam',
-//     'Shafi',
-//     'Safwan',
-//     'Sanjina'
-// ];
+const myFriends = [
+    'Ayman',
+    'Ashik',
+    'Abir',
+    'Emad',
+    'Emran',
+    'Boby',
+    'Bashir',
+    'Bochiya',
+    'Ferdaus',
+    'Faraz',
+    'Salam',
+    'Shafi',
+    'Safwan',
+    'Sanjina'
+];
 
-// const nameGroup = myFriends.reduce((updatedValue, currentValue) => {
-//     const fristLatter = currentValue[0].toUpperCase();
-//     if (fristLatter in updatedValue) {
-//         updatedValue[fristLatter].push(currentValue);
-//     } else {
-//         updatedValue[fristLatter] = [currentValue];
-//     } return updatedValue;
-// }, {});
+const nameGroup = myFriends.reduce((updatedValue, currentValue) => {
+    const fristLatter = currentValue[0].toUpperCase();
+    if (fristLatter in updatedValue) {
+        updatedValue[fristLatter].push(currentValue);
+    } else {
+        updatedValue[fristLatter] = [currentValue];
+    } return updatedValue;
+}, {});
 
-// Object.keys(nameGroup).forEach((key) => {
-//     console.log('-----------', key, '------------------');
-//     nameGroup[key].forEach((myFriends) => {
-//         console.log(myFriends);
-//     });
-// });
+Object.keys(nameGroup).forEach((key) => {
+    console.log('-----------', key, '------------------');
+    nameGroup[key].forEach((myFriends) => {
+        console.log(myFriends);
+    });
+});
 
 var a = ['sakib', 'siam', 'arif']
 var b = a.keys();
@@ -560,7 +560,7 @@ if (age < 18) {
 }else {
     console.log('you are old');
 }
-
+*/
 // switch
 var day;
 switch (new Date().getDay()) {
@@ -601,7 +601,7 @@ var myObjname={
 }
 console.log(myObjname)
 
-//We can find a element from object by 2 ways,
+/*We can find a element from object by 2 ways,
 // Dot notation(.)
 // Braket Notation([])
 // Dot notation dosen't support number & space.
@@ -633,8 +633,6 @@ let na = 'sakil';
 for (var x of na) {
     console.log(x)
 }
-  
-
 
 var i= 15;
 do {
@@ -664,25 +662,25 @@ for (var k = 0; k <= 5; k++){
     console.log(k+ ' : i  is now at' );
 }
 
-// var i=1;
-// const interval = setInterval(()=>{
-// console.log(i);
-// i++;
-// if(i===100) clearInterval(interval);
-// }, 1000);
+var i=1;
+const interval = setInterval(()=>{
+console.log(i);
+i++;
+if(i===100) clearInterval(interval);
+}, 1000);
 
-// let index = 0;
-// setInterval(() => {
-//     if (index < 100) {
-//         console.log(++index);
+let index = 0;
+setInterval(() => {
+    if (index < 100) {
+        console.log(++index);
         
-//     }
+    }
     
-// }, 1000)
+}, 1000)
 
-// var a = 'hello Quokka';
+var a = 'hello Quokka';
 
-// console.log()
+console.log()
 
 
 /*
@@ -714,7 +712,7 @@ function myFun(){
 myFun();
 
 
-global__scope:
+//global__scope:
 var globalVar = 'I am a Global Variable';
 
 function globalScope() {
@@ -973,3 +971,32 @@ console.log(demo(391, 9));
 
 // class 
 
+class PersonName{
+    constructor(name, age,job) {
+        this.name = name;
+        this.age = age;
+        this.job=job;
+    }
+}
+
+let PersonParent = new PersonName('ashraful rahman sakil', 22,'student');
+let Person = new PersonName('ashraful rahman sakil', 22,'programmer');
+let Parents = new PersonName('ashraful rahman sakil', 22,'coder');
+let PP = new PersonName('ashraful rahman sakil', 22,'unemployed');
+
+console.log(PersonParent);
+console.log(Person);
+console.log(Parents);
+console.log(PP);
+
+
+class NewPerson{
+    constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+    }
+}
+
+let oldPerson = new NewPerson('shakib khan',25,'web developer');
+console.log(oldPerson);

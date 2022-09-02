@@ -39,24 +39,24 @@ console.log(boolType);
 console.log(typeof boolType);
 
 // Uppercase Lowercase  Method >8
-Uppercase:
+//Uppercase:
 
 var summery = "Proficient students are They understand that if they can write a one- or two-sentence summary of each paragraph after reading it, then that is a good sign that they have correctly understood it. If they can not summarize the main idea of the paragraph, they know that comprehension has broken down and they need to use fix-up strategies to repair understanding.";
 
 console.log(summery.toUpperCase());
 
-Lowercasse:
+//Lowercasse:
 
 var summery ="Proficient students are understand that if they can write a one- or two-sentence summary of each paragraph after reading it, then that is a good sign that they have correctly understood it. If they can not summarize the main idea of the paragraph, they know that comprehension has broken down and they need to use fix-up strategies to repair understanding."
 console.log(summery.toLowerCase());
 
 // IndexOf() & Split() Method >9
-split:
+//split:
 
 var myFriend=" Sakil Siam Eshan Tutul";
 console.log(myFriend.split("Sakil"));
 
-IndexOf:
+//IndexOf:
 
 var myFriend=" Sakil Siam Eshan Tutul";
 console.log(myFriend.indexOf("Tutul"));
@@ -65,14 +65,14 @@ console.log(myFriend.indexOf("Tutul"));
 
 //ParseFloat:String To Number/int
 
-Number:
+//Number:
 
 var num1 ="4454.5454";
 var num2 =2054;
 num1 =parseFloat(num1);
 console.log(num1);
 
-Int:
+//Int:
 
 var num1 ="4454.0054";
 var num2 =2054;
@@ -105,31 +105,31 @@ console.log(typeof total);
 
 // Math Operators >11
 
-Addition:
+//Addition:
 var num1 =50;
 var num2 =30;
 var total= num1 + num2;
 console.log(total);
 
-Subtraction:
+//Subtraction:
 var num1 =50;
 var num2 =30;
 var total= num1 - num2;
 console.log(total);
 
-Multiplication:
+//Multiplication:
 var num1 =50;
 var num2 =30;
 var total= num1 * num2;
 console.log(total);
 
-Division:
+//Division:
 var num1 =50;
 var num2 =30;
 var total= num1/ num2;
 console.log(total);
 
-Modulus:
+//Modulus:
 var num1 =50;
 var num2 =30;
 var total= num1 % num2;
@@ -137,29 +137,29 @@ console.log(total);
 
 // Predefined Function > 12
 
-Mathabs:
+//Mathabs:
 var num = -30;
 var sum = Math.abs(num);
 console.log(sum);
 
-Mathround:
+//Mathround:
 var totalMember = 40
 var voter = 0.5
 var sum = Math.round(voter);
 console.log(sum);
 
-Mathceil:
+//Mathceil:
 var upper = 0.00005;
 var sum = Math.ceil(upper);
 console.log(sum);
 
-Mathfloor:
+//Mathfloor:
 var lower=0.00005;
 var sum=Math.floor(lower);
 console.log(sum);
 
 
-Mathrandom:
+//Mathrandom:
 var lotary = Math.random()
 console.log(lotary);
 

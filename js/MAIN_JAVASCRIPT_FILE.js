@@ -373,15 +373,15 @@ console.log(myUser);
   */
 //Primitive Data Type
 
-Number:
+//Number:
 var aNum = 10;
 console.log(aNum);
 
-String:
+//String:
 var aNum = "this is javascript";
 console.log(aNum);
 
- Boolean:
+//Boolean:
   // var isTrue =true; // valid
   // var isTrue =True;  not valid
   // var isTrue =TRUE; // not valid
@@ -390,10 +390,10 @@ console.log(aNum);
   // var isFalse =False; // not valid
   // var isFalse =FALSE; // not valid
 
-Undefined:
+//Undefined:
 // let someThing;
 
-Null:
+//Null:
 var goSome = null;
  console.log(goSome);
 
@@ -401,7 +401,7 @@ var goSome = null;
   ১৪.  JavaScript Function. > জাভাক্রিপ্টে সবকিছু অবজেক্ট । ফাংশনও অবজেক্ট , এটাকে ফাস্ট ক্লাস ফাংশন বলা হয়। 
 
 বিভিন্নভাবে ফাংশকে লেখা যায়। ফাংশনকে যেভাবে ডিক্লেয়ার করা হয় > প্রথমে function > ফাংশন নাম > কার্লি ব্র্যাকেট দিয়ে শুরু পরে যা করতে ইচ্ছা তা দিতে হবে স্টেটমেন্ট এ যাবে পরে আবার কার্লি ব্র্যাকেট দিয়ে শেষ।
-*/
+
 function funcName(){
   // statements এটাকে ফাংশন স্টেটমেন্ট বলে।
 
@@ -412,10 +412,10 @@ var funcName = function(){
 }
 
 funcName();
-/*
+
 ফাংশনকে ডাকার জন্যে কল করতে হবে।
 ফাংশন ফাইনাল স্টেটমেন্ট
-*/
+
 function funcName(){
   console.log('hello this is called Function');
 }
@@ -447,7 +447,7 @@ bFunc();
 
 // aFunc(arguments);
 
-Example:
+//Example:
 function sumMachine(a,b){
   let sum = a + b;
   return sum;
@@ -458,7 +458,7 @@ console.log(sumMachine(1,4));
 
 
 // মেজর পার্ট  array,string,Boolean,object,varuable...
-Example:
+//Example:
 
 function printMyName (name,object){
   console.log('this is a' + name + ' and its a very ' + object + ' language.');
@@ -627,7 +627,7 @@ clickMeBtn.onload = function () {
 
 youeElement.addEventListener(typeofEvent(প্যারামিটার), handler(ফাংশন));
 */
-Example:
+//Example:
 var box = document.getElementById('box');
 box.addEventListener('click', function () {
     console.log('function change');
@@ -944,7 +944,7 @@ console.log(a);
 
 হলো ( [ `` ] ব্যাকটিক বা ক্যারেট সাইন দেওয়া, ${}) দিলে কোড দেখতে ও করতে সহজ হয়।
 */
-simple_example:
+//simple_example:
 
 var name = 'shiraj';
 var age = 50;
@@ -2047,7 +2047,7 @@ try {
 এটা মূলত let/const দিয়ে লেখা হয়
 */
 
-local__scope:
+//local__scope:
 function localScope() {
   var local = 'I am local to my own function';
   console.log(local);
@@ -2058,13 +2058,13 @@ block__scope:
   let j = 'sakil';// এটা কার্লি প্রেসেস এর ভিতরে ডিফাইন করে লিখতে হয়।
 }
 
-function__scope:
+//function__scope:
 
 function A() {
   let x=40; // এটা ফাংশনের ভিতরে হয়।
 }
 
-global__scope: // আগে থেকে ডিফাইন করে ফাংশনের ভিতরে তা প্রকাশ করাকে বোঝায়
+//global__scope: // আগে থেকে ডিফাইন করে ফাংশনের ভিতরে তা প্রকাশ করাকে বোঝায়
 var globalVar = 'I am a Global Variable';
 
 function globalScope() {
@@ -2309,11 +2309,45 @@ const ClassExzpression= class{
 ...
 }
 
+class PersonName{
+    constructor(name, age,job) {
+        this.name = name;
+        this.age = age;
+        this.job=job;
+    }
+}
+
+let PersonName = new PersonName(’kabir chowdhury', 22,'student');
+console.log(PersonName);
+
+প্রথমে var,let,const এর মতো class অ্যাট্রিবিউট নিয়ে পরে যেকোন মিনিংফুল নাম দিতে হবে আর ক্লাসের নাম বড় হাতের প্রথম অক্ষর হবে। পরে নিয়ম অনুযায়ী constructor(...) দিয়ে কি কাজ করতে হবে তা ডিফাইন করে দিতে হবে। পরে ইনহেরিটেন্স ব্যবহার করে this. ... এর সাথে constructor(...) নাম মিল রাখতে হবে। নতুন নাম দিতে হবে এর সাথে new কিওয়ার্ড যোগ করে ক্লাসের উদ্দ্যেশ্য ডিফাইন করে দিতে হবে ,সবকিছু সুন্দরভাবে হওয়ার পর কল করতে হবে।
 
 */
 
 
-// Modules
+/* Modules > এটা ES6 এর ফিচার। খুবই গুরুত্বপূর্ণ টপিক।
+
+এটায় ইমপোর্ট [import] / এক্সপোর্ট [export] করা হয়
+ইমপোর্ট করা হয় মেইন ফাইলে থাকা ইলিমেন্টকে কল অন্য ফাইলে আনাকে বোঝায় করে ডেকে আনাকে বোঝায়।
+
+প্রধমে export করতে হবে।
+export:
+export var sakil = {
+  name: 'sakib khan',
+  age: 25,
+  job: 'student',
+  address:'122/10 dhaka,bangladesh'
+}
+
+পরে import করতে হবে।
+import:
+import {sakil} from "./export.js";
+console.log(sakil);
+
+
+*/
+
+
 
 
 /*
@@ -2334,6 +2368,8 @@ JSON is language independent *
 JSON is "self-describing" and easy to understand
 
 example:
+জেসন লিখা হয় তৃতীয় বন্ধনীর ভিতরে।
+
 {
 "employees":[
   {"firstName":"John", "lastName":"Doe"},
@@ -2345,9 +2381,15 @@ example:
 */
 
 
-//Debugging
-//Style Guide
-//Best Practices
+//Debugging > কোডে কোন প্রকার ইরর আসলে তা খুঁ েবের করে ফিক্সড করাকে বোঝায় কোথায় সমস্যা হয়েছে তা 
+
+
+
+//Style Guide কোডকে সুন্দর ও আন্তর্জাতিক মানের স্টাইলে লিখতে ও ফলো করতে হবে। কোডের নিজস্ব রুলস এন্ড টার্মস এবং গঠনমূলক নিয়মে কোড করতে হবে। 80 ক্যাক্টোরের পর পরে লাইনে চলে যাওয়া।
+
+//Best Practices 
+
+
 
 /*
 ###Task--- 18
@@ -2357,6 +2399,13 @@ example:
 ৬০. JavaScript Version
 /*
 
+//JavaScript Mistacks
+
+//JavaScript Performance
+
+//JavaScript Reserved Words
+
+//JavaScript Version
 
 /*
 ###Task--- 19
