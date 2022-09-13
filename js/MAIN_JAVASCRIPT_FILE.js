@@ -2348,8 +2348,6 @@ console.log(sakil);
 */
 
 
-
-
 /*
 ###Task--- 17
 ৫৩. JavaScript Json
@@ -2381,14 +2379,11 @@ example:
 */
 
 
-//Debugging > কোডে কোন প্রকার ইরর আসলে তা খুঁজে বের করে ফিক্সড করাকে বোঝায় কোথায় সমস্যা হয়েছে তা 
-
-
+//Debugging > কোডে কোন প্রকার ইরর আসলে তা খুঁজে বের করে ফিক্সড করাকে বোঝায় কোথায় সমস্যা হয়েছে তা
 
 //Style Guide কোডকে সুন্দর ও আন্তর্জাতিক মানের স্টাইলে লিখতে ও ফলো করতে হবে। কোডের নিজস্ব রুলস এন্ড টার্মস এবং গঠনমূলক নিয়মে কোড করতে হবে। 80 ক্যাক্টোরের পর পরে লাইনে চলে যাওয়া।ম
 
-//Best Practices 
-
+//Best Practices এটা কোডকে কিভাবে করলে বা কি ব্যবহার করলে ভালো হবে পরিমার্জিত,সুন্দর ও কি কি এড়িয়ে চলতে হবে তা বোঝায়।
 
 
 /*
@@ -2399,96 +2394,188 @@ example:
 ৬০. JavaScript Version
 /*
 
-//JavaScript Mistacks
+//JavaScript Mistacks কিছু জিনিস ভালোভাবে না বোঝে লিখলে তা ভুল হবার সম্ভাবনা রয়ে যাবে।
 
-//JavaScript Performance
+
+//JavaScript Performance যেটা করলে মানসম্মত কোড হয় এবং গোছানো , অপ্রয়োজনীয় কোনো লেখা যাবে না।
+
 
 //JavaScript Reserved Words এটি জাভাক্রিপ্টের স্টোর করা কিওয়ার্ড যা ব্যবহার করা যায় না।
 
-//JavaScript Version
+//JavaScript Version এটা মূলত
 
 /*
-###Task--- 19
-৬১. JavaScript 
-৬২.JavaScript 
-৬৩.JavaScript 
-৬৪. JavaScript
+###Task--- 19 ==> JavaScript Objects
+৬১. JavaScript Objects Definitions
+৬২.JavaScript Object Properties
+৬৩.JavaScript Object Methods
+৬৪. JavaScript Display Objects
 /*
+
+//JavaScript Objects Definitions ==> In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+All JavaScript values, except primitives, are objects.
+
+
+
+//JavaScript Objects Properties
+
+Properties are the values associated with a JavaScript object.
+A JavaScript object is a collection of unordered properties.
+Properties can usually be changed, added, and deleted, but some are read only.
+
+কোনো কিছু এড করতে হলে অবজেক্ট নেমের পর [.] দিয়ে পরের অংশ দিতে হবে অবজেক্ট প্রোপার্টি হিসেবে ।
+এটায় নতুন কিছু যোজন বিয়োজন করা যায়  নেস্টিং করে অবজেক্ট দেওয়া যায়,এর মধ্যে অ্যারেও আছে। আর Prototype Properties
+JavaScript objects inherit the properties of their prototype.
+
+The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.
+
+//JavaScript Objects Methods
+JavaScript methods are actions that can be performed on objects.
+
+*** A JavaScript method is a property containing a function definition.
+
+Property	Value
+firstName	John
+lastName	Doe
+age	50
+eyeColor	blue
+fullName	function() {return this.firstName + " " + this.lastName;}
+
+এক্সসেসিং অবজেক্ট মেথড [ objectName.methodName() ]
+
+
+//JavaScript Display Objects
+
 
 
 /*
 ###Task--- 20
-৬৫. JavaScript 
-৬৬.JavaScript 
-৬৭.JavaScript 
-৬৮. JavaScript
+৬৫. JavaScript Object Accessors
+৬৬.JavaScript Object Constructors
+৬৭.JavaScript Object Prototypes
+৬৮. JavaScript Iterables
 /*
 
+//JavaScript Object Accessors
 
+//JavaScript Object Constructors
+
+//JavaScript Object Prototypes
+
+//JavaScript Iterables 
 
 
 /*
 ###Task--- 21
-৬৯. JavaScript 
-৭০.JavaScript 
-৭১.JavaScript 
-৭২. JavaScript
+৬৯. JavaScript Sets
+৭০.JavaScript Maps
+৭১.JavaScript ES5 Object Methods
 /*
+
+
+//JavaScript Sets জাভাক্রিপ্টের বিল্ড ইন মেথড এটি দিয়ে সহজে কাজ করা যায় কোনো ঝামেলা ছাড়াই । বিভিন্ন ধরনের সেট রয়েছে। সেট এর সাথে রিলেশন অ্যারের।
+ 
+Set Methods
+Method	Description
+
+new Set()	Creates a new Set
+add()	Adds a new element to the Set
+delete()	Removes an element from a Set
+has()	Returns true if a value exists
+clear()	Removes all elements from a Set
+forEach()	Invokes a callback for each element
+values()	Returns an Iterator with all the values in a Set
+keys()	Same as values()
+entries()	Returns an Iterator with the [value,value] pairs from a Set
+Property	Description
+size	Returns the number elements in a Set
+
+
+//JavaScript Maps ==> ম্যাপসের এর সাথে রিলেশন অবজেক্ট এর
 
 /*
 ###Task--- 22
-৭৩. JavaScript 
-৭৪.JavaScript 
-৭৫.JavaScript 
-৭৬. JavaScript
-/*
+৭২. JavaScript Function Definitions
+৭৩. JavaScript Function Parameters
+৭৪. JavaScript Function Invocation
+৭৫. JavaScript Function call()
+৭৬. JavaScript Function apply()
+৭৭. JavaScript Function bind()
+৭৮. JavaScript Closures
+*/
+
+
+
+// JavaScript Function Definitions
+
+// JavaScript Function Parameters
+// JavaScript Function Invocation
+// JavaScript Function call()
+// JavaScript Function apply()
+// JavaScript Function bind()
+// JavaScript Closures
+
+
+
+
+
+
+
+
 
 /*
 ###Task--- 23
-৭৭. JavaScript 
-৭৮.JavaScript 
-৭৯.JavaScript 
-৮০. JavaScript
-/*
+৭৯. JavaScript Classes
+৮০. JavaScript Class Inheritance
+৮১. JavaScript Static Methods
+*/
 
 /*
 ###Task--- 24
-৮১. JavaScript 
-৮২.JavaScript 
-৮৩.JavaScript 
-৮৪. JavaScript
-/*
+৮২. JavaScript Callbacks
+৮৩. Asynchronous JavaScript
+৮৪. JavaScript Promises
+৮৫. JavaScript Async / Await
+*/
 
 /*
 ###Task--- 25
-৮৫. JavaScript 
 ৮৬.JavaScript 
-৮৭.JavaScript 
-৮৮. JavaScript
+৮৭. JavaScript
 /*
 
 /*
 ###Task--- 26
-৮৯. JavaScript 
+৮৮. JavaScript 
+৮৯.JavaScript 
 ৯০.JavaScript 
-৯১.JavaScript 
-৯২. JavaScript
+৯১. JavaScript
 /*
 
 /*
 ###Task--- 27
-৯৩. JavaScript 
+৯২. JavaScript 
+৯৩.JavaScript 
 ৯৪.JavaScript 
-৯৫.JavaScript 
-৯৬. JavaScript
+৯৫. JavaScript
 /*
 
 /*
 ###Task--- 28
-৯৭. JavaScript 
+৯৬. JavaScript 
+৯৭.JavaScript 
 ৯৮.JavaScript 
-৯৯.JavaScript 
-১০০. JavaScript
+৯৯. JavaScript
 /*
 
 /*

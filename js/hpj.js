@@ -1000,3 +1000,10 @@ class NewPerson{
 
 let oldPerson = new NewPerson('shakib khan',25,'web developer');
 console.log(oldPerson);
+
+//set
+
+var i = new Set();
+console.log(i);
+
+//ম্যাপস
