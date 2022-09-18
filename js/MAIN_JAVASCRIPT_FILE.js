@@ -2170,7 +2170,7 @@ var myName = {
     }
 }
 
-myName.otherObj.value();// 2য় অবজেক্ট এর ফাংশন বানানোর আগে যে অবজেক্ট নাম দিবেন তাই কল করার সময় দেত হবে।
+myName.otherObj.value();// 2য় অবজেক্ট এর ফাংশন বানানোর আগে যে অবজেক্ট নাম দিবেন তাই কল করার সময় দিতে হবে।
 console.log(aNull);
 myName.otherObj.value.call(myName);
 
@@ -2290,37 +2290,6 @@ console.log(demo(90, 10));
 //arrow function
 var demo = (x, y) => x + y
 console.log(demo(391, 9));
-
-*/
-
-
-/* Classes এটি ES6 এ অন্তভুক্ত এটি আগে ছিল না । অবজেক্ট ওরিয়েন্টের প্রোগ্রামিং ল্যাঙ্গুয়েজ এ বেশি ব্যবহার করা হয়। আসল ব্যাপার হলো জাভাস্কিপ্টও অবজেক্ট ওরিয়েন্টেড ল্যাঙ্গুয়েজ, কিন্তু অন্যান্য মেজর ল্যাঙ্গুয়েজগুলোর মতো ক্লাস বেসড না
-
-জাভাস্ক্রিপ্ট এ ক্লাস ঠিক ফাংশনের মতো করেই দুইভাবে নেওয়া যায়ঃ
-
-১। ক্লাস স্টেটমেন্ট;
-class ClassStatement{
-...
-}
-
-২। ক্লাস এক্সপ্রেশন;
-
-const ClassExzpression= class{
-...
-}
-
-class PersonName{
-    constructor(name, age,job) {
-        this.name = name;
-        this.age = age;
-        this.job=job;
-    }
-}
-
-let PersonName = new PersonName(’kabir chowdhury', 22,'student');
-console.log(PersonName);
-
-প্রথমে var,let,const এর মতো class অ্যাট্রিবিউট নিয়ে পরে যেকোন মিনিংফুল নাম দিতে হবে আর ক্লাসের নাম বড় হাতের প্রথম অক্ষর হবে। পরে নিয়ম অনুযায়ী constructor(...) দিয়ে কি কাজ করতে হবে তা ডিফাইন করে দিতে হবে। পরে ইনহেরিটেন্স ব্যবহার করে this. ... এর সাথে constructor(...) নাম মিল রাখতে হবে। নতুন নাম দিতে হবে এর সাথে new কিওয়ার্ড যোগ করে ক্লাসের উদ্দ্যেশ্য ডিফাইন করে দিতে হবে ,সবকিছু সুন্দরভাবে হওয়ার পর কল করতে হবে।
 
 */
 
@@ -2456,6 +2425,11 @@ fullName	function() {return this.firstName + " " + this.lastName;}
 
 //JavaScript Display Objects
 
+Some common solutions to display JavaScript objects are:
+Displaying the Object Properties by name
+Displaying the Object Properties in a Loop > for in loop use
+Displaying the Object using Object.values() 
+Displaying the Object using JSON.stringify() > স্ট্রিং এ কনভার্ট করা
 
 
 /*
@@ -2466,13 +2440,63 @@ fullName	function() {return this.firstName + " " + this.lastName;}
 ৬৮. JavaScript Iterables
 /*
 
-//JavaScript Object Accessors
+//JavaScript Object Accessors কোনো অবজেক্ট এর কোনো কিছু এক্সেস করা।
+Getters and setters allow you to define Object Accessors (Computed Properties).
 
-//JavaScript Object Constructors
+কোনো কিছু নিতে চাইলে getter object ব্যবহার করা হয়।
 
-//JavaScript Object Prototypes
 
-//JavaScript Iterables 
+
+// এক্সেসসর 
+const access = {
+    firstName: 'araf',
+    lastName: 'siam',
+    language: 'bn',
+    get lang() {
+        return this.language;
+    }
+};
+
+console.log(access.lang);
+
+const setterAccess = {
+    firstName: 'hello',
+    lastName: 'bangladesh',
+    location: 'south asia',
+    set local(location) {
+        this.local = 'india';
+    }
+}
+
+console.log(setterAccess.location);
+
+
+আর এটা জাভাক্রিপ্ট এ খুব কমই ব্যবহার করা হয়।
+
+//JavaScript Object Constructors এটা হলো একটা কমন মডেল তৈরি করে তার ফলাফল ভিন্ন ভিন্ন আনার নিয়ম বা স্ট্রাকচারকে বোঝায়। 
+
+ function People(first, last, age) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.fullName = function () {
+        return this.firstName + ' ' + this.lastName
+    }
+};
+const sakib = new People('sakib','rahman',24);
+
+const sakil = new People('sakil','rahman',24);
+
+console.log(sakib.fullName());
+
+console.log(sakil.fullName());
+
+
+//JavaScript Object Prototypes  ===> advanced tutorials form lws
+
+//JavaScript Iterables ===> advanced tutorials form lws
+
+Iterables হলো স্টেপ বাই স্টেপ করে লাইন বাই লাইন করে যাওয়াকে বোঝায়
 
 
 /*
@@ -2485,23 +2509,68 @@ fullName	function() {return this.firstName + " " + this.lastName;}
 
 //JavaScript Sets জাভাক্রিপ্টের বিল্ড ইন মেথড এটি দিয়ে সহজে কাজ করা যায় কোনো ঝামেলা ছাড়াই । বিভিন্ন ধরনের সেট রয়েছে। সেট এর সাথে রিলেশন অ্যারের।
  
-Set Methods
-Method	Description
+*** Set Methods
 
-new Set()	Creates a new Set
-add()	Adds a new element to the Set
-delete()	Removes an element from a Set
-has()	Returns true if a value exists
-clear()	Removes all elements from a Set
-forEach()	Invokes a callback for each element
-values()	Returns an Iterator with all the values in a Set
-keys()	Same as values()
-entries()	Returns an Iterator with the [value,value] pairs from a Set
-Property	Description
-size	Returns the number elements in a Set
+* Method	Description
+
+=> new Set()	Creates a new Set
+=> add()	Adds a new element to the Set
+=> delete()	Removes an element from a Set
+=> has()	Returns true if a value exists
+=> clear()	Removes all elements from a Set
+=> forEach()	Invokes a callback for each element
+=> values()	Returns an Iterator with all the
+=> values in a Set
+=> keys()	Same as values()
+=> entries()	Returns an Iterator with the [value,value] pairs from a Set
+
+* Property	Description
+
+=> size	Returns the number elements in a Set
+
+new Set()::
+
+const personName = new Set(['arif', 'siam', 'jalal', 'habib']);
+console.log(personName);
+console.log(personName.size); // টোটাল পরিমাণ বোঝায়
+
+* add নতুন কিছু এড করতে সাহায্য করে
+console.log(personName.add('sakil'));
+
+forEach() => The forEach() method invokes a function for each Set element:
+
+//foreach:
+const letters = new Set(['sakil ', 'akib ', ' kaka', ' sakib', ' labib']);
+let pName = '';
+letters.forEach(function (value) {
+pName += value;
+})
+
+console.log(pName);
 
 
 //JavaScript Maps ==> ম্যাপসের এর সাথে রিলেশন অবজেক্ট এর
+const myBazer = new Map([
+    ['apple', 500],
+    ['banana', 100],
+    ['suger', 150],
+    ['honey', 50],
+    ['orange', 500],
+    ['milk', 100],
+    ['papuya', 150],
+    ['salut', 50]
+])
+
+console.log(myBazer.get('orange'));
+console.log(myBazer.size);
+myBazer.delete('apple');
+console.log(myBazer);
+console.log(myBazer.has('milk'));
+myBazer.clear();
+console.log(myBazer.entries()); //The entries() method returns an iterator object with the [key,values] in a Map:
+
+console.log(myBazer.values()); // it's a very top.
+
 
 /*
 ###Task--- 22
@@ -2516,21 +2585,107 @@ size	Returns the number elements in a Set
 
 
 
-// JavaScript Function Definitions
+// JavaScript Function Definitions কোনটা কি ,কিভাবে করতে হবে তা নিদের্শ করে থাকে।
 
-// JavaScript Function Parameters
-// JavaScript Function Invocation
+// JavaScript Function Parameters => advanced tutorials form lws
+
+// JavaScript Function Invocation কাকে দিয়ে কল করা হয়েছে তাকে বোঝায়
+
 // JavaScript Function call()
-// JavaScript Function apply()
-// JavaScript Function bind()
-// JavaScript Closures
+//call:
+const Peoples = {
+  fullName: function (city,country) {
+      return this.firstName + '' + this.lastName + "" + 'he lives in ' + city + country;
+  }
+};
+
+let People1 = {
+  firstName: 'ashraful rahman',
+  lastName: ' sakil'
+}
+
+let People2 = {
+  firstName: 'ashraful khan',
+  lastName: ' alim'
+}
+
+console.log(Peoples.fullName.call(People1,'Dhaka ',' Bangladesh'));
+console.log(Peoples.fullName.call(People2, 'New York ', 'USA'));
+
+// JavaScript Function apply() এটা একটা অবজেক্ট দিলে আরেকটা অ্যারে হিসেবে দিতে হবে।
+
+//apply:
+const aPeople = {
+  fullName: function (city, country) {
+      return 'My name is ' + this.firstName + '' + this.lastName + "" + ' he lives in ' + city + country;
+  }
+};
+
+let People01 = {
+  firstName: 'ashraful rahman',
+  lastName: ' sakil'
+}
+
+let People02 = {
+  firstName: 'ashraful khan',
+  lastName: ' alim'
+}
+
+console.log(aPeople.fullName.apply(People02,['Dhaka',' Bangladesh']));
+
+
+// JavaScript Function bind() ‍কল বা এপ্লাই এর মতো কাজ করে না এটা দু্ইভাবে ডিক্লেয়ার করে থাকে । ফলে একটি নিজস্ব ভেরিয়েবল তৈরি করে যা অন্য কোথায় সহজেই ব্যবহার করা যায়।
+
+let examinee= {
+  name: 'araf rahman siam',
+  age: 17,
+  candid: 'ssc',
+  location: 'Narsingdi',
+  subExaminee: {
+      name: 'adib khan',
+      age: 18,
+      candid: 'ssc',
+      value: function () {
+         console.log('i am a ' + this.candid + ' examinee');
+     }
+  }
+  
+
+}
+
+examinee.subExaminee.value.bind(examinee);
+
+let myOwnerCandid = examinee.subExaminee.value.bind(examinee);
+
+myOwnerCandid();
 
 
 
+// JavaScript Closures => হলো প্যারেন্ট - চাইল্ডের খেলা। এটি মূলত একটি ফাংশনের ভিতরে আরেকটি ফাংশন নিয়ে কাজ করে বা আলাদা করেও কল করলেও ওই একই নিয়ম মেনে কাজ করে থাকে। 
 
+function closure() {
+  let max = 2400;
+  return function () {
+      min = 100;
+      console.log('total ' + (max - min));
+  }
+}
 
+closure()();
 
+//দুটি ফাংশন ছাড়াও আলাদা ভাবে করে এনেও ফলাফল দেখাতেও পারি। তার মানে ক্লোজার হলোঃ- আমরা যখন কোনো ফাংশন রিটার্ন করি আরেকটা ফাংশন থেকে, যেখানে ( ফাংশনের লোকাল মেমোরি ) ফাংশন টা saved ছিল, রিটার্ন হওয়ার সময় শুধু এই ( চাইল্ড / returned function ) ফাংশনের definition টাই রিটার্ন করবে না, সাথে তার surrounding data (যেখানে saved ছিল - লোকাল মেমোরির) গুলোও attached (চাইল্ড ফাংশনের backpack -এ) হয়ে যাবে। আর যখন ফাংশনের executing শেষ হয়ে যাবে & সেই ফাংশনের Local মেমোরিও delete হয়ে যাবে (except returned value)
 
+Example :
+function outer (){
+ let counter = 0;
+ function incrementCounter (){ counter ++; }
+ return incrementCounter;
+}
+const myNewFunction = outer();
+myNewFunction();
+myNewFunction();
+
+//আপনার লেখাটা অনেক আগে পড়ছিলাম আজ হঠাৎ মনে হলো এই লাইন গুলার কথা, আমার বুঝতে কষ্ট হচ্ছে এই লাইন গুলা ঃ- কিন্তু এখানে আরো মজার ব্যাপার হচ্ছে ইভেন আমরা যদি প্যারেন্ট ফাংশনটা রিটার্ন করে ফেলি তারপরেও আমরা চাইল্ড ফাংশন থেকে প্যারেন্ট ফাংশনের ভ্যারিয়েবল, ফাংশন অথবা অবজেক্ট অ্যাক্সেস করতে পারবো। কারণ এগুলো রিটার্ন হওয়ার পরও মেমোরী তে থেকে যায় । আর এটাই হচ্ছে ক্লোজারস।
 
 
 /*
@@ -2541,12 +2696,51 @@ size	Returns the number elements in a Set
 */
 
 /*
+
+Classes এটি ES6 এ অন্তভুক্ত এটি আগে ছিল না । অবজেক্ট ওরিয়েন্টের প্রোগ্রামিং ল্যাঙ্গুয়েজ এ বেশি ব্যবহার করা হয়। আসল ব্যাপার হলো জাভাস্কিপ্টও অবজেক্ট ওরিয়েন্টেড ল্যাঙ্গুয়েজ, কিন্তু অন্যান্য মেজর ল্যাঙ্গুয়েজগুলোর মতো ক্লাস বেসড না
+
+জাভাস্ক্রিপ্ট এ ক্লাস ঠিক ফাংশনের মতো করেই দুইভাবে নেওয়া যায়ঃ
+
+১। ক্লাস স্টেটমেন্ট;
+class ClassStatement{
+...
+}
+
+২। ক্লাস এক্সপ্রেশন;
+
+const ClassExzpression= class{
+...
+}
+
+class PersonName{
+    constructor(name, age,job) {
+        this.name = name;
+        this.age = age;
+        this.job=job;
+    }
+}
+
+let PersonName = new PersonName(’kabir chowdhury', 22,'student');
+console.log(PersonName);
+
+প্রথমে var,let,const এর মতো class অ্যাট্রিবিউট নিয়ে পরে যেকোন মিনিংফুল নাম দিতে হবে আর ক্লাসের নাম বড় হাতের প্রথম অক্ষর হবে। পরে নিয়ম অনুযায়ী constructor(...) দিয়ে কি কাজ করতে হবে তা ডিফাইন করে দিতে হবে। পরে ইনহেরিটেন্স ব্যবহার করে this. ... এর সাথে constructor(...) নাম মিল রাখতে হবে। নতুন নাম দিতে হবে এর সাথে new কিওয়ার্ড যোগ করে ক্লাসের উদ্দ্যেশ্য ডিফাইন করে দিতে হবে ,সবকিছু সুন্দরভাবে হওয়ার পর কল করতে হবে।
+
+*/
+
+//Inheritance কেনো কিছু কারও কাছ থেকে নিয়ে আসাকে বোঝায় । আর এটা ক্লাসে বেশি ব্যবহার করা হয়।
+
+//Static Methods
+
+/*
 ###Task--- 24
 ৮২. JavaScript Callbacks
 ৮৩. Asynchronous JavaScript
 ৮৪. JavaScript Promises
 ৮৫. JavaScript Async / Await
 */
+
+
+
 
 /*
 ###Task--- 25

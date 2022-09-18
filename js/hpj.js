@@ -736,12 +736,12 @@ function helloThis(){
 
 helloThis();
 
-function fullName(){
-    this.named ='ashraful rahman sakil';
-  }
-fullName();
+// function fullName(){
+//     this.named ='ashraful rahman sakil';
+//   }
+// fullName();
   
-console.log(named);
+// console.log(named);
 
 var myCustomObj={
     name:'ashraful rahman sakil',
@@ -947,11 +947,11 @@ var person = {
 person.person2.value();
 
 var myObj = {
-   name: 'Zonayed Ahmed',
+   name: 'Ashraful Rahman Sakil',
    age: 21,
    timer: ()=> {
       setTimeout(function() {
-         console.log('My name is ' + this.name);
+         console.log(this.name + '. ' + 'he is a good man');
       }.bind(myObj), 1000)
     }
 }
@@ -1000,10 +1000,201 @@ class NewPerson{
 
 let oldPerson = new NewPerson('shakib khan',25,'web developer');
 console.log(oldPerson);
-
 //set
 
 var i = new Set();
 console.log(i);
 
+//JASON.Stringify
+
+var person1 = {
+    name: 'ashraful rhaman sakil',
+    age: 25,
+    address: 'dhaka,bangladesh',
+    friends_names:['sakib','akram','sakil','siam']
+}
+console.log(JSON.stringify(person1));
+console.log(person1);
+
+// var f = [0, 1, 2, 3] == '0,1,2,3';
+// console.log(f);
+
+
+// এক্সেসসর 
+const access = {
+    firstName: 'araf',
+    lastName: 'siam',
+    language: 'bn',
+    get lang() {
+        return this.language;
+    }
+};
+
+console.log(access.lang);
+
+const setterAccess = {
+    firstName: 'hello',
+    lastName: 'bangladesh',
+    location: 'south asia',
+    set local(location) {
+        this.local = 'india';
+    }
+}
+
+console.log(setterAccess.location);
+
+//কনস্ট্রাকটর ফাংশন অবজেক্টে
+
+ function People(first, last, age) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.fullName = function () {
+        return this.firstName + ' ' + this.lastName
+    }
+};
+const sakib = new People('sakib','rahman',24);
+const sakil = new People('sakil','rahman',24);
+console.log(sakib.fullName());
+console.log(sakil.fullName());
+
+
+// সেট
+var personName = new Set(['arif', 'siam', 'jalal', 'habib']);
+add:
+console.log(personName.add('new elements add'));
+
+//foreach:
+const letters = new Set(['sakil ', 'akib ', ' kaka', ' sakib', ' labib']);
+let pName = '';
+letters.forEach(function (value) {
+pName += value;
+})
+
+console.log(pName);
+newSet:
+//set bundiles
+console.log(personName);
+console.log(personName.size);
+console.log(personName.values());
+console.log(personName.keys());
+console.log(personName.entries());
+
+
+
 //ম্যাপস
+
+const myBazer = new Map([
+    ['apple', 500],
+    ['banana', 100],
+    ['suger', 150],
+    ['honey', 50],
+    ['orange', 500],
+    ['milk', 100],
+    ['papuya', 150],
+    ['salut', 50]
+])
+
+console.log(myBazer.get('orange'));
+console.log(myBazer.size);
+myBazer.delete('apple');
+console.log(myBazer);
+console.log(myBazer.has('milk'));
+myBazer.clear();
+console.log(myBazer.entries()); //The entries() method returns an iterator object with the [key,values] in a Map:
+
+console.log(myBazer.values()); // it's a very top.
+
+
+
+// function
+function my(x,y) {
+    return x * y;
+}
+
+console.log(my(15, 16))
+
+//call:
+const Peoples = {
+    fullName: function (city,country) {
+        return this.firstName + '' + this.lastName + "" + 'he lives in ' + city + country;
+    }
+};
+
+let People1 = {
+    firstName: 'ashraful rahman',
+    lastName: ' sakil'
+}
+
+let People2 = {
+    firstName: 'ashraful khan',
+    lastName: ' alim'
+}
+
+console.log(Peoples.fullName.call(People1,'Dhaka ',' Bangladesh'));
+console.log(Peoples.fullName.call(People2, 'New York ', 'USA'));
+
+
+const aPeople = {
+    fullName: function (city, country) {
+        return 'My name is ' + this.firstName + '' + this.lastName + "" + ' he lives in ' + city + country;
+    }
+  };
+  
+  let People01 = {
+    firstName: 'ashraful rahman',
+    lastName: ' sakil'
+  }
+  
+  let People02 = {
+    firstName: 'ashraful khan',
+    lastName: ' alim'
+  }
+  
+console.log(aPeople.fullName.apply(People02, ['Dhaka', ' Bangladesh']));
+  
+let examinee= {
+    name: 'araf rahman siam',
+    age: 17,
+    candid: 'ssc',
+    location: 'Narsingdi',
+    subExaminee: {
+        name: 'adib khan',
+        age: 18,
+        candid: 'ssc',
+        value: function () {
+           console.log('i am a ' + this.candid + ' examinee');
+       }
+    }
+    
+
+}
+
+examinee.subExaminee.value.bind(examinee);
+
+let myOwnerCandid = examinee.subExaminee.value.bind(examinee);
+
+myOwnerCandid();
+
+//closure
+
+ clouser = ()=> {
+    let sum1 = 10;
+    return ()=> {
+        let sum2 = 20;
+        console.log('sum : ' + (sum1+sum2))
+    }
+    
+}
+
+clouser()();
+
+function closure() {
+    let max = 2400;
+    return function () {
+        min = 100;
+        console.log('total ' + (max - min));
+    }
+}
+
+closure()();
