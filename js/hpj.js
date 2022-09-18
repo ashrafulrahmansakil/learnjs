@@ -8,7 +8,7 @@
 
 
 
-for (var i = 1; i < 200; i++){
+for (var i = 1; i < 5; i++){
     if (i % 2 === 0) {
         console.log(i);
     }
@@ -1178,23 +1178,74 @@ myOwnerCandid();
 
 //closure
 
- clouser = ()=> {
-    let sum1 = 10;
-    return ()=> {
-        let sum2 = 20;
-        console.log('sum : ' + (sum1+sum2))
-    }
+//  clouser = ()=> {
+//     let sum1 = 10;
+//     return ()=> {
+//         let sum2 = 20;
+//         console.log('sum : ' + (sum1+sum2))
+//     }
     
-}
+// }
 
-clouser()();
+// clouser()();
 
-function closure() {
-    let max = 2400;
-    return function () {
-        min = 100;
-        console.log('total ' + (max - min));
+// function closure() {
+//     let max = 2400;
+//     return function () {
+//         min = 100;
+//         console.log('total ' + (max - min));
+//     }
+// }
+
+// closure()();
+
+class StudentId{
+    constructor(name, age, address) {
+        this.name=name;
+        this.age=age;
+        this.address=address;
+
     }
 }
 
-closure()();
+class StudentInfo extends StudentId{
+    constructor(name, age, address, session,study) {
+        super(name, age, address);
+        this.session = session;
+        this.study = study;
+    }
+}
+
+const singleStudend = new StudentInfo('Araf rahman', 17, 'Narsingdi', 'science', 'scc candid');
+
+console.log(singleStudend.name);
+console.log(singleStudend.age);
+console.log(singleStudend.session);
+console.log(singleStudend.study);
+console.log(singleStudend.address);
+
+console.log(' **** empty **** ');
+
+// jonayed class
+class PersonClass {
+   constructor(name, age, job) {
+      this.name = name;
+      this.age = age;
+      this.job = job;
+   }
+}
+
+class TeacherClass extends PersonClass {
+   constructor(name, age, job, subject) {
+      super(name, age, job);
+      this.subject = subject;
+   }
+}
+
+const ourSir = new TeacherClass('Shafiq Sir', 46, 'Assistant Teacher', 'Physics');
+
+console.log(ourSir.name);
+console.log(ourSir.age);
+console.log(ourSir.job);
+console.log(ourSir.subject);
+

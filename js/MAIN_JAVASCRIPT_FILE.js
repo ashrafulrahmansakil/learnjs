@@ -2727,7 +2727,34 @@ console.log(PersonName);
 
 */
 
-//Inheritance কেনো কিছু কারও কাছ থেকে নিয়ে আসাকে বোঝায় । আর এটা ক্লাসে বেশি ব্যবহার করা হয়।
+//Inheritance কেনো কিছু কারও কাছ থেকে নিয়ে আসাকে বোঝায় । আর এটা ক্লাসে বেশি ব্যবহার করা হয়। ব্যাপারটা এরকম যেমন কোন একটা কাজে করতে হবে কিন্তু কারও কাছে একটা ইলিমেন্ট বেশি বা কম আছে যখন দরকার হবে তাকে রিকুয়েষ্ট করে তার কাছে থেকে নিয়ে আসা। আর এটা ES6 এর অবজেক্ট অরিয়েন্ট প্রোগ্রামিং এর অন্তর্ভুক্ত।
+
+
+class StudentId{
+  constructor(name, age, address) {
+      this.name=name;
+      this.age=age;
+      this.address=address;
+
+  }
+}
+
+class StudentInfo extends StudentId{
+  constructor(name, age, address, session,study) {
+      super(name, age, address);
+      this.session = session;
+      this.study = study;
+  }
+}
+
+const singleStudend = new StudentInfo('Araf rahman', 17, 'Narsingdi', 'science', 'scc candid');
+
+console.log(singleStudend.name);
+console.log(singleStudend.age);
+console.log(singleStudend.session);
+console.log(singleStudend.study);
+console.log(singleStudend.address);
+
 
 //Static Methods
 
