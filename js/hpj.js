@@ -946,16 +946,16 @@ var person = {
 
 person.person2.value();
 
-var myObj = {
-   name: 'Ashraful Rahman Sakil',
-   age: 21,
-   timer: ()=> {
-      setTimeout(function() {
-         console.log(this.name + '. ' + 'he is a good man');
-      }.bind(myObj), 1000)
-    }
-}
-myObj.timer();
+// var myObj = {
+//    name: 'Ashraful Rahman Sakil',
+//    age: 21,
+//    timer: ()=> {
+//       setTimeout(function() {
+//          console.log(this.name + '. ' + 'he is a good man');
+//       }.bind(myObj), 1000)
+//     }
+// }
+// myObj.timer();
 
 //normal function
 var demo = function(x,y){
@@ -1249,3 +1249,60 @@ console.log(ourSir.age);
 console.log(ourSir.job);
 console.log(ourSir.subject);
 
+// inheritance
+
+class TeacherData{
+    constructor(name, age, post, subject) {
+      this.name = name;
+      this.age = age;
+      this.post=post;
+      this.subject = subject;
+  
+    }
+  }
+  
+  class TeacherId extends TeacherData {
+    constructor(name, age, post, subject, activeYear) {
+      super(name, age, post, subject);
+      this.activeYear = activeYear;
+    }
+  }
+  
+  const TeacherCard = new TeacherId('arif khan', 35,'Assistance Teacher', 'ICT', 2010)
+  console.log(TeacherCard.name);
+  console.log(TeacherCard.subject);
+  console.log(TeacherCard.activeYear);
+console.log(TeacherCard);
+  
+
+class mySelf{
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    static MeMy() {
+        return 'hi it\'s me';
+    }
+}
+console.log(mySelf.MeMy());
+
+//asynchronous function
+
+function getVar() {
+    var x;
+    setTimeout(() => {
+        x = 12;
+    },3000); // যদি এখানে টাইম না দেই তাহলে তা মূল কাজ হওয়ার আগেই অপারেশন সম্পূর্ণ হয়ে যাচ্ছে যার ফলে কাঙ্খিত ডেটা পাওয়া যাবে না। সময় এখানে যার যার ইচ্ছামতো দিতে পারবে।
+}
+
+var value = getVar();
+console.log('hi it\'s working')
+
+/// অভিন্ন বা ভিন্নভাবে দেখানো হলো
+
+var value;
+setTimeout(function(){
+    value = 12;
+},5000);
+
+console.log('this is me ' + value);
