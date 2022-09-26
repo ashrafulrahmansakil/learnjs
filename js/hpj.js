@@ -1300,9 +1300,11 @@ console.log('hi it\'s working')
 
 /// অভিন্ন বা ভিন্নভাবে দেখানো হলো
 
-var value;
-setTimeout(function(){
-    value = 12;
-},5000);
 
-console.log('this is me ' + value);
+var value;
+setTimeout(function() {
+ value = 12;
+}, 3000)
+console.log('The value is: ' + value);
+
+// Dom all Example

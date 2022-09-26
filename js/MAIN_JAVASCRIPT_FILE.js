@@ -581,217 +581,6 @@ const arrObj = [
 
 console.log(arrObj);
 
-
-/* ১৬. JavaScript Events.
-ইভেন্ট হচ্ছে কোনো ঘটনা। ইভেন্ট HTML এ ব্যবহার করা হয়। যা ডম হিসেবে কাজ করে থাকে । বিভিন্ন ধরনের ইন্টাররেকটিভ স্মার্ট ওয়েতে বিভিন্ন জিনিস খুব সহজেই দেখাতে পারি।
-বিভিন্ন ধরনের ইভেন্ট রয়েছে।
-*/
-//এলার্ট দেওয়া > এটার কাজ ব্রাউজারে বিভিন্ন এলার্ট দেওয়া।
-alert('this is alert');
-
-//(A) কমন ডট ইভেন্ট > দুই রকমভাবে দেখাতে পারি , 1. ইনলাইন স্টাইলে 2. ইলিমেন্টের সাথে অ্যাট্রিবিভট হিসেবে।
-function showAlert(){
-  alert('hi, i am alert');
-}
-
-showAlert();
-
-var clickMeBtn = document.getElementById('demo');
-console.dir(demo);
-
-clickMeBtn.onclick = function () {
-  console.log('on click');
-}
-
-clickMeBtn.onchange = function () {
-  console.log('on change');
-}
-
-clickMeBtn.onmouseout = function () {
-  console.log('onmouseout');
-}
-
-clickMeBtn.onmousedown = function () {
-  console.log('onmousedown');
-}
-
-clickMeBtn.onload = function () {
-  console.log('onload');
-}
-
-
-/*(B) ইভেন্ট লিসেনার আমরা যেভাবে করি সচরাচর এভাবে করা হয় না। 
-
-সবচেয়ে ইফেক্টিভ মেথডটা  হলো addEventListener ,এটা প্রধানত দুইটা প্যারামিটার নেয়।
-প্রথমটা হলো কোন টাইপের ইভেন্ট হবে সেটা ,, দ্বিতীয়টা হলেঅ ফাংশন(হ্যান্ডেলার) যেটা ইভেন্ট ঘটলে রান করবে।
-
-youeElement.addEventListener(typeofEvent(প্যারামিটার), handler(ফাংশন));
-*/
-//Example:
-var box = document.getElementById('box');
-box.addEventListener('click', function () {
-    console.log('function change');
-})
-  
-// চাইলে এগুলো দেওয়া যেতে পারে load, focus, blur, submit, resize, cut, copy, keydown, keypress, keyup etc...
- 
-//(C) ইভেন্ট মডিফাই > বিভিন্ন ধরনের মডিফাই আছে
-// বাবল আপ
-let clickBtn = document.getElementById('demo3');
-clickBtn.onclick = function (event) {
-  event.stopPropagation();
-  console.log('bubble clicked');
-}
-
-var clickMeBtn = document.getElementById('click');
-clickMeBtn.addEventListener('click', () => {
-    console.log('this is me. it\'s working');
-})
-
-
-var clickMeBtn = document.getElementById('demo4');
-clickMeBtn.onclick = function (event) {
-  event.stopPropagation();
-  event.stopImmediatePropagation();
-  console.log('it\'s stop');
-}
-
-// ডিফল্ট আচরণ > ব্রাউজার আচরণ পরিবর্তন
-
-const link = document.getElementById('link');
-link.addEventListener('link',()=> {
-  link.preventDefult();
-});
-
-//(D) নেটিভ ডট ইভেন্ট > কোড দিয়ে ইভেন্ট ঘটানো
-
-clickMeBtn.click();
-
-//(E) ইভেন্ট ডেলিগেশন
-var box1 = document.getElementById('box1');
-box1.addEventListener('click', (event) => {
-    if (event.target.tagName === 'LI') {
-      console.log("is\'s working");
-    }
-  });
-
-//(F) ফরম ইভেন্ট
- const inputs = document.querySelectorAll('input');
- const submitBtn = document.querySelector('button[type=submit]');
-
-// ইনপুট ফিল্ড চেঞ্জ
-
-inputs[0].addEventListener('change', function () {
-    console.log('input change');
-  });
-
-inputs[0].addEventListener('change', function (event) {
-    console.log(event.target.value);
-  });
-
-// ফরম সাবমিট ইভেন্ট
-
-submitBtn.addEventListener('submit', function (event) {
-    event.preventDefault();
-  });
-
-submitBtn.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (inputs[0].value === "" || inputs[1].value === "") {
-    alert('input failed can not be empty');
-  }
-
-});
-
-//ফুল ফরম সাবমিট 
-submitBtn.addEventListener ('click', function (event) {
-    event.preventDefault();
-    if (inputs[0].value === '' || inputs[1].value === '') {
-      alert('input are not emprty');
-    }
-    else {
-      var input0Data = inputs[0].value;
-      var input0Data = inputs[1].value;
-      console.log('your Name', input0Data, 'and yor last names', input0Data);
-    }
-  });
-
-//(G) কি বোর্ড ইভেন্ট
-keyDown:
-document.addEventListener('keydown', () => {
-  console.log('key down');
-});
-
-keyPress:
-document.addEventListener('keypress', () => {
-  console.log('key press');
-});
-
-keyup:
-document.addEventListener('keyup', () => {
-  console.log('key up');
-});
-
-// এখন একটা ছোট কাজ করে দেখবো
-
-document.addEventListener('keydown', (event) => {
-  console.log('key down event');
-  console.log('pressed key:' + event.key);
-});
-
-
-document.addEventListener('keydown', (event) => {
-  console.log('key down event');
-  console.log('pressed key:' + event.key);
-  console.dir(event);
-});
-
-//(H) মাউস ইভেন্ট
-mouseover:
-
-clickMeBtn.onmouseover = (_event) => {
-  console.log('mouse over');
-}
-
-clickBtn.addEventListener('mouseover', () => {
-  console.log('mouse over event');
-});
-
-mouseout:
-
-clickBtn.addEventListener('mouseout', () => {
-  console.log('mouse over event');
-});
-
-
-//(I) 
-//ব্রাউজার ইভেন্ট পুরোপুরি_লোড_হওয়ার_পর_ইভেন্ট:
-window.addEventListener('load',()=> {
-  console.log('your are right');
-});
-
-//শুধু মার্কাপ লোড হওয়ার পর ইভেন্ট
-window.addEventListener('DOMContentLoaded',()=> {
-  console.log('markup loaded');
-});
-
-
-// নির্দিষ্ট কোনো ইলিমেন্ট লোড হওয়ার পরের ইভেন্ট
-
-var img = document.querySelector('img[alt=vaid-img]');
-var img = document.querySelector('img[alt=invaid-img]');
-
-img.addEventListener('load', () => {
-  console.log('img success');
-});
-
-// ইলিমেন্ট লোড না হলে পরের ইভেন্ট
-
-img.addEventListener('error', () => {
-  console.log('img not success');
-})
-  
-
 /*
 ###Task---07
 
@@ -2768,7 +2557,7 @@ class mySelf{
   }
 }
 console.log(mySelf.MeMy());
-// কিন্তু এই ক্লাস দিয়ে তৈরি অবজেক্ট কখনও এক্সস করতে পারবো না ইরর দিবে। কারণ এই static মেথড শুধু মেইন ক্লাস দিয়ে অ্যাক্সেস পাওয়া যায়।
+// কিন্তু এই ক্লাস দিয়ে তৈরি অবজেক্ট কখনও এক্সেস করতে পারবো না ইরর দিবে। কারণ এই static মেথড শুধু মেইন ক্লাস দিয়ে অ্যাক্সেস পাওয়া যায়।
 
 
 
@@ -2781,9 +2570,15 @@ console.log(mySelf.MeMy());
 ৮৫. JavaScript Async / Await
 */
 
-//JavaScript Asynchronous জাভাক্রিপ্টমহ প্রায় সকল ভাষায় চলে সিনক্রোনাস পদ্ধতিতে। তবে কিছু ক্ষেত্রে অ্যাসিনক্রোনাস পদ্ধতিও লাগে। কারণ কিছু কাজ করতে গেলে সরাসরি রেসপন্স না করে একটু ঘুরিয়ে করা লাগে বিশেষত সার্ভার থেকে ডাটা আনতে গেলে।
+//JavaScript Asynchronous জাভাক্রিপ্টমহ প্রায় সকল ভাষায় চলে সিনক্রোনাস পদ্ধতিতে। তবে কিছু ক্ষেত্রে অ্যাসিনক্রোনাস পদ্ধতিও লাগে। কারণ কিছু কাজ করতে গেলে সরাসরি রেসপন্স না করে একটু ঘুরিয়ে করা লাগে বিশেষত সার্ভার থেকে ডাটা আনতে গেলে। আর এটা মূলত হয়ে থাকে সার্ভার কোনো কারণে লোড হতে দেরি হলে যাতে সঠিক সময়ের আগে যেন কন্টেন্ট না আসে তার জন্যে এটা ব্যবহার করা হয়।
+let asyn;
+setTimeout(function () {
+  value = 12;
+}, 1000);
 
-//JavaScript Callbacks
+console.log(asyn);
+
+//JavaScript Callbacks এটা হলো সিরিয়ালভাবে ডিক্লেয়ার না করে আগেরটা পরে, পরেরটা আগে ফলাফল দিয়ে থাকে।
 
 //JavaScript Promises
 
@@ -2793,166 +2588,424 @@ console.log(mySelf.MeMy());
 
 /*
 ###Task--- 25
-৮৬.JavaScript 
-৮৭. JavaScript
-/*
+৮৬. JavaScript Dom Documents হলো ডকুমেস্ট অবজেক্ট মডিউল এটা সবচেয়ে ইউজফুল ব্রাউজারের কোনো
+৮৭. JavaScript Dom Elements
+৮৮. JavaScript 
+৮৯. JavaScript Events / Listener
+*/
+
+
+/* ৮৯. JavaScript Events / Listener
+
+01. ইলিমেন্ট সিলেক্ট করা:::
+
+০১. আইডি সিলেক্ট করা (ID) : আমরা দুইভাবে আইডিকে সিলেক্ট করতে পারি আইডি বা কুয়েরি করে যেমন
+
+var id1= document.querySelector('#dom__area');
+var id2= document.getElementById('dom__area'); //আইডি দিলে [#] লাগবে না
+
+০২. ক্লাস দিয়ে সিলেক্ট করা (Class): ক্লাস দিয়েও আমরা সিলেক্ট করতে পারি।
+
+var id1= document.querySelector('#dom__area');
+আবার, document.querySelectorAll('.',"#"); দিয়েও আমরা সিলেক্ট করতে পারি। তবে এটা নোডলিস্ট আকারে রিটার্ন করবে, অ্যারে নয় দেখতে অ্যারের মতোই।
+var class= document.getElementsByClassName('',"") এটকে HTML কালেকশন বলে থাকে, আর এটা অ্যারেও না তাই কোনো অ্যারের সুবিধা পাওয়া যাবে না। 
+Array.prototype.slice.call(className) এটা দিয়ে ক্লাসকে অ্যারেতে রুপান্তর করা যায়।
+
+০৩. ট্যাগনেম দিয়ে সিলেক্ট করা: html এ বিভিন্ন ধরনের ট্যাগ নেম থাকে সেগুলো ধরতে হলে এটা ব্যবহার করা হয়।
+var id1= document.querySelector(div,section) এটা দিয়ে প্রথমটা ধরতে পারবো
+var id1= document.querySelectorAll(h1,h3,p,li,ul) আবার এর ভিতর ট্যাগ দিয়ে সিলেক্ট করতে পারবো ,এগুলো সব নোডলিস্ট আকারে পাবো।
+var id1 =document.getElementsByTagName();এটা দিয়ে শুধু ট্যাগকে ধরা হয়
+
+০৪. অ্যাট্রিবিউট দিয়ে সিলেক্ট করা: HTML এ অনেক ধরনের অ্যাট্রিবিউট ব্যবহার করা হয় সেগুলো নিয়ে কাজ করার জন্য
+var id1= document.querySelectorAll(['h1']) একাধিক এলিমেন্ট সিলেক্ট করতে
+var id2= document.querySelector(['#div,h1,p,li']) একটি মাত্র এলিমেন্ট সিলেক্ট করতে
+
+০৫. সুডো ক্লাস [Pseudo-class] দিয়ে সিলেক্ট: CSS এর মতো সুডো ক্লাস দিয়ে 
+var id1= document.querySelector("ul:nth-last-child")
+var id2= document.querySelectorAll('li:first-child') একাধিক ইলিমেন্ট সিলেক্ট করতে এটা ব্যবহার করতে হয়।
+
+০৬. চিলড্রেন সিলেক্ট: প্যারেন্ট ইলিমেন্ট দিয়েও চিলড্রেন ইলিমেন্ট ধরতে পারি।
+var parentElement = document.getElementById('') ধরে পরে
+parentElement.children;
+parentElement.childrenNode; এটা সবকিছু ধরে নিয়ে আসবে।
+চিলড্রেন থেকেও চিলড্রেন সিলেক্ট করা যায়।
+parentElement.children[2].children;
+
+০৭. প্যারেন্ট সিলেক্ট: html এ থেকে যেটা ধরতে হবে তা  document.querySelector('') দিয়ে প্যারেন্ট কে সিলেক্ট করতে হবে। 
+* প্যারেন্ট এর প্যারেন্ট সিলেক্ট করা: আবার প্যারেন্টের এর প্যারেন্ট ধরতে পারবে। 
+demo.parentNode.parentNode.parentNode;
+
+০৮. প্যারেন্ট থেকে চাইল্ড সিলেক্ট: উপরের টেকনিকগুলো যদি ঝামেলা তৈরি হয়ে যায় তাহলে এটা ব্যবহার করা যেতে পারে
+var id1= document.querySelectorAll(['.div']) একাধিক এলিমেন্ট সিলেক্ট করতে
+var id2= document.querySelector(['#demo,h2,h4,li,ul]) একটি মাত্র এলিমেন্ট সিলেক্ট করতে
+
+* সবগুলো চাইল্ড, নাকি সরাসরি চাইল্ডঃ এখানে আরেকটা সমস্যা যেটা হতে পারে, বা আমরা চাইতে পারি যে আমরা সরাসরি চাইল্ড ইলিমেন্টটাকেই সিলেক্ট করবো। সেক্ষেত্রে উপরে দেখানো টেকনিকগুলো কিন্তু কাজ করছে না। খেয়াল করে দেখবেন আমাদের ডকুমেন্ট এ তিন নাম্বার বক্সের ভিতরে সরাসরি একটা strongট্যাগের চাইল্ড আছে, আবার আরেকটা strongট্যাগ আছে যেটা হচ্ছে p ট্যাগের চাইল্ড। আবার শুধু একটি স্পেসিফিক ট্যাগ নিয়েও কাজ করতে পারি। 
+
+#box>strong
+
+০৯. বাদ দিয়ে সিলেক্ট করা: আমাদের আবার এমনও করতে হতে পারে যে আমরা অনেকগুলো ইলিমেন্ট সিলেক্ট করবো,তবে তাদের মধ্যে কিছু ইলিমেন্ট বাদ দিয়ে করতে চাই।
+সেটাও সহজেই এই querySelectorআর querySelectorAllদিয়ে করতে পারবোঃ
+document.querySelectorAll(): আমরা আমাদের সবগুলো বক্স সিলেক্ট করবো, তবে ৩ নাম্বার বক্স বাদ দিয়েঃ
+
+document.querySelectorAll('.box:not(#box3)');
+
+ব্যাস! সিলেক্ট হয়ে গেলো সবগুলো, বেচারা ৩ নাম্বারটা বাদ দিয়ে যেহেতু আমরা বলেই দিয়েছিএটা সিলেক্ট করবো নাঃ
+
+সেইম querySelector()এর ক্ষেত্রেও কাজ করবে।
+
+১০. একাধিক ইলিমেন্ট সিলেক্টঃ যদিও আমরা আগেও আলোচনা করেছি, তবে আমরা চাইলেই querySelectorAll()দিয়ে নিজের ইচ্ছামতো একাধিক ইলিমেন্ট সিলেক্ট করতে পারবো। প্রত্যেকটা সিলেক্টরই বাকী সবগুলোর মতোই রুলস মেইন্টেইন করে চলবে। জাস্ট আমাদের একটার পর আরেকটা কমা দিয়ে দিয়ে উল্লেখ করে দিতে হবেঃ
+document.querySelector('.box, #box3, #box3 strong, #box3 strong, #box3 li:last-child');
+যেই যেই ইলিমেন্ট সিলেক্ট করেছি সেগুলোই ক্রমানুসারে সিলেক্ট করে নোডলিস্ট আকারে রিটার্ণ করবেঃ
+
+02. ইলিমেন্ট নিয়ে খেলা করা: এখানে ইলিমেন্ট বানানো থেকে শুরু করে, এগুলোকে কিভাবে বিভিন্নভাবে মডিফাই করবেন, সেই সাথে ইলিমেন্টগুলো নিয়ে ডমে কিভাবে বিভিন্ন জায়গায় প্লেস করাবেন, এসব নিয়ে আলোচনা করা হবে। ডমের বিভিন্ন মেথড সম্পর্কে আগেই জেনেছি কিন্তু কিভাবে ব্যবহার করা হয় তা জানি না, তাই এখানে তা জানবো।
+
+০১. 
+০২. 
+০৩. 
+০৪. 
+০৫. 
+০৬. 
+০৭. 
+০৮
+
+
+03. ইভেন্ট হচ্ছে কোনো ঘটনা। ইভেন্ট HTML এ ব্যবহার করা হয়। যা ডম হিসেবে কাজ করে থাকে । বিভিন্ন ধরনের ইন্টাররেকটিভ স্মার্ট ওয়েতে বিভিন্ন জিনিস খুব সহজেই দেখাতে পারি।
+বিভিন্ন ধরনের ইভেন্ট রয়েছে।
+*/
+
+//এলার্ট দেওয়া > এটার কাজ ব্রাউজারে বিভিন্ন এলার্ট দেওয়া।
+alert('this is alert');
+
+//(A) কমন ডট ইভেন্ট > দুই রকমভাবে দেখাতে পারি , 1. ইনলাইন স্টাইলে 2. ইলিমেন্টের সাথে অ্যাট্রিবিভট হিসেবে।
+function showAlert(){
+  alert('hi, i am alert');
+}
+
+showAlert();
+
+var clickMeBtn = document.getElementById('demo');
+console.dir(demo);
+
+clickMeBtn.onclick = function () {
+  console.log('on click');
+}
+
+clickMeBtn.onchange = function () {
+  console.log('on change');
+}
+
+clickMeBtn.onmouseout = function () {
+  console.log('onmouseout');
+}
+
+clickMeBtn.onmousedown = function () {
+  console.log('onmousedown');
+}
+
+clickMeBtn.onload = function () {
+  console.log('onload');
+}
+
+
+/*(B) ইভেন্ট লিসেনার আমরা যেভাবে করি সচরাচর এভাবে করা হয় না। 
+
+সবচেয়ে ইফেক্টিভ মেথডটা  হলো addEventListener ,এটা প্রধানত দুইটা প্যারামিটার নেয়।
+প্রথমটা হলো কোন টাইপের ইভেন্ট হবে সেটা ,, দ্বিতীয়টা হলেঅ ফাংশন(হ্যান্ডেলার) যেটা ইভেন্ট ঘটলে রান করবে।
+
+yourElement.addEventListener(typeofEvent(প্যারামিটার), handler(ফাংশন));
+*/
+//Example:
+var box = document.getElementById('box');
+box.addEventListener('click', function () {
+    console.log('function change');
+})
+  
+// চাইলে এগুলো দেওয়া যেতে পারে load, focus, blur, submit, resize, cut, copy, keydown, keypress, keyup etc...
+ 
+//(C) ইভেন্ট মডিফাই > বিভিন্ন ধরনের মডিফাই আছে
+// বাবল আপ
+let clickBtn = document.getElementById('demo3');
+clickBtn.onclick = function (event) {
+  event.stopPropagation();
+  console.log('bubble clicked');
+}
+
+var clickMeBtn = document.getElementById('click');
+clickMeBtn.addEventListener('click', () => {
+    console.log('this is me. it\'s working');
+})
+
+
+var clickMeBtn = document.getElementById('demo4');
+clickMeBtn.onclick = function (event) {
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+  console.log('it\'s stop');
+}
+
+// ডিফল্ট আচরণ > ব্রাউজার আচরণ পরিবর্তন
+
+const link = document.getElementById('link');
+link.addEventListener('link',()=> {
+  link.preventDefult();
+});
+
+//(D) নেটিভ ডট ইভেন্ট > কোড দিয়ে ইভেন্ট ঘটানো
+
+clickMeBtn.click();
+
+//(E) ইভেন্ট ডেলিগেশন
+var box1 = document.getElementById('box1');
+box1.addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
+      console.log("is\'s working");
+    }
+  });
+
+//(F) ফরম ইভেন্ট
+ const inputs = document.querySelectorAll('input');
+ const submitBtn = document.querySelector('button[type=submit]');
+
+// ইনপুট ফিল্ড চেঞ্জ
+
+inputs[0].addEventListener('change', function () {
+    console.log('input change');
+  });
+
+inputs[0].addEventListener('change', function (event) {
+    console.log(event.target.value);
+  });
+
+// ফরম সাবমিট ইভেন্ট
+
+submitBtn.addEventListener('submit', function (event) {
+    event.preventDefault();
+  });
+
+submitBtn.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (inputs[0].value === "" || inputs[1].value === "") {
+    alert('input failed can not be empty');
+  }
+
+});
+
+//ফুল ফরম সাবমিট 
+submitBtn.addEventListener ('click', function (event) {
+    event.preventDefault();
+    if (inputs[0].value === '' || inputs[1].value === '') {
+      alert('input are not emprty');
+    }
+    else {
+      var input0Data = inputs[0].value;
+      var input0Data = inputs[1].value;
+      console.log('your Name', input0Data, 'and yor last names', input0Data);
+    }
+  });
+
+//(G) কি বোর্ড ইভেন্ট
+keyDown:
+document.addEventListener('keydown', () => {
+  console.log('key down');
+});
+
+keyPress:
+document.addEventListener('keypress', () => {
+  console.log('key press');
+});
+
+keyup:
+document.addEventListener('keyup', () => {
+  console.log('key up');
+});
+
+// এখন একটা ছোট কাজ করে দেখবো
+
+document.addEventListener('keydown', (event) => {
+  console.log('key down event');
+  console.log('pressed key:' + event.key);
+});
+
+
+document.addEventListener('keydown', (event) => {
+  console.log('key down event');
+  console.log('pressed key:' + event.key);
+  console.dir(event);
+});
+
+//(H) মাউস ইভেন্ট
+mouseover:
+
+clickMeBtn.onmouseover = (_event) => {
+  console.log('mouse over');
+}
+
+clickBtn.addEventListener('mouseover', () => {
+  console.log('mouse over event');
+});
+
+mouseout:
+
+clickBtn.addEventListener('mouseout', () => {
+  console.log('mouse over event');
+});
+
+
+//(I) 
+//ব্রাউজার ইভেন্ট পুরোপুরি_লোড_হওয়ার_পর_ইভেন্ট:
+window.addEventListener('load',()=> {
+  console.log('your are right');
+});
+
+//শুধু মার্কাপ লোড হওয়ার পর ইভেন্ট
+window.addEventListener('DOMContentLoaded',()=> {
+  console.log('markup loaded');
+});
+
+
+// নির্দিষ্ট কোনো ইলিমেন্ট লোড হওয়ার পরের ইভেন্ট
+
+var img = document.querySelector('img[alt=vaid-img]');
+var img = document.querySelector('img[alt=invaid-img]');
+
+img.addEventListener('load', () => {
+  console.log('img success');
+});
+
+// ইলিমেন্ট লোড না হলে পরের ইভেন্ট
+
+img.addEventListener('error', () => {
+  console.log('img not success');
+})
+  
 
 /*
 ###Task--- 26
-৮৮. JavaScript 
-৮৯.JavaScript 
-৯০.JavaScript 
+৯০. JavaScript 
 ৯১. JavaScript
-/*
+৯২. JavaScript 
+৯৩. JavaScript 
+*/
 
 /*
 ###Task--- 27
-৯২. JavaScript 
-৯৩.JavaScript 
-৯৪.JavaScript 
+৯৪. JavaScript 
 ৯৫. JavaScript
-/*
+৯৬. JavaScript 
+৯৭. JavaScript 
+
+*/
 
 /*
 ###Task--- 28
-৯৬. JavaScript 
-৯৭.JavaScript 
-৯৮.JavaScript 
+
+৯৮. JavaScript 
 ৯৯. JavaScript
-/*
+১০০. JavaScript 
+১০১. JavaScript
+*/
+
 
 /*
 ###Task--- 29
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১০২. JavaScript 
+১০৩. JavaScript
+১০৪. JavaScript 
+১০৫. JavaScript
+*/
 
 /*
 ###Task--- 30
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১০৬. JavaScript 
+১০৭. JavaScript
+১০৮. JavaScript 
+১০৯. JavaScript
+*/
 
 /*
 ###Task--- 31
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১০. JavaScript 
+১১১. JavaScript
+১১২. JavaScript 
+১১৩. JavaScript
+*/
 
 /*
 ###Task--- 32
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 33
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 34
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 35
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 36
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 37
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 38
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 39
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
+*/
+
 
 /*
 ###Task--- 40
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
-
-/*
-###Task--- 41
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
-
-/*
-###Task--- 42
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
-
-/*
-###Task--- 43
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
-
-/*
-###Task--- 44
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
-/*
-
-/*
-###Task--- 45
-৪৯. JavaScript 
-৫০.JavaScript 
-৫১.JavaScript 
-৫২. JavaScript
+১১৪. JavaScript 
+১১৫. JavaScript
+১১৬. JavaScript 
+১১৭. JavaScript
 */
