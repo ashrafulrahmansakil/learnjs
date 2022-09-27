@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #4d4d4d;
+    background-color: #373535;
     color: #fff;
     font-family: monospace;
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
+    font-size: 1rem;
     user-select: none;
 }
 
@@ -23,5 +22,5 @@ h1{
     font-size: 4rem;
 }
 strong{
-    color: #a19696;
+    color: #bcbcbc;
 }

@@ -1308,3 +1308,40 @@ setTimeout(function() {
 console.log('The value is: ' + value);
 
 // Dom all Example
+
+// var newElement = document.createElement('p');
+// newElement.textContent = ' hello world ';
+// console.log(newElement);
+
+var newAdd = document.createElement('h1');
+var oldRemove = document.createElement('h1');
+
+console.log(newAdd);
+console.log(oldRemove);
+var newAd = newAdd.classList.add('add');
+var oldRemove = oldRemove.classList.remove('remove');
+
+var setAtt = document.createElement('h2');
+var setAttribute = setAtt.setAttribute('data', 'some');
+console.log(setAtt);
+
+// new element
+var create = document.querySelector('#box3');
+create.classList.add('new');
+create.innerHTML = ' hello bangladesh';
+
+
+
+// header title
+
+let styleObj = {
+    background: 'purple', padding: '15px', color: 'white',
+    fontSize: '25px', textAlign: 'center',
+    textTransform: 'uppercase'
+};
+let select = document.querySelector('#header');
+select.classList.add('box__item');
+select.innerHTML = 'learn js';
+Object.assign(select.style, styleObj);
+
+
