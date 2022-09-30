@@ -1313,35 +1313,75 @@ console.log('The value is: ' + value);
 // newElement.textContent = ' hello world ';
 // console.log(newElement);
 
+
+// header title
+
+let styleObj = {
+    background: 'purple',
+    padding: '15px',
+    color: 'white',
+    fontSize: '25px',
+    textAlign: 'center',
+    textTransform: 'uppercase'
+};
+
+let select = document.querySelector('#header');
+select.classList.add('box__item');
+select.innerHTML = 'learn js';
+select.setAttribute('data-attr', 'set-item');
+
+Object.assign(select.style, styleObj);
+
+// 
+
 var newAdd = document.createElement('h1');
 var oldRemove = document.createElement('h1');
 
 console.log(newAdd);
 console.log(oldRemove);
+
 var newAd = newAdd.classList.add('add');
 var oldRemove = oldRemove.classList.remove('remove');
 
-var setAtt = document.createElement('h2');
-var setAttribute = setAtt.setAttribute('data', 'some');
-console.log(setAtt);
-
 // new element
-var create = document.querySelector('#box3');
+let create = document.querySelector('#box3');
 create.classList.add('new');
 create.innerHTML = ' hello bangladesh';
+create.setAttribute('data-attr','setData');
+create.setAttribute('data-attr','setDataAdd');
+create.removeAttribute('data-attr','setDataAdd');
 
 
+// style or objective way style
+create.style.backgroundColor = '#20B2Ae';
+create.style.padding = '20px';
+create.style.borderRadius = '5px';
+create.style.textAlign = 'center';
 
-// header title
+// new line
 
-let styleObj = {
-    background: 'purple', padding: '15px', color: 'white',
-    fontSize: '25px', textAlign: 'center',
-    textTransform: 'uppercase'
-};
-let select = document.querySelector('#header');
-select.classList.add('box__item');
-select.innerHTML = 'learn js';
-Object.assign(select.style, styleObj);
+styleElement = {
+    background:'orange',
+    backgroundColor:'grey',
+    fontSize:'25px',
+    textTransform: 'uppercase',
+    margin: '5px 0px',
+    padding: '10px',
+    textAlign: 'center',
+    borderRadius:'5px'
+}
+
+let newCreate = document.querySelector('#box4');
+newCreate.classList.add('box-4');
+newCreate.innerHTML = 'This is bangladesh';
+
+Object.assign(newCreate.style, styleElement);
+
+// create.insertAdjacentElement("beforebegin", newCreate);
+//create.insertAdjacentElement("afterbegin", newCreate);
+//create.insertAdjacentElement("beforeend", newCreate);
+//create.insertAdjacentElement("afterend", newCreate);
+
+//create.appendChild(newCreate);
 
 
