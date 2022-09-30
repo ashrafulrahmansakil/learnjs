@@ -1384,4 +1384,21 @@ Object.assign(newCreate.style, styleElement);
 
 //create.appendChild(newCreate);
 
+var box5 = document.getElementById('box5');
+var box6 = document.querySelector('#box6');
+var box7 = document.getElementById('box7');
+var box8 = document.getElementById('box8');
+var box9 = document.getElementById('box9');
+
+
+box5.innerHTML = 'box5';
+box6.innerHTML = 'box6';
+box7.innerHTML = 'box7';
+box8.innerHTML = 'box8';
+box9.innerHTML = 'box9';
+
+box5.style.background = 'grey'
+box6.style.background='brown'
+box7.style.background = 'grey'
+box8.style.background='brown'
 
