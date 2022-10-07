@@ -2755,7 +2755,18 @@ create.insertAdjacentElement("afterend", newCreate);অন্য ইলিমে
 
 * একটা ইলিমেন্টকে আরেকটা ইলিমেন্ট এর শেষের দিক থেকে চাইল্ড বানাতেঃ
 
-create.appendChild(newCreate);
+        <div id="box7">
+            <ul id="myList">
+                <li>sakil</li>
+                <li>siam</li>
+            </ul>
+        </div>
+
+
+const myList = document.getElementById('myList');
+let newListItem = document.createElement('li');
+newListItem.textContent = 'araf';
+myList.appendChild(newListItem);
 
 *
 
@@ -2768,9 +2779,6 @@ create.appendChild(newCreate);
 *
 
 *
-
-
-
 
 
 

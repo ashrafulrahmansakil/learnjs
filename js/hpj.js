@@ -1,3 +1,4 @@
+//import 
 /*
 
                             হাতে কলমে জাভাক্রিপ্ট / স্ট্যাক লার্নার এর সকল ইলিমেন্ট
@@ -1385,20 +1386,24 @@ Object.assign(newCreate.style, styleElement);
 //create.appendChild(newCreate);
 
 var box5 = document.getElementById('box5');
-var box6 = document.querySelector('#box6');
-var box7 = document.getElementById('box7');
-var box8 = document.getElementById('box8');
-var box9 = document.getElementById('box9');
+var box6 = document.getElementById('box6');
 
 
 box5.innerHTML = 'box5';
 box6.innerHTML = 'box6';
-box7.innerHTML = 'box7';
-box8.innerHTML = 'box8';
-box9.innerHTML = 'box9';
 
-box5.style.background = 'grey'
-box6.style.background='brown'
-box7.style.background = 'grey'
-box8.style.background='brown'
+box5.style.background = 'grey';
+box6.style.background = 'brown';
 
+const myList = document.getElementById('myList');
+let newListItem = document.createElement('ol');
+newListItem.textContent ='araf';
+myList.appendChild(newListItem);
+
+const newList = document.getElementById('myList');
+const friendsName = ['asif', 'akber', 'himel', 'mahadi', 'akram', 'junayed',];
+for (let friendNames of friendsName) {
+    let newElements = document.createElement('li');
+    newElements.innerHTML = friendNames;
+    newList.appendChild(newElements);
+}
