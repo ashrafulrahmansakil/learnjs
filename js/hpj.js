@@ -1,4 +1,4 @@
-//import 
+//import
 /*
 
                             হাতে কলমে জাভাক্রিপ্ট / স্ট্যাক লার্নার এর সকল ইলিমেন্ট
@@ -7,24 +7,21 @@
 
 //বিজোড়
 
-
-
-for (var i = 1; i < 5; i++){
-    if (i % 2 === 0) {
-        console.log(i);
-    }
+for (var i = 1; i < 5; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
 }
-for (var i = 1; i<2;i++)
-{
-    console.log('............ Stop...........');
+for (var i = 1; i < 2; i++) {
+  console.log("............ Stop...........");
 }
 
 //জোড়
 
-for (var i = 1; i < 300; i++){
-    if (i + 2 === 1) {
-        console.log(i);
-    }
+for (var i = 1; i < 300; i++) {
+  if (i + 2 === 1) {
+    console.log(i);
+  }
 }
 
 /**
@@ -32,178 +29,227 @@ for (var i = 1; i < 300; i++){
  */
 
 var sum = 0;
-for (let i = 1; i <= 10; i++){
-    console.log(sum + '+' + i + '=' + (sum + i));
-    sum += i;
+for (let i = 1; i <= 10; i++) {
+  console.log(sum + "+" + i + "=" + (sum + i));
+  sum += i;
 }
-console.log('result =' + sum);
+console.log("result =" + sum);
 
-for (var i = 1; i<2;i++)
-{
-    console.log('............ Stop...........');
+for (var i = 1; i < 2; i++) {
+  console.log("............ Stop...........");
 }
 
-var sum= 0;
-for (var i = 1; i <= 10; i++){
-    console.log(sum + '-' + i + '=' + (sum - i));
-    sum += i;
+var sum = 0;
+for (var i = 1; i <= 10; i++) {
+  console.log(sum + "-" + i + "=" + (sum - i));
+  sum += i;
 }
-console.log('result' + sum);
+console.log("result" + sum);
 
-for (var i = 1; i<2;i++)
-{
-    console.log('............ Stop...........');
+for (var i = 1; i < 2; i++) {
+  console.log("............ Stop...........");
 }
 
 var s = 0;
-for (let i = 1; i <=10; i++) {
-    console.log(s + '/' + i + '=' + (s/i))
-    s+=i
+for (let i = 1; i <= 10; i++) {
+  console.log(s + "/" + i + "=" + s / i);
+  s += i;
 }
-console.log('result=' + s)
+console.log("result=" + s);
 
 /**
  * Array Example
  */
-var studentsNames= ['rahim', 'salam', 'salman', 'salam', 'salman', 'sakil'][77, 58, 75, 44, 80, 95];
- console.log(studentsNames);
-
-var arrayName = ['blue','mango', 'green', 'blue', 'white', 'dark','youtube','facebook'];
-console.log(arrayName.length);
-
-let firstName= [' hi', ' i am a', ' your engine', ' of javascript program'];
-let lastName = firstName.length;
-for (let i = 0; i<lastName;i++){
-    console.log(lastName +''+ firstName[i]);
-}
+var studentsNames = ["rahim", "salam", "salman", "salam", "salman", "sakil"][
+  (77, 58, 75, 44, 80, 95)
+];
+console.log(studentsNames);
 
 var arrayName = [
-    'sakil',
-    'siam',
-    'araf rahman',
-    'sakib'
-  ]
-  console.log(arrayName);
+  "blue",
+  "mango",
+  "green",
+  "blue",
+  "white",
+  "dark",
+  "youtube",
+  "facebook",
+];
+console.log(arrayName.length);
+
+let firstName = [" hi", " i am a", " your engine", " of javascript program"];
+let lastName = firstName.length;
+for (let i = 0; i < lastName; i++) {
+  console.log(lastName + "" + firstName[i]);
+}
+
+var arrayName = ["sakil", "siam", "araf rahman", "sakib"];
+console.log(arrayName);
 
 var aName = [
-    'sakil',
-    'siam',
-    'araf rahman',
-    'sakib',
-    'sakil',
-    'siam',
-    'araf rahman',
-    'sakib'
-]
+  "sakil",
+  "siam",
+  "araf rahman",
+  "sakib",
+  "sakil",
+  "siam",
+  "araf rahman",
+  "sakib",
+];
 
-let aNull = '\n';
+let aNull = "\n";
 console.log(aNull);
 
 // object array
-let pNames = { firstName: 'ashraful rahman', lastName: ' sakil', age: 24 };
+let pNames = { firstName: "ashraful rahman", lastName: " sakil", age: 24 };
 console.log(pNames);
 
 // loop array ***
-const fName = ['sakil', 'siam', 'araf', 'abir', 'abdul', 'rifat', 'hasin', 'shoriful', 'akram', 'omit'];
+const fName = [
+  "sakil",
+  "siam",
+  "araf",
+  "abir",
+  "abdul",
+  "rifat",
+  "hasin",
+  "shoriful",
+  "akram",
+  "omit",
+];
 console.log(fName);
-const fNull = '\n';
+const fNull = "\n";
 console.log(fNull);
-fName[10] = 'sakib';
+fName[10] = "sakib";
 console.log(fName);
 console.log(typeof fName);
 console.log(fName.length);
-console.log(fName.length-1);
+console.log(fName.length - 1);
 // array sort ব্যবহার করা হয় অ্যাসেন্ডিংভাবে সাজানোর জন্য
 console.log(fName.sort());
 for (let i = 0; i < fName.length; i++) {
-    console.log((i + 1) + `. Name : ${fName[i]}`);
+  console.log(i + 1 + `. Name : ${fName[i]}`);
 }
 
 // loop array
 
 function myFunction() {
-    for (let i = 0; i < fName.length; i++) {
-        console.log((i + 1) + `. Name : ${fName[i]}`);
-        document.getElementById('click').innerHTML=((i + 1) + `. Name : ${fName[i]}`);
-        console.log((i + 1) + `. Name : ${fName[i]}`);
-        alert((i + 1) + `. Name : ${fName[i]}`);
-    }
+  for (let i = 0; i < fName.length; i++) {
+    console.log(i + 1 + `. Name : ${fName[i]}`);
+    document.getElementById("click").innerHTML = i + 1 + `. Name : ${fName[i]}`;
+    console.log(i + 1 + `. Name : ${fName[i]}`);
+    alert(i + 1 + `. Name : ${fName[i]}`);
+  }
 }
 
 // forEach array same by > for loop
 // var fruits = ['mango', 'banana', 'apple', 'orange', 'pear', 'grape', 'cherry']
 // function myFunction(value) {
-//     console.log(value); 
+//     console.log(value);
 // }
 
 // fruits.forEach(myFunction);
 // console.log(fNull);
 
 //JavaScript Array Methods
-var flower = ['Abutilon','Forsythia','Rose','Sunflower','Daisy']
+var flower = ["Abutilon", "Forsythia", "Rose", "Sunflower", "Daisy"];
 console.log(flower);
 // push ব্যবহার করা হয় কোনো কিছু যোগ করতে
-flower.push('Jasmine');
+flower.push("Jasmine");
 console.log(flower);
 //pop ব্যবহার করা হয় কোনো কিছু ডিলেট করতে
-flower.pop('Jasmine');
+flower.pop("Jasmine");
 console.log(flower);
 
 // Shift শুরুর দিকের আইটেম রিমুভ করতে
-flower.shift('Jasmine');
+flower.shift("Jasmine");
 console.log(flower);
 // Unshift শুরুর দিকের আইটেম যোগ করতে
-flower.unshift('Jasmine');
+flower.unshift("Jasmine");
 console.log(flower);
 // কোনো অ্যারের ইলিমেন্ট পরিবর্তন করতে
- flower[0] = 'Iris';
- console.log(flower);
+flower[0] = "Iris";
+console.log(flower);
 // indexOf নির্দিষ্ট কোনো আইটেমের নাম্বার জানতে
-flower.indexOf('Rose');
+flower.indexOf("Rose");
 console.log(flower);
 
 // splicing যেকোনো আইটেম রিমুভ / কাট করতে ব্যবহার করা হয়
 flower.splice(1);
 console.log(flower);
 
-
 //আইটেমগুলো কিভাবে ভাগ হয় তা দেখানো হয়েছে
-var x = ['1 Apple iPhone','2 Toshiba DVD Player','3 Apple iPad','4 TiVo', '5 DJI Phantom', '6 Fitbit', '7 Apple iBook', '8 Nokia 3210']
+var x = [
+  "1 Apple iPhone",
+  "2 Toshiba DVD Player",
+  "3 Apple iPad",
+  "4 TiVo",
+  "5 DJI Phantom",
+  "6 Fitbit",
+  "7 Apple iBook",
+  "8 Nokia 3210",
+];
 var y = x.splice(5);
 console.log(x);
 console.log(y);
 //slice
-var fruits = ["Banana", "Orange", "Apple", "Mango",'Rose'];
+var fruits = ["Banana", "Orange", "Apple", "Mango", "Rose"];
 console.log(fruits.slice(2));
 
 // concat Merging (দুটো এলিমেন্ট যুক্ত করতে বা একসাথে করতে ব্যবহার করা হয়)
-var mobile = ['1 Apple iPhone','2 Toshiba DVD Player','3 Apple iPad','4 TiVo', '5 DJI Phantom', '6 Fitbit', '7 Apple iBook', '8 Nokia 3210']
-var flower = ['i Abutilon','ii Forsythia','iii Rose','iv Sunflower','v Daisy']
+var mobile = [
+  "1 Apple iPhone",
+  "2 Toshiba DVD Player",
+  "3 Apple iPad",
+  "4 TiVo",
+  "5 DJI Phantom",
+  "6 Fitbit",
+  "7 Apple iBook",
+  "8 Nokia 3210",
+];
+var flower = [
+  "i Abutilon",
+  "ii Forsythia",
+  "iii Rose",
+  "iv Sunflower",
+  "v Daisy",
+];
 var total = mobile.concat(flower);
 console.log(total);
 
 //sort
 
 //sort এটা হলো এলোমেলো এলিমেন্টগুলো সিরিয়াল মোতাবেক দেখায় ইনডেক্স অনুসারে (A-Z)
-var a = ['sakib', 'sakil', 'akram', 'faruk',]
+var a = ["sakib", "sakil", "akram", "faruk"];
 console.log(a.sort());
 console.log(a.reverse());
 
 var y = [40, 200, 10, 25, 95, 33];
-console.log(y.sort((a, b) => { return a - b; }));
-console.log(y.sort((a, b) => { return b - a; }));
-console.log(y.sort((_a, _b) => { return 0.5 - Math.random() }));
+console.log(
+  y.sort((a, b) => {
+    return a - b;
+  })
+);
+console.log(
+  y.sort((a, b) => {
+    return b - a;
+  })
+);
+console.log(
+  y.sort((_a, _b) => {
+    return 0.5 - Math.random();
+  })
+);
 //The Fisher Yates Method
 
-var points = [40, 100, 1,250,580,905, 5, 25, 10];
-for (var i = points.length -1; i > 0; i--) {
-  let j = Math.floor(Math.random() * i)
-  let k = points[i]
-  points[i] = points[j]
-  points[j] = k
+var points = [40, 100, 1, 250, 580, 905, 5, 25, 10];
+for (var i = points.length - 1; i > 0; i--) {
+  let j = Math.floor(Math.random() * i);
+  let k = points[i];
+  points[i] = points[j];
+  points[j] = k;
 }
 console.log(points);
-
 
 /*Challenge [0,0,1,8,0,9,0,0,0,8,7,9,0,0] Ei array ke slice korte hbe but    start index ta hbe 1st value jeta 0 theke boro jemon ekhane index 2 is 1, and end hbe last ke number ta 0theke boro like ekhane 11 index is 9. Ans hbe [1,8,0,9,0,0,0,8,7,9]
 
@@ -565,42 +611,42 @@ if (age < 18) {
 // switch
 var day;
 switch (new Date().getDay()) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
 }
 console.log(day);
 
 //loop
 
-var cars = ['a', 'b', 'c', 'd'];
-for (var i = 0; i < cars.length; i++){
-    console.log(`${i} ${cars}`);
+var cars = ["a", "b", "c", "d"];
+for (var i = 0; i < cars.length; i++) {
+  console.log(`${i} ${cars}`);
 }
 
-var myObjname={
-	name: "Happy Coder",
-	"first name": " Hiya ",
-	10: "number"
-}
-console.log(myObjname)
+var myObjname = {
+  name: "Happy Coder",
+  "first name": " Hiya ",
+  10: "number",
+};
+console.log(myObjname);
 
 /*We can find a element from object by 2 ways,
 // Dot notation(.)
@@ -705,34 +751,31 @@ function showTime(){
 showTime();
 */
 
-let hasib = 'sakil rahman';
-function myFun(){
+let hasib = "sakil rahman";
+function myFun() {
   console.log(hasib);
 }
 
 myFun();
 
-
 //global__scope:
-var globalVar = 'I am a Global Variable';
+var globalVar = "I am a Global Variable";
 
 function globalScope() {
-   console.log('Inside a Function: ' + globalVar);
+  console.log("Inside a Function: " + globalVar);
 }
 
 globalScope();
 
-console.log('Outside: ' + globalVar);
+console.log("Outside: " + globalVar);
 
-
-var names = function() {
-    console.log('My name is Zonayed Ahmed');
-}
+var names = function () {
+  console.log("My name is Zonayed Ahmed");
+};
 names();
 
-
-function helloThis(){
-    console.log(this);
+function helloThis() {
+  console.log(this);
 }
 
 helloThis();
@@ -741,94 +784,91 @@ helloThis();
 //     this.named ='ashraful rahman sakil';
 //   }
 // fullName();
-  
+
 // console.log(named);
 
-var myCustomObj={
-    name:'ashraful rahman sakil',
-    age: 24,
-    job: 'student',
-    msg: function(){
-    console.log('my name is '+ this.name);
-    }
-  }
-  
-myCustomObj.msg();
-  
 var myCustomObj = {
-    name: 'Zonayed Ahmed',
-    age: 21,
-    job: 'Student',
-    isTrue: function() {
-         console.log(this === myCustomObj);
-    }
-}
- 
+  name: "ashraful rahman sakil",
+  age: 24,
+  job: "student",
+  msg: function () {
+    console.log("my name is " + this.name);
+  },
+};
+
+myCustomObj.msg();
+
+var myCustomObj = {
+  name: "Zonayed Ahmed",
+  age: 21,
+  job: "Student",
+  isTrue: function () {
+    console.log(this === myCustomObj);
+  },
+};
+
 myCustomObj.isTrue();
 
 var myCustomObj = {
-    name: 'Zonayed Ahmed',
-    age: 21,
-    job: 'Student',
-    anotherObj: {
-       name: 'Ahmed Zonayed',
-       value: function() {
-          console.log(this);
-       }
-    }
-}
+  name: "Zonayed Ahmed",
+  age: 21,
+  job: "Student",
+  anotherObj: {
+    name: "Ahmed Zonayed",
+    value: function () {
+      console.log(this);
+    },
+  },
+};
 
 myCustomObj.anotherObj.value();
 
+var myCustomOj = {
+  name: "ashraful rahman sakil",
+  age: 24,
+  job: "student",
+  msg: function () {
+    console.log("my name is " + this.name);
+  },
+};
 
-
-var myCustomOj={
-    name:'ashraful rahman sakil',
-    age: 24,
-    job: 'student',
-    msg: function(){
-    console.log('my name is '+ this.name);
-    }
-  }
-  
 myCustomOj.msg();
-  
+
 var myName = {
-    name: 'ashraful sakil',
-    job: 'student',
-    age: 24,
-    otherObj: {
-        name: 'araf rahman siam',
-        age: 17,
-        job:'student',
-        msg: function () {
-            console.log('my name is ' + this.name);
-            console.log(' i am ' + this.age+ ' years old.');
-            console.log('i am a ' + this.job);
-        }
-    }
-}
+  name: "ashraful sakil",
+  job: "student",
+  age: 24,
+  otherObj: {
+    name: "araf rahman siam",
+    age: 17,
+    job: "student",
+    msg: function () {
+      console.log("my name is " + this.name);
+      console.log(" i am " + this.age + " years old.");
+      console.log("i am a " + this.job);
+    },
+  },
+};
 
 myName.otherObj.msg();
-
 
 console.log(aNull);
 
 var myName = {
-    name: 'ashraful sakil',
-    job: 'student',
-    age: 24,
-    otherObj: {
-        name: 'arif khan',
-        age: 23,
-        job:'student',
-        value: function () {
-            console.log('my name is ' + this.name);
-            console.log(' i am ' + this.age+ ' years old.');
-            console.log('i am a ' + this.job);
-        }
-    }
-}
+  name: "ashraful sakil",
+  job: "student",
+  age: 24,
+  otherObj: {
+    name: "arif khan",
+    age: 23,
+    job: "student",
+    value: function () {
+      console.log("my name is " + this.name);
+      console.log(" i am " + this.age + " years old.");
+      console.log("i am a " + this.job);
+    },
+  },
+};
 
 myName.otherObj.value();
 
@@ -837,113 +877,116 @@ console.log(aNull);
 myName.otherObj.value.call(myName); // call( এর ভিতরে ফাংশনের যে প্যারেন্ট বা চাইল্ড দিবেন তাইই কল করবে মানে পরিবর্তনশীল )
 
 var myCustomObj = {
-    name: 'Zonayed Ahmed',
-    age: 21,
-    job: 'Student',
-    anotherObj: {
-       name: 'Ahmed Zonayed',
-       value: function() {
-          console.log('My name is ' + this.name);
-       }.call(myCustomObj)
-    }
-}
+  name: "Zonayed Ahmed",
+  age: 21,
+  job: "Student",
+  anotherObj: {
+    name: "Ahmed Zonayed",
+    value: function () {
+      console.log("My name is " + this.name);
+    }.call(myCustomObj),
+  },
+};
 
 console.log(aNull);
 
 var kamal = {
-    name: 'ariful islam',
-    job: 'software enginner',
-    address: 'Gazipur',
-    dob:1997,
-    age: function (currentYear) {
-        console.log(this.name + ' is ' + (currentYear - this.dob) + ' years old!');
-    }
-    
-}
+  name: "ariful islam",
+  job: "software enginner",
+  address: "Gazipur",
+  dob: 1997,
+  age: function (currentYear) {
+    console.log(this.name + " is " + (currentYear - this.dob) + " years old!");
+  },
+};
 
 kamal.age(2022);
 
 var jamal = {
-    name: 'rahim ali',
-    dob: 1990,
-}
+  name: "rahim ali",
+  dob: 1990,
+};
 
 kamal.age.call(jamal, 2022);
 
 console.log(aNull);
 
 var myOwner = {
-    name: 'ashraful alom khan',
-    age: 20,
-    anotherOwner: {
-        name: 'jamil uddin',
-        age: '54',
-        value: function () {
-            console.log('My name is ' + this.name);
-        }
-    }
-}
+  name: "ashraful alom khan",
+  age: 20,
+  anotherOwner: {
+    name: "jamil uddin",
+    age: "54",
+    value: function () {
+      console.log("My name is " + this.name);
+    },
+  },
+};
 
 myOwner.anotherOwner.value.apply(myOwner);
 myOwner.anotherOwner.value.call(myOwner);
 
 console.log(aNull);
 
-
 var karim = {
-    name: 'Karim Rahman',
-    dob: 1996,
-    age: function(currentYear, msg) {
-       console.log(msg + ' ' + this.name + ' is ' + (currentYear - this.dob) + ' years old!');
-    }
-}
+  name: "Karim Rahman",
+  dob: 1996,
+  age: function (currentYear, msg) {
+    console.log(
+      msg + " " + this.name + " is " + (currentYear - this.dob) + " years old!"
+    );
+  },
+};
 
 var rahim = {
-    name: 'Rahim Abdu',
-    dob: 1986
-}
- 
-karim.age(2018, 'Hello World!');
+  name: "Rahim Abdu",
+  dob: 1986,
+};
+
+karim.age(2018, "Hello World!");
 
 console.log(aNull);
 
 var jamal = {
-    name: 'rahim ali',
-    dob: 1990,
-}
+  name: "rahim ali",
+  dob: 1990,
+};
 
 var kamal = {
-    name: 'ariful islam',
-    job: 'software enginner',
-    address: 'Gazipur',
-    dob:1997,
-    age: function (currentYear, msg) {
-        console.log(msg+' ' + this.name + ' he was working '+ '. he is ' + (currentYear - this.dob) + ' years old!');
-    }
-    
-}
+  name: "ariful islam",
+  job: "software enginner",
+  address: "Gazipur",
+  dob: 1997,
+  age: function (currentYear, msg) {
+    console.log(
+      msg +
+        " " +
+        this.name +
+        " he was working " +
+        ". he is " +
+        (currentYear - this.dob) +
+        " years old!"
+    );
+  },
+};
 
-
-
-kamal.age(2022,'hi, it\'s work. ');
+kamal.age(2022, "hi, it's work. ");
 console.log(aNull);
-kamal.age.apply(jamal, [2022, 'hi i am.']);
-
+kamal.age.apply(jamal, [2022, "hi i am."]);
 
 // global rule
 
 var person = {
-    name: 'shakib ahmed',
-    age: 22,
-    address: 'gazipur',
-    person2: {
-        name: 'akib khan',
-        value: function () {
-            console.log(' my name is ' + this.name);
-        
-        }
-    }
-}
+  name: "shakib ahmed",
+  age: 22,
+  address: "gazipur",
+  person2: {
+    name: "akib khan",
+    value: function () {
+      console.log(" my name is " + this.name);
+    },
+  },
+};
 
 person.person2.value();
 
@@ -959,47 +1002,44 @@ person.person2.value();
 // myObj.timer();
 
 //normal function
-var demo = function(x,y){
-    return x + y;
-  
-}
+var demo = function (x, y) {
+  return x + y;
+};
 console.log(demo(90, 10));
 
 //arrow function
-var demo = (x, y) => x + y
+var demo = (x, y) => x + y;
 console.log(demo(391, 9));
 
+// class
 
-// class 
-
-class PersonName{
-    constructor(name, age,job) {
-        this.name = name;
-        this.age = age;
-        this.job=job;
-    }
+class PersonName {
+  constructor(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;
+  }
 }
 
-let PersonParent = new PersonName('ashraful rahman sakil', 22,'student');
-let Person = new PersonName('ashraful rahman sakil', 22,'programmer');
-let Parents = new PersonName('ashraful rahman sakil', 22,'coder');
-let PP = new PersonName('ashraful rahman sakil', 22,'unemployed');
+let PersonParent = new PersonName("ashraful rahman sakil", 22, "student");
+let Person = new PersonName("ashraful rahman sakil", 22, "programmer");
+let Parents = new PersonName("ashraful rahman sakil", 22, "coder");
+let PP = new PersonName("ashraful rahman sakil", 22, "unemployed");
 
 console.log(PersonParent);
 console.log(Person);
 console.log(Parents);
 console.log(PP);
 
-
-class NewPerson{
-    constructor(name, age, job) {
-        this.name = name;
-        this.age = age;
-        this.job = job;
-    }
+class NewPerson {
+  constructor(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;
+  }
 }
 
-let oldPerson = new NewPerson('shakib khan',25,'web developer');
+let oldPerson = new NewPerson("shakib khan", 25, "web developer");
 console.log(oldPerson);
 //set
 
@@ -1009,167 +1049,167 @@ console.log(i);
 //JASON.Stringify
 
 var person1 = {
-    name: 'ashraful rhaman sakil',
-    age: 25,
-    address: 'dhaka,bangladesh',
-    friends_names:['sakib','akram','sakil','siam']
-}
+  name: "ashraful rhaman sakil",
+  age: 25,
+  address: "dhaka,bangladesh",
+  friends_names: ["sakib", "akram", "sakil", "siam"],
+};
 console.log(JSON.stringify(person1));
 console.log(person1);
 
 // var f = [0, 1, 2, 3] == '0,1,2,3';
 // console.log(f);
 
-
-// এক্সেসসর 
+// এক্সেসসর
 const access = {
-    firstName: 'araf',
-    lastName: 'siam',
-    language: 'bn',
-    get lang() {
-        return this.language;
-    }
+  firstName: "araf",
+  lastName: "siam",
+  language: "bn",
+  get lang() {
+    return this.language;
+  },
 };
 
 console.log(access.lang);
 
 const setterAccess = {
-    firstName: 'hello',
-    lastName: 'bangladesh',
-    location: 'south asia',
-    set local(location) {
-        this.local = 'india';
-    }
-}
+  firstName: "hello",
+  lastName: "bangladesh",
+  location: "south asia",
+  set local(location) {
+    this.local = "india";
+  },
+};
 
 console.log(setterAccess.location);
 
 //কনস্ট্রাকটর ফাংশন অবজেক্টে
 
- function People(first, last, age) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
-    this.fullName = function () {
-        return this.firstName + ' ' + this.lastName
-    }
-};
-const sakib = new People('sakib','rahman',24);
-const sakil = new People('sakil','rahman',24);
+function People(first, last, age) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.fullName = function () {
+    return this.firstName + " " + this.lastName;
+  };
+}
+const sakib = new People("sakib", "rahman", 24);
+const sakil = new People("sakil", "rahman", 24);
 console.log(sakib.fullName());
 console.log(sakil.fullName());
 
-
 // সেট
-var personName = new Set(['arif', 'siam', 'jalal', 'habib']);
-add:
-console.log(personName.add('new elements add'));
+var personName = new Set(["arif", "siam", "jalal", "habib"]);
+add: console.log(personName.add("new elements add"));
 
 //foreach:
-const letters = new Set(['sakil ', 'akib ', ' kaka', ' sakib', ' labib']);
-let pName = '';
+const letters = new Set(["sakil ", "akib ", " kaka", " sakib", " labib"]);
+let pName = "";
 letters.forEach(function (value) {
-pName += value;
-})
+  pName += value;
+});
 
 console.log(pName);
-newSet:
 //set bundiles
-console.log(personName);
+newSet: console.log(personName);
 console.log(personName.size);
 console.log(personName.values());
 console.log(personName.keys());
 console.log(personName.entries());
 
-
-
 //ম্যাপস
 
 const myBazer = new Map([
-    ['apple', 500],
-    ['banana', 100],
-    ['suger', 150],
-    ['honey', 50],
-    ['orange', 500],
-    ['milk', 100],
-    ['papuya', 150],
-    ['salut', 50]
-])
+  ["apple", 500],
+  ["banana", 100],
+  ["suger", 150],
+  ["honey", 50],
+  ["orange", 500],
+  ["milk", 100],
+  ["papuya", 150],
+  ["salut", 50],
+]);
 
-console.log(myBazer.get('orange'));
+console.log(myBazer.get("orange"));
 console.log(myBazer.size);
-myBazer.delete('apple');
+myBazer.delete("apple");
 console.log(myBazer);
-console.log(myBazer.has('milk'));
+console.log(myBazer.has("milk"));
 myBazer.clear();
 console.log(myBazer.entries()); //The entries() method returns an iterator object with the [key,values] in a Map:
 
 console.log(myBazer.values()); // it's a very top.
 
-
-
 // function
-function my(x,y) {
-    return x * y;
+function my(x, y) {
+  return x * y;
 }
 
-console.log(my(15, 16))
+console.log(my(15, 16));
 
 //call:
 const Peoples = {
-    fullName: function (city,country) {
-        return this.firstName + '' + this.lastName + "" + 'he lives in ' + city + country;
-    }
+  fullName: function (city, country) {
+    return (
+      this.firstName + "" + this.lastName + "" + "he lives in " + city + country
+    );
+  },
 };
 
 let People1 = {
-    firstName: 'ashraful rahman',
-    lastName: ' sakil'
-}
+  firstName: "ashraful rahman",
+  lastName: " sakil",
+};
 
 let People2 = {
-    firstName: 'ashraful khan',
-    lastName: ' alim'
-}
+  firstName: "ashraful khan",
+  lastName: " alim",
+};
 
-console.log(Peoples.fullName.call(People1,'Dhaka ',' Bangladesh'));
-console.log(Peoples.fullName.call(People2, 'New York ', 'USA'));
-
+console.log(Peoples.fullName.call(People1, "Dhaka ", " Bangladesh"));
+console.log(Peoples.fullName.call(People2, "New York ", "USA"));
 
 const aPeople = {
-    fullName: function (city, country) {
-        return 'My name is ' + this.firstName + '' + this.lastName + "" + ' he lives in ' + city + country;
-    }
-  };
-  
-  let People01 = {
-    firstName: 'ashraful rahman',
-    lastName: ' sakil'
-  }
-  
-  let People02 = {
-    firstName: 'ashraful khan',
-    lastName: ' alim'
-  }
-  
-console.log(aPeople.fullName.apply(People02, ['Dhaka', ' Bangladesh']));
-  
-let examinee= {
-    name: 'araf rahman siam',
-    age: 17,
-    candid: 'ssc',
-    location: 'Narsingdi',
-    subExaminee: {
-        name: 'adib khan',
-        age: 18,
-        candid: 'ssc',
-        value: function () {
-           console.log('i am a ' + this.candid + ' examinee');
-       }
-    }
-    
+  fullName: function (city, country) {
+    return (
+      "My name is " +
+      this.firstName +
+      "" +
+      this.lastName +
+      "" +
+      " he lives in " +
+      city +
+      country
+    );
+  },
+};
 
-}
+let People01 = {
+  firstName: "ashraful rahman",
+  lastName: " sakil",
+};
+
+let People02 = {
+  firstName: "ashraful khan",
+  lastName: " alim",
+};
+
+console.log(aPeople.fullName.apply(People02, ["Dhaka", " Bangladesh"]));
+
+let examinee = {
+  name: "araf rahman siam",
+  age: 17,
+  candid: "ssc",
+  location: "Narsingdi",
+  subExaminee: {
+    name: "adib khan",
+    age: 18,
+    candid: "ssc",
+    value: function () {
+      console.log("i am a " + this.candid + " examinee");
+    },
+  },
+};
 
 examinee.subExaminee.value.bind(examinee);
 
@@ -1185,7 +1225,7 @@ myOwnerCandid();
 //         let sum2 = 20;
 //         console.log('sum : ' + (sum1+sum2))
 //     }
-    
+
 // }
 
 // clouser()();
@@ -1200,24 +1240,29 @@ myOwnerCandid();
 
 // closure()();
 
-class StudentId{
-    constructor(name, age, address) {
-        this.name=name;
-        this.age=age;
-        this.address=address;
-
-    }
+class StudentId {
+  constructor(name, age, address) {
+    this.name = name;
+    this.age = age;
+    this.address = address;
+  }
 }
 
-class StudentInfo extends StudentId{
-    constructor(name, age, address, session,study) {
-        super(name, age, address);
-        this.session = session;
-        this.study = study;
-    }
+class StudentInfo extends StudentId {
+  constructor(name, age, address, session, study) {
+    super(name, age, address);
+    this.session = session;
+    this.study = study;
+  }
 }
 
-const singleStudend = new StudentInfo('Araf rahman', 17, 'Narsingdi', 'science', 'scc candid');
+const singleStudend = new StudentInfo(
+  "Araf rahman",
+  17,
+  "Narsingdi",
+  "science",
+  "scc candid"
+);
 
 console.log(singleStudend.name);
 console.log(singleStudend.age);
@@ -1225,25 +1270,30 @@ console.log(singleStudend.session);
 console.log(singleStudend.study);
 console.log(singleStudend.address);
 
-console.log(' **** empty **** ');
+console.log(" **** empty **** ");
 
 // jonayed class
 class PersonClass {
-   constructor(name, age, job) {
-      this.name = name;
-      this.age = age;
-      this.job = job;
-   }
+  constructor(name, age, job) {
+    this.name = name;
+    this.age = age;
+    this.job = job;
+  }
 }
 
 class TeacherClass extends PersonClass {
-   constructor(name, age, job, subject) {
-      super(name, age, job);
-      this.subject = subject;
-   }
+  constructor(name, age, job, subject) {
+    super(name, age, job);
+    this.subject = subject;
+  }
 }
 
-const ourSir = new TeacherClass('Shafiq Sir', 46, 'Assistant Teacher', 'Physics');
+const ourSir = new TeacherClass(
+  "Shafiq Sir",
+  46,
+  "Assistant Teacher",
+  "Physics"
+);
 
 console.log(ourSir.name);
 console.log(ourSir.age);
@@ -1252,61 +1302,64 @@ console.log(ourSir.subject);
 
 // inheritance
 
-class TeacherData{
-    constructor(name, age, post, subject) {
-      this.name = name;
-      this.age = age;
-      this.post=post;
-      this.subject = subject;
-  
-    }
+class TeacherData {
+  constructor(name, age, post, subject) {
+    this.name = name;
+    this.age = age;
+    this.post = post;
+    this.subject = subject;
   }
-  
-  class TeacherId extends TeacherData {
-    constructor(name, age, post, subject, activeYear) {
-      super(name, age, post, subject);
-      this.activeYear = activeYear;
-    }
-  }
-  
-  const TeacherCard = new TeacherId('arif khan', 35,'Assistance Teacher', 'ICT', 2010)
-  console.log(TeacherCard.name);
-  console.log(TeacherCard.subject);
-  console.log(TeacherCard.activeYear);
-console.log(TeacherCard);
-  
+}
 
-class mySelf{
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    static MeMy() {
-        return 'hi it\'s me';
-    }
+class TeacherId extends TeacherData {
+  constructor(name, age, post, subject, activeYear) {
+    super(name, age, post, subject);
+    this.activeYear = activeYear;
+  }
+}
+
+const TeacherCard = new TeacherId(
+  "arif khan",
+  35,
+  "Assistance Teacher",
+  "ICT",
+  2010
+);
+console.log(TeacherCard.name);
+console.log(TeacherCard.subject);
+console.log(TeacherCard.activeYear);
+console.log(TeacherCard);
+
+class mySelf {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  static MeMy() {
+    return "hi it's me";
+  }
 }
 console.log(mySelf.MeMy());
 
 //asynchronous function
 
 function getVar() {
-    var x;
-    setTimeout(() => {
-        x = 12;
-    },3000); // যদি এখানে টাইম না দেই তাহলে তা মূল কাজ হওয়ার আগেই অপারেশন সম্পূর্ণ হয়ে যাচ্ছে যার ফলে কাঙ্খিত ডেটা পাওয়া যাবে না। সময় এখানে যার যার ইচ্ছামতো দিতে পারবে।
+  var x;
+  setTimeout(() => {
+    x = 12;
+  }, 3000); // যদি এখানে টাইম না দেই তাহলে তা মূল কাজ হওয়ার আগেই অপারেশন সম্পূর্ণ হয়ে যাচ্ছে যার ফলে কাঙ্খিত ডেটা পাওয়া যাবে না। সময় এখানে যার যার ইচ্ছামতো দিতে পারবে।
 }
 
 var value = getVar();
-console.log('hi it\'s working')
+console.log("hi it's working");
 
 /// অভিন্ন বা ভিন্নভাবে দেখানো হলো
 
-
 var value;
-setTimeout(function() {
- value = 12;
-}, 3000)
-console.log('The value is: ' + value);
+setTimeout(function () {
+  value = 12;
+}, 3000);
+console.log("The value is: " + value);
 
 // Dom all Example
 
@@ -1314,67 +1367,65 @@ console.log('The value is: ' + value);
 // newElement.textContent = ' hello world ';
 // console.log(newElement);
 
-
 // header title
 
 let styleObj = {
-    background: 'purple',
-    padding: '15px',
-    color: 'white',
-    fontSize: '25px',
-    textAlign: 'center',
-    textTransform: 'uppercase'
+  background: "purple",
+  padding: "15px",
+  color: "white",
+  fontSize: "25px",
+  textAlign: "center",
+  textTransform: "uppercase",
 };
 
-let select = document.querySelector('#header');
-select.classList.add('box__item');
-select.innerHTML = 'learn js';
-select.setAttribute('data-attr', 'set-item');
+var select = document.getElementById("header");
+select.classList.add("box__item");
+select.innerHTML = "learn js";
+select.setAttribute("data-attr", "set-item");
 
 Object.assign(select.style, styleObj);
 
-// 
+//
 
-var newAdd = document.createElement('h1');
-var oldRemove = document.createElement('h1');
+var newAdd = document.createElement("h1");
+var oldRemove = document.createElement("h1");
 
 console.log(newAdd);
 console.log(oldRemove);
 
-var newAd = newAdd.classList.add('add');
-var oldRemove = oldRemove.classList.remove('remove');
+var newAd = newAdd.classList.add("add");
+var oldRemove = oldRemove.classList.remove("remove");
 
 // new element
-let create = document.querySelector('#box3');
-create.classList.add('new');
-create.innerHTML = ' hello bangladesh';
-create.setAttribute('data-attr','setData');
-create.setAttribute('data-attr','setDataAdd');
-create.removeAttribute('data-attr','setDataAdd');
-
+let create = document.querySelector("#box3");
+create.classList.add("new");
+create.innerHTML = " hello bangladesh";
+create.setAttribute("data-attr", "setData");
+create.setAttribute("data-attr", "setDataAdd");
+create.removeAttribute("data-attr", "setDataAdd");
 
 // style or objective way style
-create.style.backgroundColor = '#20B2Ae';
-create.style.padding = '20px';
-create.style.borderRadius = '5px';
-create.style.textAlign = 'center';
+create.style.backgroundColor = "#20B2Ae";
+create.style.padding = "20px";
+create.style.borderRadius = "5px";
+create.style.textAlign = "center";
 
 // new line
 
 styleElement = {
-    background:'orange',
-    backgroundColor:'grey',
-    fontSize:'25px',
-    textTransform: 'uppercase',
-    margin: '5px 0px',
-    padding: '10px',
-    textAlign: 'center',
-    borderRadius:'5px'
-}
+  background: "orange",
+  backgroundColor: "grey",
+  fontSize: "25px",
+  textTransform: "uppercase",
+  margin: "5px 0px",
+  padding: "10px",
+  textAlign: "center",
+  borderRadius: "5px",
+};
 
-let newCreate = document.querySelector('#box4');
-newCreate.classList.add('box-4');
-newCreate.innerHTML = 'This is bangladesh';
+let newCreate = document.querySelector("#box4");
+newCreate.classList.add("box-4");
+newCreate.innerHTML = "This is bangladesh";
 
 Object.assign(newCreate.style, styleElement);
 
@@ -1385,25 +1436,24 @@ Object.assign(newCreate.style, styleElement);
 
 //create.appendChild(newCreate);
 
-var box5 = document.getElementById('box5');
-var box6 = document.getElementById('box6');
+var box5 = document.getElementById("box5");
+var box6 = document.getElementById("box6");
 
+box5.innerHTML = "box5";
+box6.innerHTML = "box6";
 
-box5.innerHTML = 'box5';
-box6.innerHTML = 'box6';
+box5.style.background = "grey";
+box6.style.background = "brown";
 
-box5.style.background = 'grey';
-box6.style.background = 'brown';
-
-const myList = document.getElementById('myList');
-let newListItem = document.createElement('ol');
-newListItem.textContent ='araf';
+const myList = document.getElementById("myList");
+let newListItem = document.createElement("ol");
+newListItem.textContent = "araf";
 myList.appendChild(newListItem);
 
-const newList = document.getElementById('myList');
-const friendsName = ['asif', 'akber', 'himel', 'mahadi', 'akram', 'junayed',];
+const newList = document.getElementById("myList");
+const friendsName = ["asif", "akber", "himel", "mahadi", "akram", "junayed"];
 for (let friendNames of friendsName) {
-    let newElements = document.createElement('li');
-    newElements.innerHTML = friendNames;
-    newList.appendChild(newElements);
+  let newElements = document.createElement("li");
+  newElements.innerHTML = friendNames;
+  newList.appendChild(newElements);
 }

@@ -69,7 +69,6 @@ console.log("this is a javascript");
 
 // document.getElementById("demo").innerHTML = 10 + 10;
 
-
 /*
 
 ###Task---02
@@ -186,22 +185,22 @@ first_name, last_name
 
   */
 
-  //  variables:
-  //  ধরি: 
-  //  //সবসময় সব জায়গায় ব্যবহার করা যাবে।
-   var a = 25;
-   var b = 15;
-   var c = (a+b);
-   console.log(c);
+//  variables:
+//  ধরি:
+//  //সবসময় সব জায়গায় ব্যবহার করা যাবে।
+var a = 25;
+var b = 15;
+var c = a + b;
+console.log(c);
 
-  //  let এটা Curly braces {...} মানে সেকেন্ড ব্র্যাকেটর ভিতরের সবকিছু চিনে ব্লক স্কোপ হিসেবে
+//  let এটা Curly braces {...} মানে সেকেন্ড ব্র্যাকেটর ভিতরের সবকিছু চিনে ব্লক স্কোপ হিসেবে
 
-  // Let:
-  let x =5;
-  if(true){
-    let x = 15;
-    console.log(x);
-  }
+// Let:
+let x = 5;
+if (true) {
+  let x = 15;
+  console.log(x);
+}
 console.log(x);
 
 // var x = 2;    // Allowed গ্লোবাল স্কোপ
@@ -219,7 +218,7 @@ console.log(x);
 
 // let hoisting দিলে ইরর আসবে সব চেক করলে
 
-userName = "java" + "script"
+userName = "java" + "script";
 var userName;
 console.log(userName);
 
@@ -235,7 +234,7 @@ Number = [6, 8, 9, 54];
 console.log(Number);
 
 //(iv) Objects
-var cars = {type:"BMW", model:"500" ,color:"red"};
+var cars = { type: "BMW", model: "500", color: "red" };
 
 console.log(cars);
 
@@ -265,7 +264,7 @@ console.log(e + f);
 
 var a = 5;
 var b = 5;
-console.log(a+b);
+console.log(a + b);
 
 // // Subtraction: (-) বিয়োগ করার জন্যে
 var a = 30;
@@ -282,7 +281,7 @@ var a = 30;
 var b = 5;
 console.log(a / b);
 
-var a = 31.10;
+var a = 31.1;
 var b = 22.5;
 console.log(a / b);
 
@@ -293,59 +292,59 @@ console.log(a % b);
 
 //Increment: (++) এক ঘর করে বাড়বে
 var a = 15;
-a ++;
+a++;
 ++a;
 console.log(a);
 //Decrement: (--) এক ঘর করে কমবে
 var b = 12;
-b --;
+b--;
 --b;
 console.log(b);
 
 //Exponentiation: (**) কোনো কিছু  ব্যাখ্যা করার জন্যে + ডাবল মান পাওয়া যায় = math.pow
 
 var a = 5;
-console.log(a**2);
+console.log(a ** 2);
 
 // Precedence: এক লাইনে প্রকাশ করা
-var a =(100 + 4 * 4);
+var a = 100 + 4 * 4;
 console.log(a);
 
 //১২. (iv) অ্যাসাইনমেন্ট অপারেটর:::: JavaScript Assignment হলো কোনো কিছু এসাইন করা । এভাবে এসাইন করা হয় +=,-=, *+, /= ইত্যাদি।
 
 //simple Assignment:(=)
-var a =1;
+var a = 1;
 console.log(a);
 
 //Addition Assignment:(+=)
-var a=10;
-a+=10;
-a= a+10;
+var a = 10;
+a += 10;
+a = a + 10;
 console.log(a);
 //Subtraction Assignment:(-=)
-a-=10;
-a= a-10;
+a -= 10;
+a = a - 10;
 console.log(a);
 
 //Multiplication Assignment:(*=)
-a*=10;
-a= a*10;
+a *= 10;
+a = a * 10;
 console.log(a);
 
 //Division Assignment:(/=)
-a/=10;
-a= a/10;
+a /= 10;
+a = a / 10;
 console.log(a);
 
 //Modulus Assignment:(%=)
-a%=10;
-a= a%10;
+a %= 10;
+a = a % 10;
 console.log(a);
 
-let myName ="sakil";
+let myName = "sakil";
 console.log(myName);
 
-const myUser ="sakil";
+const myUser = "sakil";
 console.log(myUser);
 
 /*
@@ -382,20 +381,20 @@ var aNum = "this is javascript";
 console.log(aNum);
 
 //Boolean:
-  // var isTrue =true; // valid
-  // var isTrue =True;  not valid
-  // var isTrue =TRUE; // not valid
+// var isTrue =true; // valid
+// var isTrue =True;  not valid
+// var isTrue =TRUE; // not valid
 
-  // var isFalse =false; // valid
-  // var isFalse =False; // not valid
-  // var isFalse =FALSE; // not valid
+// var isFalse =false; // valid
+// var isFalse =False; // not valid
+// var isFalse =FALSE; // not valid
 
 //Undefined:
 // let someThing;
 
 //Null:
 var goSome = null;
- console.log(goSome);
+console.log(goSome);
 
 /*
   ১৪.  JavaScript Function. > জাভাক্রিপ্টে সবকিছু অবজেক্ট । ফাংশনও অবজেক্ট , এটাকে ফাস্ট ক্লাস ফাংশন বলা হয়। 
@@ -439,8 +438,8 @@ function aFunc(parameters){
 
 //ফাংশন ডেফিনেশন বা যেভাবে ফাংশন তৈরি করা হয়।
 
-function bFunc(){
-  console.log('a simple function .' + ' how to maka a pipeline of function?');
+function bFunc() {
+  console.log("a simple function ." + " how to maka a pipeline of function?");
 }
 
 bFunc();
@@ -448,37 +447,36 @@ bFunc();
 // aFunc(arguments);
 
 //Example:
-function sumMachine(a,b){
+function sumMachine(a, b) {
   let sum = a + b;
   return sum;
 }
 
-console.log(sumMachine(2,2));
-console.log(sumMachine(1,4));
-
+console.log(sumMachine(2, 2));
+console.log(sumMachine(1, 4));
 
 // মেজর পার্ট  array,string,Boolean,object,varuable...
 //Example:
 
-function printMyName (name,object){
-  console.log('this is a' + name + ' and its a very ' + object + ' language.');
+function printMyName(name, object) {
+  console.log("this is a" + name + " and its a very " + object + " language.");
 }
 
-printMyName(' javascript ', ' high level ' );
+printMyName(" javascript ", " high level ");
 
 // এক ফাংশনের ভিতরে আরেক ফাংশন আর্গুমেন্ট হিসেবে দিতে চাইলে
 
-function storName(title, callback){
-let myTitle ='javascript';
+function storName(title, callback) {
+  let myTitle = "javascript";
   callback(myTitle);
-  console.log('it is nice language' + title);
+  console.log("it is nice language" + title);
 }
 
-function hello(title){
-  console.log('Web apps are dynamic because of ' + title);
+function hello(title) {
+  console.log("Web apps are dynamic because of " + title);
 }
 
-storName(' javascript',hello);
+storName(" javascript", hello);
 
 /*
 
@@ -504,80 +502,75 @@ var সাকিব = new object();
 //simple object
 
 var sakil = {
-  fullName : 'Ashraful Rahman Sakil',
-  age :'unknown',
-  address : 'Bangladesh',
-  job : 'student',
-
-}
+  fullName: "Ashraful Rahman Sakil",
+  age: "unknown",
+  address: "Bangladesh",
+  job: "student",
+};
 console.log(sakil);
 
 // আসুন অবজেক্টকে  ডট নোটেশনে দেখি
 // document.getElementById('demo1').innerHTML= sakil.fullName;
 var sakib = {
-  fullName : 'Ashraful Rahman Sakil',
-  age :'unknown',
-  address : 'Bangladesh',
-  job : 'student',
-
-}
+  fullName: "Ashraful Rahman Sakil",
+  age: "unknown",
+  address: "Bangladesh",
+  job: "student",
+};
 console.log(sakib.fullName);
 
 // আসুন অবজেক্টকে ব্রাকেটস নোটেশনে দেখি
 let araf = {
-  fullName : 'Ashraful Rahman Sakil',
-  age :'unknown',
-  address : 'Bangladesh',
-  job : 'student',
-
-}
-console.log(araf['age']);
+  fullName: "Ashraful Rahman Sakil",
+  age: "unknown",
+  address: "Bangladesh",
+  job: "student",
+};
+console.log(araf["age"]);
 
 // নতুন আইটেম যোগ করার উপায়
 let rahim = {
-  fullName: 'Ashraful Rahman Sakil',
-  age: 'unknown',
-  address: 'Bangladesh',
-  job: 'student',
+  fullName: "Ashraful Rahman Sakil",
+  age: "unknown",
+  address: "Bangladesh",
+  job: "student",
+};
 
-}
+console.log((rahim.zipcode = 1700));
 
-console.log(rahim.zipcode=1700);
+// অবজেক্টে ফাংশন এড করা
 
-// অবজেক্টে ফাংশন এড করা 
-
-rahim.welcome = function(){
-  console.log('it\'s called object function');
-}
+rahim.welcome = function () {
+  console.log("it's called object function");
+};
 rahim.welcome();
 
 // object > loop
 
-for (item in rahim){
+for (item in rahim) {
   console.log(item);
 }
 
 // অবজেক্টের এর ভিতরে অ্যারে
 const objArr = {
-  normal : 'normal item',
-  name :['rahim', 'karim', 'rafiq'],
-  age :  [10,20,22],
-}
+  normal: "normal item",
+  name: ["rahim", "karim", "rafiq"],
+  age: [10, 20, 22],
+};
 
 console.log(objArr);
 
 // এরের ভিতরে অবজেক্ট
 const arrObj = [
-  'javascript',
+  "javascript",
   {
-  normal : 'normal item',
-  name   : ['rahim', 'karim', 'rafiq'],
-  age    : [10,20,22],
-},
+    normal: "normal item",
+    name: ["rahim", "karim", "rafiq"],
+    age: [10, 20, 22],
+  },
 
-    'bangladesh'
-
-]
+  "bangladesh",
+];
 
 console.log(arrObj);
 
@@ -587,16 +580,16 @@ console.log(arrObj);
 ১৭. JavaScript Strings হলো টেক্সট নাম্বারসহ ক্যৗারেক্টারের সিকুয়েন্স। আর এটি সিংঙ্গেল (''),ডাবল("") বা ক্যারেট (``) সাইনের ভিতরে থাকে। এর ভিতরে অবজেক্টও থাকতে পারে।
 */
 
-let art = 'bangladesh' + ' is our country';
+let art = "bangladesh" + " is our country";
 console.log(art);
-console.log(typeof (art));
+console.log(typeof art);
 
-let str = 'hello this is str';
-let obj =new String('hello this is str');
+let str = "hello this is str";
+let obj = new String("hello this is str");
 console.log(str == obj);
 console.log(str === obj);
 
-var a = '\n';
+var a = "\n";
 console.log(a);
 
 /*
@@ -609,72 +602,73 @@ var summary = "Javascript";
 console.log(summary.length);
 
 //JavaScript String slice()
-var summary = 'apple, banana, orange';
-console.log(summary.slice(0,5));
+var summary = "apple, banana, orange";
+console.log(summary.slice(0, 5));
 
 // //JavaScript String substring
-var summary = 'apple, banana, orange';
+var summary = "apple, banana, orange";
 console.log(summary.substring(0, 13));
 
 //JavaScript String substr()
-var summary = 'apple, banana, orange';
+var summary = "apple, banana, orange";
 console.log(summary.substr(5, 18));
 
 //JavaScript Replacing String Content
-var summary = 'this is popular language of C';
-console.log(summary.replace('C','javascript'));
+var summary = "this is popular language of C";
+console.log(summary.replace("C", "javascript"));
 
 //JavaScript String toUpperCase()
-var summery = "Proficient students are They understand that if they can write a one- or two-sentence summary of each paragraph after reading it, then that is a good sign that they have correctly understood it. If they can not summarize the main idea of the paragraph, they know that comprehension has broken down and they need to use fix-up strategies to repair understanding.";
+var summery =
+  "Proficient students are They understand that if they can write a one- or two-sentence summary of each paragraph after reading it, then that is a good sign that they have correctly understood it. If they can not summarize the main idea of the paragraph, they know that comprehension has broken down and they need to use fix-up strategies to repair understanding.";
 console.log(summery.toUpperCase());
 
 // //JavaScript String toLowerCase()
-var summery ="Proficient students are understand that if they can write a one- or two-sentence summary of each paragraph after reading it, then that is a good sign that they have correctly understood it. If they can not summarize the main idea of the paragraph, they know that comprehension has broken down and they need to use fix-up strategies to repair understanding."
+var summery =
+  "Proficient students are understand that if they can write a one- or two-sentence summary of each paragraph after reading it, then that is a good sign that they have correctly understood it. If they can not summarize the main idea of the paragraph, they know that comprehension has broken down and they need to use fix-up strategies to repair understanding.";
 console.log(summery.toLowerCase());
 
 //JavaScript String concat()
-var a = 'hello js';
-var b = 'hello java';
-var c = a.concat('', b);
+var a = "hello js";
+var b = "hello java";
+var c = a.concat("", b);
 console.log(c);
 
 // different concat
-var a = 'hello js ' + '' + 'it\'s working';
-var b = ' hello java';
-var c = a.concat('', b);
+var a = "hello js " + "" + "it's working";
+var b = " hello java";
+var c = a.concat("", b);
 console.log(c);
 
 //JavaScript String trim()
-var a = 'hello js';
-var b = 'hello java';
-var c = (a + b);
+var a = "hello js";
+var b = "hello java";
+var c = a + b;
 // console.trim().c;
 
 //JavaScript String padStart()
-var a = '20';
-console.log(a.padStart(15,1));
+var a = "20";
+console.log(a.padStart(15, 1));
 
 //JavaScript String padEnd()
-var a = '10';
+var a = "10";
 console.log(a.padEnd(15, 1));
 
 //JavaScript String charAt()
-var a = 'this js.';
+var a = "this js.";
 console.log(a.charAt(5));
 
 //JavaScript String charCodeAt()
-var a = 'js';
+var a = "js";
 console.log(a.charCodeAt(1));
 
 //JavaScript String Property Access
-var strR ='this is js';
+var strR = "this is js";
 console.log(strR[1]);
 
 //JavaScript String split()
 let text = "a,b,c,d,e,f";
 const myArray = text.split(",");
 console.log(myArray[5]);
-
 
 /* ১৯. JavaScript Strings Search হলো স্ট্রিং মেথডের ভিতরে কোনো কিছু খোঁজা
 বিভিন্নভাবে স্ট্রিং সার্চ করা যায়।
@@ -688,44 +682,43 @@ console.log(myArray[5]);
 
 */
 
-var a = '\n';
+var a = "\n";
 console.log(a);
 
 //String indexOf()
 var myStr = "my name is js";
-console.log(myStr.indexOf('js'));
+console.log(myStr.indexOf("js"));
 
 //String lastIndexOf()
 var myStr = "this is me. my name is js";
 
-console.log(myStr.lastIndexOf('name'));
+console.log(myStr.lastIndexOf("name"));
 
 //String startsWith()
 var myStr = "hello it's me . my name is js";
-console.log(myStr.startsWith('name'));
+console.log(myStr.startsWith("name"));
 
 //String endsWith()
 var myStr = "it's my name is js";
-console.log(myStr.endsWith('name'));
+console.log(myStr.endsWith("name"));
 
 //String include()
 var myStr = "hello name is js";
-console.log(myStr.includes('name'));
+console.log(myStr.includes("name"));
 
 //String repeat()
 var myStr = "sakil name is js";
-console.log(myStr.repeat('name'));
+console.log(myStr.repeat("name"));
 
 //String search()
 var myStr = "my name is js";
-console.log(myStr.search('name'));
+console.log(myStr.search("name"));
 
 //String mathch()
 var myStr = "my name is js";
-console.log(myStr.match('name'));
+console.log(myStr.match("name"));
 
-
-var a = '\n';
+var a = "\n";
 console.log(a);
 
 /* ২০.JavaScript Strings Templates. হলো স্ট্রিং ভ্যারিয়েবলসহ কোনো কিছু প্রিন্ট করতে চাইলে কনক্যাট ( [plus] (+) ) করে নিতে হয়।
@@ -735,38 +728,46 @@ console.log(a);
 */
 //simple_example:
 
-var name = 'shiraj';
+var name = "shiraj";
 var age = 50;
-var work = 'Retired.';
-console.log('my name is ' + name + ' and i\' am '+ age + ' years old! currently i\'am a '+ work);
+var work = "Retired.";
+console.log(
+  "my name is " +
+    name +
+    " and i' am " +
+    age +
+    " years old! currently i'am a " +
+    work
+);
 
 //কিন্তু এভাবে করা ঠিক নয়
 
-var a = '\n';
+var a = "\n";
 console.log(a);
 
-let myIdentity = 'shiraj rahman';
+let myIdentity = "shiraj rahman";
 let myAge = 50;
-let myWork = 'Retired.';
-console.log(`my name is ${myIdentity} and i'm ${myAge} years old. Currently i'm a ${myWork} `);
+let myWork = "Retired.";
+console.log(
+  `my name is ${myIdentity} and i'm ${myAge} years old. Currently i'm a ${myWork} `
+);
 
-var a = '\n';
+var a = "\n";
 console.log(a);
 
 function calculateAge(dob) {
   return `I'm ${2018 - dob} years old!`;
-  
 }
 
 console.log(1971);
 
 //Tagged_templated:
-const myId = 'sakil';
+const myId = "sakil";
 const meAge = 20;
-aFunc`i'm ${myId}. i'm ${meAge}years old.`
+aFunc`i'm ${myId}. i'm ${meAge}years old.`;
 
 function aFunc(String, _name, _age) {
-  console.log('String:');
+  console.log("String:");
   console.log(String);
   console.log(`Name:${myId}`);
   console.log(`String:${meAge}`);
@@ -815,22 +816,22 @@ function aFunc(String, _name, _age) {
 
 var a = 20;
 var b = 20;
-var c = (a+b);
+var c = a + b;
 console.log(c);
 
-var a = "20";//string করলে পাশাপাশি মান বসবে
+var a = "20"; //string করলে পাশাপাশি মান বসবে
 var b = 20;
-var c = (a+b);
+var c = a + b;
 console.log(c);
 
-var a = '10.05';
-var b = '2';
-var c = (a+b);
+var a = "10.05";
+var b = "2";
+var c = a + b;
 console.log(c);
 
 var a = 20;
 var b = 5;
-var c = (a+b);
+var c = a + b;
 console.log(c);
 
 var myNumber = 15;
@@ -839,8 +840,8 @@ console.log(myNumber.toString(8));
 console.log(myNumber.toString(10));
 console.log(myNumber.toString(16));
 
-var a = 'apple';
-var b = ' 10';
+var a = "apple";
+var b = " 10";
 console.log(a / b);
 
 //২২ JavaScript Number Methods. বিভিন্ন ধরেনের মেথড রয়েছে
@@ -880,19 +881,19 @@ var a = new Date("1970-01-01"); //ইহা সর্বনিম্ন মি�
 var b = new Date("1970-01-02"); //ইহা সর্বনিম্ন মিলি সেকেন্ড
 console.log(a);
 console.log(b);
- 
+
 //The parseInt() Method পূর্ণসংখ্যা দিয়ে থাকে
 var a = 20.33;
 var b = -10;
-var c = [105-102];
+var c = [105 - 102];
 console.log(parseInt(a));
 console.log(parseInt(b));
 console.log(parseInt(c));
 
 //The parseFloat() Method
 var a = 20.33;
-var b = -12.20;
-var c = [11.05-10.202];
+var b = -12.2;
+var c = [11.05 - 10.202];
 console.log(parseFloat(a));
 console.log(parseFloat(b));
 console.log(parseFloat(c));
@@ -900,7 +901,7 @@ console.log(parseFloat(c));
 //JavaScript MIN_VALUE and MAX_VALUE Method
 let numbers = [20, 30, 10, 50, 100, 500, 150, 5000, 100000];
 
-var a = -1/0;
+var a = -1 / 0;
 console.log(a);
 //JavaScript POSITIVE_INFINITY
 //JavaScript NEGATIVE_INFINITY
@@ -911,141 +912,177 @@ console.log(a);
  * অ্যারো হলো প্রচুর পরিমাণ ডাটা স্টোর করার সহজ মাধ্যম
  * অ্যারেকে সাধারণ ডাটা স্ট্রাকচার বলা হয়। বুলিয়ান,স্ট্রিং,ভেরিয়েবল নিয়ে অ্যারে বানানো হয়।
  * অ্যারো হলো সবচেয়ে সুন্দর ও ছোট লেভেলের ডাটা স্ট্রাকচার,অ্যারেকে ( [... 'মান','মান'...] ) দিয়ে প্রকাশ করা হয়
- * 
+ *
  */
 
 //Creating an Array বিভিন্ন ভাবে অ্যারে লেখা যায়
 
-var array = ['mango', 'green', 'blue', 'white', 'dark']
+var array = ["mango", "green", "blue", "white", "dark"];
 console.log(array);
 
-var arrayName = [
-  'sakil',
-  'siam',
-  'araf rahman',
-  'sakib'
-]
+var arrayName = ["sakil", "siam", "araf rahman", "sakib"];
 console.log(arrayName);
 
 //Accessing Array Elements
 
-var arrayName = ['siam','araf rahman','sakib']
-array =[2];
+var arrayName = ["siam", "araf rahman", "sakib"];
+array = [2];
 console.log(arrayName);
 
-var studentsNames= ['rahim', 'salam', 'salman', 'salam', 'salman', 'sakil'][77, 58, 75, 44, 80, 95];
- console.log(studentsNames);
+var studentsNames = ["rahim", "salam", "salman", "salam", "salman", "sakil"][
+  (77, 58, 75, 44, 80, 95)
+];
+console.log(studentsNames);
 
-var arrayName = ['blue','mango', 'green', 'blue', 'white', 'dark','youtube','facebook'];
+var arrayName = [
+  "blue",
+  "mango",
+  "green",
+  "blue",
+  "white",
+  "dark",
+  "youtube",
+  "facebook",
+];
 console.log(arrayName.length);
 
-let firstName = [' hi', ' i am a', ' your engine', ' of javascript program'];
+let firstName = [" hi", " i am a", " your engine", " of javascript program"];
 let lastName = firstName.length;
-for (let i = 0; i<lastName;i++){
-    console.log(lastName +''+ firstName[i]);
+for (let i = 0; i < lastName; i++) {
+  console.log(lastName + "" + firstName[i]);
 }
 
 // full array
-var arrayName = [
-    'sakil',
-    'siam',
-    'araf rahman',
-    'sakib'
-  ]
-  console.log(arrayName);
+var arrayName = ["sakil", "siam", "araf rahman", "sakib"];
+console.log(arrayName);
 
 var aName = [
-    'sakil',
-    'siam',
-    'araf rahman',
-    'sakib',
-    'sakil',
-    'siam',
-    'araf rahman',
-    'sakib'
-]
+  "sakil",
+  "siam",
+  "araf rahman",
+  "sakib",
+  "sakil",
+  "siam",
+  "araf rahman",
+  "sakib",
+];
 
-let aNull = '\n';
+let aNull = "\n";
 console.log(aNull);
 
 // object array
-let pNames = { firstName: 'ashraful rahman', lastName: ' sakil', age: 24 };
+let pNames = { firstName: "ashraful rahman", lastName: " sakil", age: 24 };
 console.log(pNames);
 
 // loop array ***
-const fName = ['sakil', 'siam', 'araf', 'abir', 'abdul', 'rifat', 'hasin', 'shoriful', 'akram', 'omit'];
+const fName = [
+  "sakil",
+  "siam",
+  "araf",
+  "abir",
+  "abdul",
+  "rifat",
+  "hasin",
+  "shoriful",
+  "akram",
+  "omit",
+];
 console.log(fName);
-const fNull = '\n';
+const fNull = "\n";
 console.log(fNull);
-fName[10] = 'sakib';
+fName[10] = "sakib";
 console.log(fName);
 console.log(typeof fName);
 // array length কতগুলো উপাদান আছে তার মোট নির্ণয় করে
 console.log(fName.length);
-console.log(fName.length-1);
+console.log(fName.length - 1);
 // array sort ব্যবহার করা হয় অ্যাসেন্ডিংভাবে সাজানোর জন্য
 console.log(fName.sort());
 for (let i = 0; i < fName.length; i++) {
-    console.log((i + 1) + `. Name : ${fName[i]}`);
+  console.log(i + 1 + `. Name : ${fName[i]}`);
 }
 
 // loop array
 
 function myFunction() {
-    for (let i = 0; i < fName.length; i++) {
-        console.log((i + 1) + `. Name : ${fName[i]}`);
-        document.getElementById('click').innerHTML=((i + 1) + `. Name : ${fName[i]}`);
-        console.log((i + 1) + `. Name : ${fName[i]}`);
-        alert((i + 1) + `. Name : ${fName[i]}`);
-    }
+  for (let i = 0; i < fName.length; i++) {
+    console.log(i + 1 + `. Name : ${fName[i]}`);
+    document.getElementById("click").innerHTML = i + 1 + `. Name : ${fName[i]}`;
+    console.log(i + 1 + `. Name : ${fName[i]}`);
+    alert(i + 1 + `. Name : ${fName[i]}`);
+  }
 }
 
 // forEach array same by > for loop ।। এটা একটি লুপ হিসেবে কাজ করে থাকে এটায় index, value, array মান দেওয়া যায়
 
-var fruits = ['mango', 'banana', 'apple', 'orange', 'pear', 'grape', 'cherry']
+var fruits = ["mango", "banana", "apple", "orange", "pear", "grape", "cherry"];
 function myFunction(value) {
-    console.log(value); 
+  console.log(value);
 }
 
 fruits.forEach(myFunction);
 
 //২৪ JavaScript Array Methods
 
-var flower = ['Abutilon','Forsythia','Rose','Sunflower','Daisy']
+var flower = ["Abutilon", "Forsythia", "Rose", "Sunflower", "Daisy"];
 console.log(flower);
 // push ব্যবহার করা হয় কোনো কিছু এড করতে
-flower.push('Erica');
+flower.push("Erica");
 console.log(flower);
 // pop ব্যবহার করা হয় কোনো কিছু ডিলেট করতে
-flower.pop('Erica');
+flower.pop("Erica");
 console.log(flower);
 // Shift শুরুর দিকের আইটেম রিমুভ করতে
-flower.shift('Jasmine');
+flower.shift("Jasmine");
 console.log(flower);
 // Unshift শুরুর দিকের আইটেম যোগ করতে
-flower.unshift('Jasmine');
+flower.unshift("Jasmine");
 console.log(flower);
 // কোনো অ্যারের ইলিমেন্ট পরিবর্তন করতে
-flower[0] = 'Iris';
+flower[0] = "Iris";
 console.log(flower);
 // indexOf নির্দিষ্ট কোনো আইটেমের নাম্বার জানতে
-flower.indexOf('Sunflower');
-console.log(flower);// এটায় কখনও 0 হবে না কাউন্ট বা ইনডেক্স
+flower.indexOf("Sunflower");
+console.log(flower); // এটায় কখনও 0 হবে না কাউন্ট বা ইনডেক্স
 // splicing যেকোনো আইটেম যোগ করতে ব্যবহার করা হয় প্রথম প্যারামিটারে এলিমেন্টের ইনডেক্স নম্বর নির্ধারন করা হয় যেখানে এলিমেন্টকে রাখা হবে। দ্বিতীয় প্যারামিটারে কতটি এলিমেন্ট বাদ দেওয়া হবে তা নির্দেশ করা হয়।
 flower.splice(2);
 console.log(flower);
 // Splicing আইটেমগুলো কিভাবে ভাগ হয় তা দেখানো হয়েছে যে নাম্বার ডিক্লিয়ার করবেন তা দেখাবে
-var z = ['1 Apple iPhone','2 Toshiba DVD Player','3 Apple iPad','4 TiVo', '5 DJI Phantom', '6 Fitbit', '7 Apple iBook', '8 Nokia 3210']
+var z = [
+  "1 Apple iPhone",
+  "2 Toshiba DVD Player",
+  "3 Apple iPad",
+  "4 TiVo",
+  "5 DJI Phantom",
+  "6 Fitbit",
+  "7 Apple iBook",
+  "8 Nokia 3210",
+];
 var y = z.splice(5);
 console.log(z);
 console.log(y);
 
 //slice  প্রথম প্যারামিটারে এলিমেন্টের ইনডেক্স নম্বর নির্ধারন করা হয় যেখানে এলিমেন্টকে রাখা হবে। দ্বিতীয় প্যারামিটারে কতটি এলিমেন্ট বাদ দেওয়া হবে তা নির্দেশ করা হয়। বাকি প্যারামিটার বাদ দেওয়া হয়েছে। তার মানে নতুন কোন এলিমেন্ট যোগ করা হবে না।
-var fruits = ["Banana", "Orange", "Apple", "Mango",'Rose'];
+var fruits = ["Banana", "Orange", "Apple", "Mango", "Rose"];
 console.log(fruits.slice(3));
 // concat Merging (দুটো এলিমেন্ট যুক্ত করতে বা একসাথে করতে ব্যবহার করা হয়)
-var mobile = ['1 Apple iPhone','2 Toshiba DVD Player','3 Apple iPad','4 TiVo', '5 DJI Phantom', '6 Fitbit', '7 Apple iBook', '8 Nokia 3210']
-var flower = ['i Abutilon','ii Forsythia','iii Rose','iv Sunflower','v Daisy']
+var mobile = [
+  "1 Apple iPhone",
+  "2 Toshiba DVD Player",
+  "3 Apple iPad",
+  "4 TiVo",
+  "5 DJI Phantom",
+  "6 Fitbit",
+  "7 Apple iBook",
+  "8 Nokia 3210",
+];
+var flower = [
+  "i Abutilon",
+  "ii Forsythia",
+  "iii Rose",
+  "iv Sunflower",
+  "v Daisy",
+];
 var total = mobile.concat(flower);
 console.log(total);
 //tostring() এটা করতে হলে DOM লাগবে
@@ -1062,7 +1099,7 @@ console.log(total);
 
 //sort এটা হলো এলোমেলো এলিমেন্টগুলো সিরিয়াল মোতাবেক দেখায় ইনডেক্স অনুসারে (A-Z)
 
-var a = ['sakib', 'sakil', 'akram', 'faruk',]
+var a = ["sakib", "sakil", "akram", "faruk"];
 console.log(a.sort());
 
 //reverse এটা দিলে ইনডেক্স নাম্বার উল্টা করে আসবে (Z-A)
@@ -1070,21 +1107,39 @@ console.log(a.reverse());
 
 //Numeric Sort
 var y = [40, 200, 10, 25, 95, 33];
-console.log(y.sort((a, b) => { return a - b; }));// low to high
-console.log(y.sort((a, b) => { return a - b; }).toString());
-console.log(y.sort((a, b) => { return b - a; }));// high to low
+console.log(
+  y.sort((a, b) => {
+    return a - b;
+  })
+); // low to high
+console.log(
+  y
+    .sort((a, b) => {
+      return a - b;
+    })
+    .toString()
+);
+console.log(
+  y.sort((a, b) => {
+    return b - a;
+  })
+); // high to low
 
 //Sorting an Array in Random Order
-console.log(y.sort((a, b) => { return 0.5 - Math.random() }));
+console.log(
+  y.sort((a, b) => {
+    return 0.5 - Math.random();
+  })
+);
 
 //The Fisher Yates Method
 
-var points = [40, 100, 1,250,580,905, 5, 25, 10];
-for (var i = points.length -1; i > 0; i--) {
-  let j = Math.floor(Math.random() * i)
-  let k = points[i]
-  points[i] = points[j]
-  points[j] = k
+var points = [40, 100, 1, 250, 580, 905, 5, 25, 10];
+for (var i = points.length - 1; i > 0; i--) {
+  let j = Math.floor(Math.random() * i);
+  let k = points[i];
+  points[i] = points[j];
+  points[j] = k;
 }
 console.log(points);
 
@@ -1093,11 +1148,15 @@ console.log(points);
 // object of array
 
 var car = [
-  { type: 'MBW', year: 2017 },
-  { type: 'BW', year: 2007 },
-  { type: 'MW', year: 2015 }
+  { type: "MBW", year: 2017 },
+  { type: "BW", year: 2007 },
+  { type: "MW", year: 2015 },
 ];
-console.log(car.sort((a, b) => { return b - a; }));
+console.log(
+  car.sort((a, b) => {
+    return b - a;
+  })
+);
 
 /**
  * Arif Arid
@@ -1116,29 +1175,29 @@ console.log(car.sort((a, b) => { return b - a; }));
  */
 
 //array forEach() এটা একটি লুপ হিসেবে কাজ করে থাকে এটায় index,value,array মান দেওয়া যায়
-var fruits = ['mango', 'banana', 'apple', 'orange', 'pear', 'grape', 'cherry']
-function myFunction(index,value,array) {
-    console.log(index);
-    console.log(value);
-    console.log(array);
-    console.log('*******');
+var fruits = ["mango", "banana", "apple", "orange", "pear", "grape", "cherry"];
+function myFunction(index, value, array) {
+  console.log(index);
+  console.log(value);
+  console.log(array);
+  console.log("*******");
 }
 
 fruits.forEach(myFunction);
 
 // এটা বেস্ট
 
-var myFruits = fruits.forEach((value, index, array)=>{
-  console.log('item' + value + index + 'arr' + array);
+var myFruits = fruits.forEach((value, index, array) => {
+  console.log("item" + value + index + "arr" + array);
 });
 
 // array Map() এটা হলো এটাতে কোনো ফাংশন দিলে তা ডাবল করে মান রির্টান করবে, এর ভিতরে index, value, array মান দেওয়া যায়
 // এটা ঝামেলা
 var i = [5, 10, 15, 20];
-function my(index,value,array) {
-  return value * 2
-  return index * 2
-  return array * 2
+function my(index, value, array) {
+  return value * 2;
+  return index * 2;
+  return array * 2;
 }
 
 let newName = i.map(my);
@@ -1149,7 +1208,7 @@ console.log(newName);
 var arr = [1, 2, 3, 4, 5, 6, 7]; // পাবলিক
 
 function getsqur(index) {
-    return index * 2;
+  return index * 2;
 }
 arr.map(getsqur);
 var newArray = arr.map(getsqur);
@@ -1157,14 +1216,14 @@ console.log(newArray);
 
 //best way
 var newArr = arr.map((item, index, arr) => {
-  console.log('item '+item +' and index'+ index + ' arr: ' + arr);
-})
+  console.log("item " + item + " and index" + index + " arr: " + arr);
+});
 
 // array filter() কোনো অ্যারে থেকে ছোট বা বড় সংখ্যা বের করতে ব্যবহার করা হয় আর এটি true/false return দেয়
 
 var evenArr = [55, 58, 48, 25, 10, 250];
 function getsqur(index) {
-  return index %1==0;
+  return index % 1 == 0;
 }
 evenArr.filter(getsqur);
 
@@ -1173,80 +1232,87 @@ console.log(newArray);
 
 var newArr = evenArr.filter((item, index, arr) => {
   console.log(`item ${item} and index ${index} arr: ${arr}`);
-})
+});
 
 // array reduce() অ্যারের ভিতরে যা আছে প্রায় সবই যোগ করে মোট ফলাফল দেখানো । এটার ভিতরে স্টেট ভ্যারিয়েবল সেট করা  বাম থেকে ডানে কাজ করে ।। total , value, index, array নিয়ে কাজ করে থাকে আর্গুমেন্ট হিসেবে
 
-var arr = [1, 2, 3, 4, 8, 65, 44, 10, 22]
+var arr = [1, 2, 3, 4, 8, 65, 44, 10, 22];
 var total = arr.reduce((sum, item) => {
-  return sum += item;
+  return (sum += item);
 }, 0);
 
 console.log(total);
 // best
 var arr = [10, 20, 30, 40, 80, 65, 44, 10, 22];
-var total = arr.reduce((item,index,arr,total) => {
-    console.log(`item: ${item} index ${index} array : ${arr} total ${total}`)
+var total = arr.reduce((item, index, arr, total) => {
+  console.log(`item: ${item} index ${index} array : ${arr} total ${total}`);
 });
 
-// array reduceRight() এটার ভিতরে স্টেট ভ্যারিয়েবল সেট করা  ডান থেকে বামে কাজ করে ।। total , value, index, array নিয়ে কাজ করে থাকে আগুমেন্ট হিসেবে 
-var total = arr.reduceRight((item,index,arr,total) => {
-  console.log(`item: ${item} index ${index} array : ${arr} total ${total}`)
+// array reduceRight() এটার ভিতরে স্টেট ভ্যারিয়েবল সেট করা  ডান থেকে বামে কাজ করে ।। total , value, index, array নিয়ে কাজ করে থাকে আগুমেন্ট হিসেবে
+var total = arr.reduceRight((item, index, arr, total) => {
+  console.log(`item: ${item} index ${index} array : ${arr} total ${total}`);
 });
 
 // array every() value, index, array নিয়ে কাজ করে থাকে আগুমেন্ট হিসেবে এটি true/false রিটার্ন করে
 var myNumber = [0, 1, 27, 2, 3, 4, 6, 7, 6, 6, 4];
 function myFunction(value, index, array) {
-    return value > 25
+  return value > 25;
 }
 var mycontact = myNumber.every(myFunction);
 console.log(mycontact);
 
 // array some() value, index, array নিয়ে কাজ করে থাকে আগুমেন্ট হিসেবে এটি true/false রিটার্ন করে
-var myNumber = [625,340,202,100,502,111,800];
+var myNumber = [625, 340, 202, 100, 502, 111, 800];
 function myFunction(value, index, array) {
-    return value > 100
+  return value > 100;
 }
 var mycontact = myNumber.some(myFunction);
 console.log(mycontact);
 
 // array indexOf() কোনো আইটেমের পজিশন জানতে আর এটা 0 থেকে শুরু হয়
-var i = ['discovery', 'milk', 'plan', 'desktop','discovery','position', 'skin']
+var i = [
+  "discovery",
+  "milk",
+  "plan",
+  "desktop",
+  "discovery",
+  "position",
+  "skin",
+];
 
-console.log(i.indexOf('position'));
+console.log(i.indexOf("position"));
 
 // array lastIndexOf() শেষের পজিশন জানতে
-console.log(i.lastIndexOf('desktop'));
+console.log(i.lastIndexOf("desktop"));
 
 // array find() বড় মান বের করে দেয়
-var myNumber = [625,340,202,100,502,111,800];
+var myNumber = [625, 340, 202, 100, 502, 111, 800];
 function myFunction(value, index, array) {
-    return value > 100
+  return value > 100;
 }
 var mycontact = myNumber.find(myFunction);
 console.log(mycontact);
 
 // array findIndex() কোনোেআইটেম বা এলিমেন্ট কত নাম্বারে আছে তা বের করতে ব্যবহার করা হয়
-var myNumberFind = [50,100,120,100,150,850,200,300,1000];
+var myNumberFind = [50, 100, 120, 100, 150, 850, 200, 300, 1000];
 function myFunction(value, index, array) {
-    return index > 900
+  return index > 900;
 }
 var mycontact = myNumberFind.findIndex(myFunction);
 console.log(mycontact);
 
 // array from() স্ট্রিং কে অ্যারেতে রুপান্তর করে থাকে
-console.log(Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ'));
+console.log(Array.from("ABCDEFGHIJKLMNOPQRSTUVWXYZ"));
 
 // array Keys() foor loop এর সাথে সংযুক্ত
-var a = ['sakib', 'siam', 'arif']
+var a = ["sakib", "siam", "arif"];
 var b = a.keys();
 console.log(b);
 
 // array entries()
 
-
 // array  includes() কোনো কিছু আছে কিনা তা চেক করে true or false
-console.log(i.includes('desktop'));
+console.log(i.includes("desktop"));
 
 /**
  * JavaScript Array Const. এটা কাজ করার সাথে সাথে শিখা যাবে
@@ -1282,7 +1348,7 @@ console.log(new Date(2014, 06));
 console.log(new Date(2014));
 console.log(new Date());
 console.log(new Date(0));
-console.log(new Date('October 14,2019,11:12:00:05'));
+console.log(new Date("October 14,2019,11:12:00:05"));
 
 //previws century
 var d = new Date(99, 11, 24);
@@ -1292,11 +1358,10 @@ console.log(new Date().toString());
 console.log(new Date().toUTCString());
 console.log(new Date().toDateString());
 console.log(new Date().toISOString());
-console.log(new Date('2022-06-15'));
+console.log(new Date("2022-06-15"));
 
 //JavaScript Date Formats.
-console.log(new Date('2022-06-15T12:00:00Z'));
-
+console.log(new Date("2022-06-15T12:00:00Z"));
 
 /*
   JavaScript Date Get Method.
@@ -1324,7 +1389,15 @@ console.log(d.getMilliseconds());
 console.log(d.getTime());
 console.log(d.getDay());
 
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 var d = new Date();
 console.log(days[d.getDay()]);
 
@@ -1379,7 +1452,7 @@ Math.Log10E: 0.4342944819032518
 
 //Mathround: এটি [.5] এর কম বা বেশি হলে আগে বা পরের সংখ্যায় চলে যায় এর্বং েকোনো দশমিক সংখ্যা দিবে না
 
-var voter = 0.5
+var voter = 0.5;
 var sum = Math.round(voter);
 console.log(sum);
 
@@ -1389,23 +1462,23 @@ var sum = Math.ceil(upper);
 console.log(sum);
 
 //Mathfloor: এটি [.] এর পরে যাই থাকবে তার ফলে পরের বা আগের সংখ্যায় যাবে না ।
-var lower= 0.00005;
-var sum=Math.floor(lower);
+var lower = 0.00005;
+var sum = Math.floor(lower);
 console.log(sum);
 
 //Mathtrunce: মানে হলো কেটে (cut) ফেলে দেওয়া। [.] পরে যাই থাকুক কেটে ফেলে দিবে।
 
-var cut= 0.00005;
-var sum=Math.trunc(cut);
+var cut = 0.00005;
+var sum = Math.trunc(cut);
 console.log(sum);
 
 //Mathsign: যােই মান দেওয়া হোক না কেন তা [-1, 0 ,1] রিটার্ন করবে।
 var sign = 5;
-var sum=Math.sign(sign);
+var sum = Math.sign(sign);
 console.log(sum);
 
 //Mathpow: এটি দুটি মান নিয়ে কাজ করে পাওয়ার রিটার্ন করে থাকে। বিভিন্ন সংখ্যার পাওয়ার নির্ণয় করতে ব্যবহার করা হয়।
-var sum = Math.pow(2,5);
+var sum = Math.pow(2, 5);
 console.log(sum);
 
 //Mathsqrt: কোনো সংখ্যার বর্গ বের করতে।
@@ -1418,39 +1491,38 @@ var sum = Math.abs(num);
 console.log(sum);
 
 //Mathcos: Angle in radians = Angle in degrees x PI / 180.
-var sum = Math.cos(0 * Math.PI / 180);
+var sum = Math.cos((0 * Math.PI) / 180);
 console.log(sum);
 
 //Mathsin: Angle in radians = Angle in degrees x PI / 180.
-var sum = sin.Math.cos(90 * Math.PI / 180);
+var sum = sin.Math.cos((90 * Math.PI) / 180);
 console.log(sum);
 
 //Mathmin: সর্বনিম্ন নাম্বার বের করতে
-var num =(25,45,20,10,33,69,510,-10,223,-50);
+var num = (25, 45, 20, 10, 33, 69, 510, -10, 223, -50);
 var sum = Math.min(num);
 console.log(sum);
 
 //Mathmax: সর্বোচ্চ নাম্বার বের করতে
-var num =(25,45,20,10,33,69,510,-10,223,-50);
+var num = (25, 45, 20, 10, 33, 69, 510, -10, 223, -50);
 var sum = Math.max(num);
 console.log(sum);
 
 //Mathrandom: 0-1 এর মধ্যে ভিন্ন ভিন্ন মান বের হবে আর এর সাথে যদি (*) কোনো সংখ্যা ডিক্লেয়ার করে দেন তাহলে তার আগ পর্যন্ত বিভিন্ন মান আসতে থাকবে।
-var lotary = Math.random()
+var lotary = Math.random();
 console.log(lotary);
 // 100 গুণ করে দেওয়ায় পূর্ণ দশমিক সংখ্যা আসতেছে
-var lotary = Math.random() * 50
+var lotary = Math.random() * 50;
 console.log(lotary);
 
 //Mathlog: লগারিদমের কাজ করে থাকে
 console.log(Math.log(44));
 
-//Mathlog2: 
+//Mathlog2:
 console.log(Math.hlog2(44));
 
-//Mathlog10: 
+//Mathlog10:
 console.log(Math.log10(44));
-
 
 //Mathrandom: 0-1 এর মধ্যে ভিন্ন ভিন্ন মান বের হবে আর এর সাথে যদি (*) কোনো সংখ্যা ডিক্লেয়ার করে দেন তাহলে তার আগ পর্যন্ত বিভিন্ন মান আসতে থাকবে।
 
@@ -1462,13 +1534,13 @@ console.log(Math.floor(Math.random() * 10) + 1);
 //JavaScript Booleans এমন একটি যেটা টাইপ যেটাই true / false রিটার্ন করে থাকে
 var a = 25;
 var b = 12;
-var c = a<b;
-console.log(c)
+var c = a < b;
+console.log(c);
 
 var a = 25;
-var b = 'hello';
-var c = a>b;
-console.log(c)
+var b = "hello";
+var c = a > b;
+console.log(c);
 
 /**
  * Javascript Comparison & Logical Operators
@@ -1531,60 +1603,59 @@ console.log(a == 9);
 //if
 var age = 18;
 if (age < 18) {
-  console.log('you are cute')
+  console.log("you are cute");
 }
 
 //if else
 var age = 18;
-if(age<18) {
-    console.log('you are child');
+if (age < 18) {
+  console.log("you are child");
 } else {
-    console.log('you always adult');
+  console.log("you always adult");
 }
 
 //if else if
 var age = 50;
 
 if (age < 18) {
-  console.log('you are child');
+  console.log("you are child");
 } else if (age == 18) {
-  console.log('welcome you are teenage');
-} else if(age>18 && age<30){
-    console.log('you and me are same');    
-}else if (age > 18 || age < 30) {
-    console.log('you and me are not same');    
-}else {
-    console.log('you are old');
+  console.log("welcome you are teenage");
+} else if (age > 18 && age < 30) {
+  console.log("you and me are same");
+} else if (age > 18 || age < 30) {
+  console.log("you and me are not same");
+} else {
+  console.log("you are old");
 }
 
 //switch অনেকগুলো স্টেটমেন্ট ডিক্লেয়ার করে প্রাপ্ত ফলাফল বের করতে ব্যবহার করা হয়
 var day;
 switch (new Date().getDay()) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
 }
 console.log(day);
 
 //nesting
-
 
 /*
 ###Task--- 13
@@ -1594,8 +1665,8 @@ console.log(day);
 
 //Loops --(i) for অনেক কাজ বার বার ম্যানুয়ালি করাটা ঝামেলাময়, এটা  1,2,3,15,20 বার করা যায় এর চেয়ে বেশি হলে করাটা বা কোনো কিছু পরিবর্তন করাটা সমস্যা হয়ে যায়। তখন সমাধান খোঁজতে হয়।  আর এর সমাধান হলো লুপ দিয়ে প্রয়োজনমতো ডিক্লেয়াররেশন দেওয়া। মোবাইলের টাইমারও আরেকটা ভালো উদাহরণ। For এর তিনটি ভিন্ন ভিন্ন স্টেট আছে
 
-var cars = ['a', 'b', 'c', 'd'];
-for (var i = 0; i < cars.length; i++){
+var cars = ["a", "b", "c", "d"];
+for (var i = 0; i < cars.length; i++) {
   console.log(cars);
   console.log(`${i} ${cars}`);
 }
@@ -1607,7 +1678,7 @@ The index order is implementation-dependent, and array values may not be accesse
 It is better to use a for loop, a for of loop, or Array.forEach() when the order is important.
 */
 
-var person = { fname: 'ashraful rahman sakil', age: 24, occupation: 'student' }
+var person = { fname: "ashraful rahman sakil", age: 24, occupation: "student" };
 for (var n in person) {
   console.log(person);
 }
@@ -1618,46 +1689,46 @@ for (var l in array) {
 }
 
 // for of
-var array = 'sakil';
+var array = "sakil";
 
 for (var l of array) {
-  console.log(l)
+  console.log(l);
 }
 
 //(ii) while loop এটা ডিক্লেয়ার করলে আগেই কন্ডিশন যাচাই করে নেবে আর মিথ্যা হলে কোনো কিছু জিজ্ঞাসা করার আগেই। সত্য হলে লুপের ভিতরে থেকে এক্সিকিউট হবে। আর এটা অনন্তকাল ধরে চলতে থাকবে। If you forget to increase the variable used in the condition, the loop will never end. This will crash your browser. (This is red alert)
 
 var i = 0;
 while (i < 2) {
-  console.log('this is me');
+  console.log("this is me");
 }
 
 //(iii) do while আর এটা অনন্তকাল ধরে চলতে থাকবে
 
-var i= 11;
+var i = 11;
 do {
-    console.log('it\' ok')
-}
-while (i < 10) {
-  console.log('this is me');
+  console.log("it' ok");
+} while (i < 10);
+{
+  console.log("this is me");
 }
 
 //(iv) break একটি পুরো লুপকে মাঝপথে থামিয়ে দিতে বা বের হয়ে আসতে ব্রেক করানো হয়।
-for (var i = 0; i < 10; i++){
+for (var i = 0; i < 10; i++) {
   if (i === 8) {
-      break;
+    break;
   }
 
-  console.log(i + ' i am ok')
+  console.log(i + " i am ok");
 }
 
 //(v) continue - এ লুপকে ব্যবহার করা হয় স্কিপ করতে continue দিয়ে । যেখানে এটা ব্যবহার করা হবে সেটা বাদে বাকিগুলো ডিক্লেয়ার করবে।
 
-for (var k = 0; k <= 25; k++){
+for (var k = 0; k <= 25; k++) {
   if (k === 5) {
-      console.log(`${k} is skipped`);
-      continue;
+    console.log(`${k} is skipped`);
+    continue;
   }
-  console.log(k+ ' : i  is now at' );
+  console.log(k + " : i  is now at");
 }
 
 /**
@@ -1680,7 +1751,6 @@ entries()	Returns an iterator with the [key, value] pairs in a Map
 Property	Description
 size	Returns the number of elements in a Map
 */
-
 
 /*
 
@@ -1772,7 +1842,6 @@ typeof function myFunc(){}   // Returns "function"
 
 */
 
-
 /*
  * JavaScript Bitwise 
 
@@ -1793,11 +1862,9 @@ JavaScript Bitwise Operators
 
  */
 
-
 /*
  * JavaScript RegExp পরে করবো
  */
-
 
 /*
 ###Task--- 15
@@ -1825,10 +1892,9 @@ The ’throw’ statement defines a custom error.
 */
 
 try {
-  addlert('welcome to error')
-  
-} catch(err) {
-  console.log(err)
+  addlert("welcome to error");
+} catch (err) {
+  console.log(err);
 }
 
 /*JavaScript Scope - 3 প্রকার ব্লক, ফাংশন, গ্লোবাল স্কোপ
@@ -1838,45 +1904,42 @@ try {
 
 //local__scope:
 function localScope() {
-  var local = 'I am local to my own function';
+  var local = "I am local to my own function";
   console.log(local);
 }
 
-block__scope:
-{
-  let j = 'sakil';// এটা কার্লি প্রেসেস এর ভিতরে ডিফাইন করে লিখতে হয়।
+block__scope: {
+  let j = "sakil"; // এটা কার্লি প্রেসেস এর ভিতরে ডিফাইন করে লিখতে হয়।
 }
 
 //function__scope:
 
 function A() {
-  let x=40; // এটা ফাংশনের ভিতরে হয়।
+  let x = 40; // এটা ফাংশনের ভিতরে হয়।
 }
 
 //global__scope: // আগে থেকে ডিফাইন করে ফাংশনের ভিতরে তা প্রকাশ করাকে বোঝায়
-var globalVar = 'I am a Global Variable';
+var globalVar = "I am a Global Variable";
 
 function globalScope() {
-   console.log('Inside a Function: ' + globalVar);
+  console.log("Inside a Function: " + globalVar);
 }
 
 globalScope();
 
-console.log('Outside: ' + globalVar);
-
+console.log("Outside: " + globalVar);
 
 //JavaScript Hoisting এটা জাভাক্রিপ্টের ডিফল্ট বিহেভিয়ার। ডিক্লেয়ার করার আগেই ব্যবহার করা যায় কিন্তু এটা ভালো প্র্যাকটিস নয়। এতে আনডিফাইন দেখা দিবে
 
 names(); //এখানে ব্যবহার করলে আনডিফাইন দেখা দিবে, ভালো হয় ডিফাইন করার পর ব্যবহার করা
 
-var names = function() {
-   console.log('My name is Zonayed Ahmed' + 'sakib khan');
-}
+var names = function () {
+  console.log("My name is Zonayed Ahmed" + "sakib khan");
+};
 
+//JavaScript Strict Mood ==> "use strict"; Defines that JavaScript code should be executed in "strict mode". এটা ব্যবহার করলে
 
-//JavaScript Strict Mood ==> "use strict"; Defines that JavaScript code should be executed in "strict mode". এটা ব্যবহার করলে 
-
-"use strict";
+("use strict");
 x = 3.14;
 console.log(x);
 
@@ -2063,8 +2126,6 @@ anotherFunc();
 
 */
 
-
-
 /* 
 Arrow function => এটা ES6 এর নতুন আইটেম || এটায় ফাংশনকে অন্যভাবে লেখা হয় [ ()=>{} ] , এটাকে আবার ফ্যাট অ্যারো(Fat Arrow)
  এটা this কিওয়ার্ডে ও কোডকে মিনিমালিস্টিক, সুন্দর দেখাতে এবং কাজ দ্রুত করতে সাহায্য করে থাকে।
@@ -2081,7 +2142,6 @@ var demo = (x, y) => x + y
 console.log(demo(391, 9));
 
 */
-
 
 /* Modules > এটা ES6 এর ফিচার। খুবই গুরুত্বপূর্ণ টপিক।
 
@@ -2104,7 +2164,6 @@ console.log(sakil);
 
 
 */
-
 
 /*
 ###Task--- 17
@@ -2136,13 +2195,11 @@ example:
 
 */
 
-
 //Debugging > কোডে কোন প্রকার ইরর আসলে তা খুঁজে বের করে ফিক্সড করাকে বোঝায় কোথায় সমস্যা হয়েছে তা
 
 //Style Guide কোডকে সুন্দর ও আন্তর্জাতিক মানের স্টাইলে লিখতে ও ফলো করতে হবে। কোডের নিজস্ব রুলস এন্ড টার্মস এবং গঠনমূলক নিয়মে কোড করতে হবে। 80 ক্যাক্টোরের পর পরে লাইনে চলে যাওয়া।ম
 
 //Best Practices এটা কোডকে কিভাবে করলে বা কি ব্যবহার করলে ভালো হবে পরিমার্জিত,সুন্দর ও কি কি এড়িয়ে চলতে হবে তা বোঝায়।
-
 
 /*
 ###Task--- 18
@@ -2372,8 +2429,6 @@ console.log(myBazer.values()); // it's a very top.
 ৭৮. JavaScript Closures
 */
 
-
-
 // JavaScript Function Definitions কোনটা কি ,কিভাবে করতে হবে তা নিদের্শ করে থাকে।
 
 // JavaScript Function Parameters => advanced tutorials form lws
@@ -2383,64 +2438,72 @@ console.log(myBazer.values()); // it's a very top.
 // JavaScript Function call()
 //call:
 const Peoples = {
-  fullName: function (city,country) {
-      return this.firstName + '' + this.lastName + "" + 'he lives in ' + city + country;
-  }
+  fullName: function (city, country) {
+    return (
+      this.firstName + "" + this.lastName + "" + "he lives in " + city + country
+    );
+  },
 };
 
 let People1 = {
-  firstName: 'ashraful rahman',
-  lastName: ' sakil'
-}
+  firstName: "ashraful rahman",
+  lastName: " sakil",
+};
 
 let People2 = {
-  firstName: 'ashraful khan',
-  lastName: ' alim'
-}
+  firstName: "ashraful khan",
+  lastName: " alim",
+};
 
-console.log(Peoples.fullName.call(People1,'Dhaka ',' Bangladesh'));
-console.log(Peoples.fullName.call(People2, 'New York ', 'USA'));
+console.log(Peoples.fullName.call(People1, "Dhaka ", " Bangladesh"));
+console.log(Peoples.fullName.call(People2, "New York ", "USA"));
 
 // JavaScript Function apply() এটা একটা অবজেক্ট দিলে আরেকটা অ্যারে হিসেবে দিতে হবে।
 
 //apply:
 const aPeople = {
   fullName: function (city, country) {
-      return 'My name is ' + this.firstName + '' + this.lastName + "" + ' he lives in ' + city + country;
-  }
+    return (
+      "My name is " +
+      this.firstName +
+      "" +
+      this.lastName +
+      "" +
+      " he lives in " +
+      city +
+      country
+    );
+  },
 };
 
 let People01 = {
-  firstName: 'ashraful rahman',
-  lastName: ' sakil'
-}
+  firstName: "ashraful rahman",
+  lastName: " sakil",
+};
 
 let People02 = {
-  firstName: 'ashraful khan',
-  lastName: ' alim'
-}
+  firstName: "ashraful khan",
+  lastName: " alim",
+};
 
-console.log(aPeople.fullName.apply(People02,['Dhaka',' Bangladesh']));
-
+console.log(aPeople.fullName.apply(People02, ["Dhaka", " Bangladesh"]));
 
 // JavaScript Function bind() ‍কল বা এপ্লাই এর মতো কাজ করে না এটা দু্ইভাবে ডিক্লেয়ার করে থাকে । ফলে একটি নিজস্ব ভেরিয়েবল তৈরি করে যা অন্য কোথায় সহজেই ব্যবহার করা যায়।
 
-let examinee= {
-  name: 'araf rahman siam',
+let examinee = {
+  name: "araf rahman siam",
   age: 17,
-  candid: 'ssc',
-  location: 'Narsingdi',
+  candid: "ssc",
+  location: "Narsingdi",
   subExaminee: {
-      name: 'adib khan',
-      age: 18,
-      candid: 'ssc',
-      value: function () {
-         console.log('i am a ' + this.candid + ' examinee');
-     }
-  }
-  
-
-}
+    name: "adib khan",
+    age: 18,
+    candid: "ssc",
+    value: function () {
+      console.log("i am a " + this.candid + " examinee");
+    },
+  },
+};
 
 examinee.subExaminee.value.bind(examinee);
 
@@ -2448,34 +2511,32 @@ let myOwnerCandid = examinee.subExaminee.value.bind(examinee);
 
 myOwnerCandid();
 
-
-
-// JavaScript Closures => হলো প্যারেন্ট - চাইল্ডের খেলা। এটি মূলত একটি ফাংশনের ভিতরে আরেকটি ফাংশন নিয়ে কাজ করে বা আলাদা করেও কল করলেও ওই একই নিয়ম মেনে কাজ করে থাকে। 
+// JavaScript Closures => হলো প্যারেন্ট - চাইল্ডের খেলা। এটি মূলত একটি ফাংশনের ভিতরে আরেকটি ফাংশন নিয়ে কাজ করে বা আলাদা করেও কল করলেও ওই একই নিয়ম মেনে কাজ করে থাকে।
 
 function closure() {
   let max = 2400;
   return function () {
-      min = 100;
-      console.log('total ' + (max - min));
-  }
+    min = 100;
+    console.log("total " + (max - min));
+  };
 }
 
 closure()();
 
 //দুটি ফাংশন ছাড়াও আলাদা ভাবে করে এনেও ফলাফল দেখাতেও পারি। তার মানে ক্লোজার হলোঃ- আমরা যখন কোনো ফাংশন রিটার্ন করি আরেকটা ফাংশন থেকে, যেখানে ( ফাংশনের লোকাল মেমোরি ) ফাংশন টা saved ছিল, রিটার্ন হওয়ার সময় শুধু এই ( চাইল্ড / returned function ) ফাংশনের definition টাই রিটার্ন করবে না, সাথে তার surrounding data (যেখানে saved ছিল - লোকাল মেমোরির) গুলোও attached (চাইল্ড ফাংশনের backpack -এ) হয়ে যাবে। আর যখন ফাংশনের executing শেষ হয়ে যাবে & সেই ফাংশনের Local মেমোরিও delete হয়ে যাবে (except returned value)
 
-Example :
-function outer (){
- let counter = 0;
- function incrementCounter (){ counter ++; }
- return incrementCounter;
+Example: function outer() {
+  let counter = 0;
+  function incrementCounter() {
+    counter++;
+  }
+  return incrementCounter;
 }
 const myNewFunction = outer();
 myNewFunction();
 myNewFunction();
 
 //আপনার লেখাটা অনেক আগে পড়ছিলাম আজ হঠাৎ মনে হলো এই লাইন গুলার কথা, আমার বুঝতে কষ্ট হচ্ছে এই লাইন গুলা ঃ- কিন্তু এখানে আরো মজার ব্যাপার হচ্ছে ইভেন আমরা যদি প্যারেন্ট ফাংশনটা রিটার্ন করে ফেলি তারপরেও আমরা চাইল্ড ফাংশন থেকে প্যারেন্ট ফাংশনের ভ্যারিয়েবল, ফাংশন অথবা অবজেক্ট অ্যাক্সেস করতে পারবো। কারণ এগুলো রিটার্ন হওয়ার পরও মেমোরী তে থেকে যায় । আর এটাই হচ্ছে ক্লোজারস।
-
 
 /*
 ###Task--- 23
@@ -2518,25 +2579,29 @@ console.log(PersonName);
 
 //Inheritance কেনো কিছু কারও কাছ থেকে নিয়ে আসাকে বোঝায় । আর এটা ক্লাসে বেশি ব্যবহার করা হয়। ব্যাপারটা এরকম যেমন কোন একটা কাজে করতে হবে কিন্তু কারও কাছে একটা ইলিমেন্ট বেশি বা কম আছে যখন দরকার হবে তাকে রিকুয়েষ্ট করে তার কাছে থেকে নিয়ে আসা। আর এটা ES6 এর অবজেক্ট অরিয়েন্ট প্রোগ্রামিং এর অন্তর্ভুক্ত।
 
-
-class StudentId{
+class StudentId {
   constructor(name, age, address) {
-      this.name=name;
-      this.age=age;
-      this.address=address;
-
+    this.name = name;
+    this.age = age;
+    this.address = address;
   }
 }
 
-class StudentInfo extends StudentId{
-  constructor(name, age, address, session,study) {
-      super(name, age, address);
-      this.session = session;
-      this.study = study;
+class StudentInfo extends StudentId {
+  constructor(name, age, address, session, study) {
+    super(name, age, address);
+    this.session = session;
+    this.study = study;
   }
 }
 
-const singleStudend = new StudentInfo('Araf rahman', 17, 'Narsingdi', 'science', 'scc candid');
+const singleStudend = new StudentInfo(
+  "Araf rahman",
+  17,
+  "Narsingdi",
+  "science",
+  "scc candid"
+);
 
 console.log(singleStudend.name);
 console.log(singleStudend.age);
@@ -2544,23 +2609,19 @@ console.log(singleStudend.session);
 console.log(singleStudend.study);
 console.log(singleStudend.address);
 
-
 //Static Methods আমরা এরকম কিছু মেথডও চাইতে পারি যেগুলো শুধুমাত্র আমাদের ক্লাসে থাকবে। কিন্তু ক্লাস থেকে যে অবজেক্ট তৈরী করবো, সেগুলো সেই মেথডের অ্যাক্সেস পাবে না। হ্যাঁ একটা স্পেশাল কীওয়ার্ড staticদিয়ে আমরা এই ধরনের মেথড নিতে পারিঃ
 
-class mySelf{
+class mySelf {
   constructor(name, age) {
-      this.name = name;
-      this.age = age;
+    this.name = name;
+    this.age = age;
   }
   static MeMy() {
-      return 'hi it\'s me';
+    return "hi it's me";
   }
 }
 console.log(mySelf.MeMy());
 // কিন্তু এই ক্লাস দিয়ে তৈরি অবজেক্ট কখনও এক্সেস করতে পারবো না ইরর দিবে। কারণ এই static মেথড শুধু মেইন ক্লাস দিয়ে অ্যাক্সেস পাওয়া যায়।
-
-
-
 
 /*
 ###Task--- 24
@@ -2584,8 +2645,6 @@ console.log(asyn);
 
 //JavaScript Async/Await
 
-
-
 /*
 ###Task--- 25
 ৮৬. JavaScript Dom Documents হলো ডকুমেস্ট অবজেক্ট মডিউল এটা সবচেয়ে ইউজফুল ব্রাউজারের কোনো
@@ -2593,7 +2652,6 @@ console.log(asyn);
 ৮৮. JavaScript 
 ৮৯. JavaScript Events / Listener
 */
-
 
 /* ৮৯. JavaScript Events / Listener
 
@@ -2787,38 +2845,37 @@ myList.appendChild(newListItem);
 */
 
 //এলার্ট দেওয়া > এটার কাজ ব্রাউজারে বিভিন্ন এলার্ট দেওয়া।
-alert('this is alert');
+alert("this is alert");
 
 //(A) কমন ডট ইভেন্ট > দুই রকমভাবে দেখাতে পারি , 1. ইনলাইন স্টাইলে 2. ইলিমেন্টের সাথে অ্যাট্রিবিভট হিসেবে।
-function showAlert(){
-  alert('hi, i am alert');
+function showAlert() {
+  alert("hi, i am alert");
 }
 
 showAlert();
 
-var clickMeBtn = document.getElementById('demo');
+var clickMeBtn = document.getElementById("demo");
 console.dir(demo);
 
 clickMeBtn.onclick = function () {
-  console.log('on click');
-}
+  console.log("on click");
+};
 
 clickMeBtn.onchange = function () {
-  console.log('on change');
-}
+  console.log("on change");
+};
 
 clickMeBtn.onmouseout = function () {
-  console.log('onmouseout');
-}
+  console.log("onmouseout");
+};
 
 clickMeBtn.onmousedown = function () {
-  console.log('onmousedown');
-}
+  console.log("onmousedown");
+};
 
 clickMeBtn.onload = function () {
-  console.log('onload');
-}
-
+  console.log("onload");
+};
 
 /*(B) ইভেন্ট লিসেনার আমরা যেভাবে করি সচরাচর এভাবে করা হয় না। 
 
@@ -2828,38 +2885,37 @@ clickMeBtn.onload = function () {
 yourElement.addEventListener(typeofEvent(প্যারামিটার), handler(ফাংশন));
 */
 //Example:
-var box = document.getElementById('box');
-box.addEventListener('click', function () {
-    console.log('function change');
-})
-  
+var box = document.getElementById("box");
+box.addEventListener("click", function () {
+  console.log("function change");
+});
+
 // চাইলে এগুলো দেওয়া যেতে পারে load, focus, blur, submit, resize, cut, copy, keydown, keypress, keyup etc...
- 
+
 //(C) ইভেন্ট মডিফাই > বিভিন্ন ধরনের মডিফাই আছে
 // বাবল আপ
-let clickBtn = document.getElementById('demo3');
+let clickBtn = document.getElementById("demo3");
 clickBtn.onclick = function (event) {
   event.stopPropagation();
-  console.log('bubble clicked');
-}
+  console.log("bubble clicked");
+};
 
-var clickMeBtn = document.getElementById('click');
-clickMeBtn.addEventListener('click', () => {
-    console.log('this is me. it\'s working');
-})
+var clickMeBtn = document.getElementById("click");
+clickMeBtn.addEventListener("click", () => {
+  console.log("this is me. it's working");
+});
 
-
-var clickMeBtn = document.getElementById('demo4');
+var clickMeBtn = document.getElementById("demo4");
 clickMeBtn.onclick = function (event) {
   event.stopPropagation();
   event.stopImmediatePropagation();
-  console.log('it\'s stop');
-}
+  console.log("it's stop");
+};
 
 // ডিফল্ট আচরণ > ব্রাউজার আচরণ পরিবর্তন
 
-const link = document.getElementById('link');
-link.addEventListener('link',()=> {
+const link = document.getElementById("link");
+link.addEventListener("link", () => {
   link.preventDefult();
 });
 
@@ -2868,129 +2924,116 @@ link.addEventListener('link',()=> {
 clickMeBtn.click();
 
 //(E) ইভেন্ট ডেলিগেশন
-var box1 = document.getElementById('box1');
-box1.addEventListener('click', (event) => {
-    if (event.target.tagName === 'LI') {
-      console.log("is\'s working");
-    }
-  });
+var box1 = document.getElementById("box1");
+box1.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    console.log("is's working");
+  }
+});
 
 //(F) ফরম ইভেন্ট
- const inputs = document.querySelectorAll('input');
- const submitBtn = document.querySelector('button[type=submit]');
+const inputs = document.querySelectorAll("input");
+const submitBtn = document.querySelector("button[type=submit]");
 
 // ইনপুট ফিল্ড চেঞ্জ
 
-inputs[0].addEventListener('change', function () {
-    console.log('input change');
-  });
+inputs[0].addEventListener("change", function () {
+  console.log("input change");
+});
 
-inputs[0].addEventListener('change', function (event) {
-    console.log(event.target.value);
-  });
+inputs[0].addEventListener("change", function (event) {
+  console.log(event.target.value);
+});
 
 // ফরম সাবমিট ইভেন্ট
 
-submitBtn.addEventListener('submit', function (event) {
-    event.preventDefault();
-  });
+submitBtn.addEventListener("submit", function (event) {
+  event.preventDefault();
+});
 
-submitBtn.addEventListener('submit', (event) => {
+submitBtn.addEventListener("submit", (event) => {
   event.preventDefault();
   if (inputs[0].value === "" || inputs[1].value === "") {
-    alert('input failed can not be empty');
+    alert("input failed can not be empty");
   }
-
 });
 
-//ফুল ফরম সাবমিট 
-submitBtn.addEventListener ('click', function (event) {
-    event.preventDefault();
-    if (inputs[0].value === '' || inputs[1].value === '') {
-      alert('input are not emprty');
-    }
-    else {
-      var input0Data = inputs[0].value;
-      var input0Data = inputs[1].value;
-      console.log('your Name', input0Data, 'and yor last names', input0Data);
-    }
-  });
+//ফুল ফরম সাবমিট
+submitBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  if (inputs[0].value === "" || inputs[1].value === "") {
+    alert("input are not emprty");
+  } else {
+    var input0Data = inputs[0].value;
+    var input0Data = inputs[1].value;
+    console.log("your Name", input0Data, "and yor last names", input0Data);
+  }
+});
 
 //(G) কি বোর্ড ইভেন্ট
-keyDown:
-document.addEventListener('keydown', () => {
-  console.log('key down');
+keyDown: document.addEventListener("keydown", () => {
+  console.log("key down");
 });
 
-keyPress:
-document.addEventListener('keypress', () => {
-  console.log('key press');
+keyPress: document.addEventListener("keypress", () => {
+  console.log("key press");
 });
 
-keyup:
-document.addEventListener('keyup', () => {
-  console.log('key up');
+keyup: document.addEventListener("keyup", () => {
+  console.log("key up");
 });
 
 // এখন একটা ছোট কাজ করে দেখবো
 
-document.addEventListener('keydown', (event) => {
-  console.log('key down event');
-  console.log('pressed key:' + event.key);
+document.addEventListener("keydown", (event) => {
+  console.log("key down event");
+  console.log("pressed key:" + event.key);
 });
 
-
-document.addEventListener('keydown', (event) => {
-  console.log('key down event');
-  console.log('pressed key:' + event.key);
+document.addEventListener("keydown", (event) => {
+  console.log("key down event");
+  console.log("pressed key:" + event.key);
   console.dir(event);
 });
 
 //(H) মাউস ইভেন্ট
-mouseover:
+mouseover: clickMeBtn.onmouseover = (_event) => {
+  console.log("mouse over");
+};
 
-clickMeBtn.onmouseover = (_event) => {
-  console.log('mouse over');
-}
-
-clickBtn.addEventListener('mouseover', () => {
-  console.log('mouse over event');
+clickBtn.addEventListener("mouseover", () => {
+  console.log("mouse over event");
 });
 
-mouseout:
-
-clickBtn.addEventListener('mouseout', () => {
-  console.log('mouse over event');
+mouseout: clickBtn.addEventListener("mouseout", () => {
+  console.log("mouse over event");
 });
 
-
-//(I) 
+//(I)
 //ব্রাউজার ইভেন্ট পুরোপুরি_লোড_হওয়ার_পর_ইভেন্ট:
-window.addEventListener('load',()=> {
-  console.log('your are right');
+window.addEventListener("load", () => {
+  console.log("your are right");
 });
 
 //শুধু মার্কাপ লোড হওয়ার পর ইভেন্ট
-window.addEventListener('DOMContentLoaded',()=> {
-  console.log('markup loaded');
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("markup loaded");
 });
-
 
 // নির্দিষ্ট কোনো ইলিমেন্ট লোড হওয়ার পরের ইভেন্ট
 
-var img = document.querySelector('img[alt=vaid-img]');
-var img = document.querySelector('img[alt=invaid-img]');
+var img = document.querySelector("img[alt=vaid-img]");
+var img = document.querySelector("img[alt=invaid-img]");
 
-img.addEventListener('load', () => {
-  console.log('img success');
+img.addEventListener("load", () => {
+  console.log("img success");
 });
 
 // ইলিমেন্ট লোড না হলে পরের ইভেন্ট
 
-img.addEventListener('error', () => {
-  console.log('img not success');
-})
-  
+img.addEventListener("error", () => {
+  console.log("img not success");
+});
 
 /*
 ###Task--- 26
@@ -3017,7 +3060,6 @@ img.addEventListener('error', () => {
 ১০০. JavaScript 
 ১০১. JavaScript
 */
-
 
 /*
 ###Task--- 29
@@ -3051,7 +3093,6 @@ img.addEventListener('error', () => {
 ১১৭. JavaScript
 */
 
-
 /*
 ###Task--- 33
 ১১৪. JavaScript 
@@ -3059,7 +3100,6 @@ img.addEventListener('error', () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
-
 
 /*
 ###Task--- 34
@@ -3069,7 +3109,6 @@ img.addEventListener('error', () => {
 ১১৭. JavaScript
 */
 
-
 /*
 ###Task--- 35
 ১১৪. JavaScript 
@@ -3077,7 +3116,6 @@ img.addEventListener('error', () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
-
 
 /*
 ###Task--- 36
@@ -3087,7 +3125,6 @@ img.addEventListener('error', () => {
 ১১৭. JavaScript
 */
 
-
 /*
 ###Task--- 37
 ১১৪. JavaScript 
@@ -3095,7 +3132,6 @@ img.addEventListener('error', () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
-
 
 /*
 ###Task--- 38
@@ -3105,7 +3141,6 @@ img.addEventListener('error', () => {
 ১১৭. JavaScript
 */
 
-
 /*
 ###Task--- 39
 ১১৪. JavaScript 
@@ -3113,7 +3148,6 @@ img.addEventListener('error', () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
-
 
 /*
 ###Task--- 40
