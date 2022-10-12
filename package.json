@@ -1,3 +1,25 @@
 {
-    "type": "module"
+  "type": "module",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "name": "javascript",
+  "description": "**বই টিউটোরিয়াল ও ওয়েবসাইটসমূহ**",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashrafulrahmansakil/learnjs.git"
+  },
+  "author": "ashraful rahman sakil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashrafulrahmansakil/learnjs/issues"
+  },
+  "homepage": "https://github.com/ashrafulrahmansakil/learnjs#readme"
 }
