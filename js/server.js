@@ -30,3 +30,14 @@ server.listen(PORT, hostname, () => {
 });
 
 */
+
+import { createServer } from "http";
+const PORT = 3000;
+const server = createServer((req, res) => {
+  res.end("hi i a server");
+});
+
+
+server.listen(PORT,()=>{
+  console.log('server is running')
+});
