@@ -1,6 +1,6 @@
 /*
     Create new http Server
-*/
+
 import { createServer } from "http";
 const PORT = 3000;
 const hostname = "127.0.0.1";
@@ -28,3 +28,5 @@ const server = createServer((req, res) => {
 server.listen(PORT, hostname, () => {
   console.log(`server successfully http://${hostname}:${PORT}`);
 });
+
+*/
