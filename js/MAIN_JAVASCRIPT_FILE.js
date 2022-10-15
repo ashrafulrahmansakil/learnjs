@@ -2826,17 +2826,15 @@ let newListItem = document.createElement('li');
 newListItem.textContent = 'araf';
 myList.appendChild(newListItem);
 
-*
-
 
 ০৮. ইলিমেন্ট রিমুভ করাঃ এবার ইলিমেন্ট রিমুভ করার পালা। আমরা অনেকভাবে ইলিমেন্ট রিমুভ করতে পারবো চাইলে। তবে আমি এখানে কাজে লাগবে এমন কিছু টেকনিক শিখাবো।
 
 
-*
+* 
 
-*
+* 
 
-*
+* 
 
 
 
