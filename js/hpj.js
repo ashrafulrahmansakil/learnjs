@@ -1438,14 +1438,26 @@ Object.assign(newCreate.style, styleElement);
 
 var box5 = document.getElementById("box5");
 var box6 = document.getElementById("box6");
+var box8 = document.getElementById("box8");
+var box9 = document.getElementById("box9");
+var box10 = document.getElementById("box10");
+var box11 = document.getElementById("box11");
 
 box5.innerHTML = "box5";
 box6.innerHTML = "box6";
+box8.innerHTML = "box8";
+box9.innerHTML = "box9";
+box10.innerHTML = "box10";
+box11.innerHTML = "box11";
 
 box5.style.background = "grey";
 box6.style.background = "brown";
+box8.style.background = "grey";
+box9.style.background = "brown";
+box10.style.background = "grey";
+box11.style.background = "brown";
 
-const myList = document.getElementById("myList");
+let myList = document.getElementById("myList");
 let newListItem = document.createElement("ol");
 newListItem.textContent = "araf";
 myList.appendChild(newListItem);
@@ -1457,3 +1469,4 @@ for (let friendNames of friendsName) {
   newElements.innerHTML = friendNames;
   newList.appendChild(newElements);
 }
+
