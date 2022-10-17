@@ -1462,11 +1462,16 @@ let newListItem = document.createElement("ol");
 newListItem.textContent = "araf";
 myList.appendChild(newListItem);
 
-const newList = document.getElementById("myList");
-const friendsName = ["asif", "akber", "himel", "mahadi", "akram", "junayed"];
-for (let friendNames of friendsName) {
-  let newElements = document.createElement("li");
-  newElements.innerHTML = friendNames;
-  newList.appendChild(newElements);
-}
+// const newList = document.getElementById("myList");
+// const friendsName = ["asif", "akber", "himel", "mahadi", "akram", "junayed"];
+// for (let friendNames of friendsName) {
+//   let newElements = document.createElement("li");
+//   newElements.innerHTML = friendNames;
+//   newList.appendChild(newElements);
+// }
 
+document.getElementById("box8").remove();
+
+var remove = document.getElementById("remove");
+var remove1 = document.getElementById("remove1");
+remove.removeChild(remove1);

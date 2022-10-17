@@ -2830,11 +2830,20 @@ myList.appendChild(newListItem);
 ০৮. ইলিমেন্ট রিমুভ করাঃ এবার ইলিমেন্ট রিমুভ করার পালা। আমরা অনেকভাবে ইলিমেন্ট রিমুভ করতে পারবো চাইলে। তবে আমি এখানে কাজে লাগবে এমন কিছু টেকনিক শিখাবো।
 
 
-* 
+* একটা ইলিমেন্ট এর আগের ইলিমেন্ট রিমুভ করাঃ
 
-* 
+* প্যারেন্ট ইলিমেন্ট দিয়ে চাইল্ড ইলিমেন্ট রিমুভ করাঃ
 
-* 
+* প্যারেন্টের চাইল্ড সিলেক্ট করে রিমুভ করাঃ
+var remove = document.getElementById("remove");
+var remove1 = document.getElementById("remove1");
+remove.removeChild(remove1);
+
+* ইলিমেন্ট সরাসরি সিলেক্ট করে রিমুভ করাঃ
+
+document.getElementById('box8').remove();
+document.getElementById('box9').remove();
+document.getElementById('box10').remove();
 
 
 
