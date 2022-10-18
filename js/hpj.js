@@ -1475,3 +1475,4 @@ document.getElementById("box8").remove();
 var remove = document.getElementById("remove");
 var remove1 = document.getElementById("remove1");
 remove.removeChild(remove1);
+remove.childNodes[4].remove();
