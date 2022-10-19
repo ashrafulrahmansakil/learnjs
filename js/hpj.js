@@ -1476,3 +1476,62 @@ var remove = document.getElementById("remove");
 var remove1 = document.getElementById("remove1");
 remove.removeChild(remove1);
 remove.childNodes[4].remove();
+
+// BOM Start
+let myWindow;
+
+function openWindow() {
+  myWindow=window.open("https://google.com");
+}
+function openWindow() {
+  myWindow=window.open("","","width=500,height=300");
+}
+
+function closeWindow() {
+  myWindow.close();
+}
+
+function moveWinTo() {
+  myWindow.moveTo(100,240);
+}
+
+function moveWinBy() {
+  myWindow.moveBy(300,140);
+}
+
+//  bom screen
+//select dom element
+
+const windows = document.getElementById('demo');
+const width = document.getElementById('width');
+const height = document.getElementById('height');
+const availHeight = document.getElementById('availHeight');
+const availWidth = document.getElementById('availWidth');
+const colorDepth  = document.getElementById('colorDepth');
+const pixelDepth= document.getElementById('pixelDepth');
+
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+// const width = document.getElementById('width');
+
+//show window screen property
+
+windows.innerHTML = "Screen height: " + window.innerHeight + ' px';
+windows.innerHTML = "Screen width: " + window.innerWidth + ' px';
+width.innerHTML = "Screen width: " + screen.width + ' px';
+height.innerHTML = "Screen height: " + screen.height + ' px';
+availWidth.innerHTML = "Screen avialWidth: " + screen.availWidth + ' px';
+colorDepth.innerHTML = "Screen colorDepth: " + screen.colorDepth + ' px';
+pixelDepth.innerHTML = "Screen pixelDepth: " + screen.pixelDepth + ' px';
+// width.innerHTML = "Screen width: " + screen.width + 'px';
+// width.innerHTML = "Screen width: " + screen.width + 'px';
+// width.innerHTML = "Screen width: " + screen.width + 'px';
+// width.innerHTML = "Screen width: " + screen.width + 'px';
+

@@ -2647,15 +2647,30 @@ console.log(asyn);
 
 /*
 ###Task--- 25
-৮৬. JavaScript Dom Documents হলো ডকুমেস্ট অবজেক্ট মডিউল এটা সবচেয়ে ইউজফুল ব্রাউজারের কোনো
+৮৬. JavaScript Dom Documents
 ৮৭. JavaScript Dom Elements
-৮৮. JavaScript 
+৮৮. JavaScript DOM at all
 ৮৯. JavaScript Events / Listener
 */
 
+
+/**
+ * ৮৬. JavaScript Dom Documents
+ */
+
+/**
+ * ৮৭. JavaScript Dom Elements
+ */
+
+/**
+ * ৮৮. JavaScript DOM at all
+ */
+
+
+
 /* ৮৯. JavaScript Events / Listener
 
-01. ইলিমেন্ট সিলেক্ট করা:::
+01. ইলিমেন্ট সিলেক্ট করা:
 
 ০১. আইডি সিলেক্ট করা (ID) : আমরা দুইভাবে আইডিকে সিলেক্ট করতে পারি আইডি বা কুয়েরি করে যেমন
 
@@ -2830,7 +2845,7 @@ myList.appendChild(newListItem);
 ০৮. ইলিমেন্ট রিমুভ করাঃ এবার ইলিমেন্ট রিমুভ করার পালা। আমরা অনেকভাবে ইলিমেন্ট রিমুভ করতে পারবো চাইলে। তবে আমি এখানে কাজে লাগবে এমন কিছু টেকনিক শিখাবো।
 
 * একটা ইলিমেন্ট এর আগের ইলিমেন্ট রিমুভ করাঃ
-
+ ----- এটা ঠিক করতে পারি নাই
 * প্যারেন্ট ইলিমেন্ট দিয়ে চাইল্ড ইলিমেন্ট রিমুভ করাঃ
 var remove = document.getElementById("remove");
 remove.childNodes[6].remove();
@@ -2845,8 +2860,6 @@ remove.removeChild(remove1);
 document.getElementById('box8').remove();
 document.getElementById('box9').remove();
 document.getElementById('box10').remove();
-
-
 
 03. ইভেন্ট হচ্ছে কোনো ঘটনা। ইভেন্ট HTML এ ব্যবহার করা হয়। যা ডম হিসেবে কাজ করে থাকে । বিভিন্ন ধরনের ইন্টাররেকটিভ স্মার্ট ওয়েতে বিভিন্ন জিনিস খুব সহজেই দেখাতে পারি।
 বিভিন্ন ধরনের ইভেন্ট রয়েছে।
@@ -3043,13 +3056,50 @@ img.addEventListener("error", () => {
   console.log("img not success");
 });
 
+
+
 /*
 ###Task--- 26
-৯০. JavaScript 
-৯১. JavaScript
-৯২. JavaScript 
-৯৩. JavaScript 
+৯০. JavaScript BOM window
+৯১. JavaScript BOM Screen
+৯২. JavaScript BOM Location
+৯৩. JavaScript BOM History
 */
+
+
+
+/*
+ * ৯০. JavaScript BOM -window হলো ব্রাউজার অবজেক্ট মডেল। ডম বমের একটি অংশ। এটা ব্যবহার করলে নতুন উইন্ডো খোলা ও বন্ধ করা যাবে। এগুলো রেফারেন্স এ প্রচুর আছে।
+
+ */
+let myWindow;
+
+function openWindow() {
+  myWindow=window.open("https://google.com");
+}
+
+function closeWindow() {
+  myWindow.close();
+}
+
+
+/*
+ * ৯১. JavaScript BOM Screen
+
+*/
+
+
+
+/*
+ * ৯২. JavaScript BOM
+ */
+
+
+
+/*
+ * ৯৩. JavaScript BOM
+ */
+
 
 /*
 ###Task--- 27
@@ -3060,6 +3110,8 @@ img.addEventListener("error", () => {
 
 */
 
+
+
 /*
 ###Task--- 28
 
@@ -3069,6 +3121,8 @@ img.addEventListener("error", () => {
 ১০১. JavaScript
 */
 
+
+
 /*
 ###Task--- 29
 ১০২. JavaScript 
@@ -3076,6 +3130,8 @@ img.addEventListener("error", () => {
 ১০৪. JavaScript 
 ১০৫. JavaScript
 */
+
+
 
 /*
 ###Task--- 30
@@ -3085,6 +3141,8 @@ img.addEventListener("error", () => {
 ১০৯. JavaScript
 */
 
+
+
 /*
 ###Task--- 31
 ১১০. JavaScript 
@@ -3092,6 +3150,8 @@ img.addEventListener("error", () => {
 ১১২. JavaScript 
 ১১৩. JavaScript
 */
+
+
 
 /*
 ###Task--- 32
@@ -3101,6 +3161,8 @@ img.addEventListener("error", () => {
 ১১৭. JavaScript
 */
 
+
+
 /*
 ###Task--- 33
 ১১৪. JavaScript 
@@ -3108,6 +3170,8 @@ img.addEventListener("error", () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
+
+
 
 /*
 ###Task--- 34
@@ -3117,6 +3181,8 @@ img.addEventListener("error", () => {
 ১১৭. JavaScript
 */
 
+
+
 /*
 ###Task--- 35
 ১১৪. JavaScript 
@@ -3124,6 +3190,8 @@ img.addEventListener("error", () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
+
+
 
 /*
 ###Task--- 36
@@ -3133,6 +3201,8 @@ img.addEventListener("error", () => {
 ১১৭. JavaScript
 */
 
+
+
 /*
 ###Task--- 37
 ১১৪. JavaScript 
@@ -3140,6 +3210,8 @@ img.addEventListener("error", () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
+
+
 
 /*
 ###Task--- 38
@@ -3149,6 +3221,8 @@ img.addEventListener("error", () => {
 ১১৭. JavaScript
 */
 
+
+
 /*
 ###Task--- 39
 ১১৪. JavaScript 
@@ -3157,6 +3231,8 @@ img.addEventListener("error", () => {
 ১১৭. JavaScript
 */
 
+
+
 /*
 ###Task--- 40
 ১১৪. JavaScript 
@@ -3164,3 +3240,5 @@ img.addEventListener("error", () => {
 ১১৬. JavaScript 
 ১১৭. JavaScript
 */
+
+
