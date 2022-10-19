@@ -1481,10 +1481,10 @@ remove.childNodes[4].remove();
 let myWindow;
 
 function openWindow() {
-  myWindow=window.open("https://google.com");
+  myWindow = window.open("https://google.com");
 }
 function openWindow() {
-  myWindow=window.open("","","width=500,height=300");
+  myWindow = window.open("", "", "width=500,height=300");
 }
 
 function closeWindow() {
@@ -1492,46 +1492,56 @@ function closeWindow() {
 }
 
 function moveWinTo() {
-  myWindow.moveTo(100,240);
+  myWindow.moveTo(100, 240);
 }
 
 function moveWinBy() {
-  myWindow.moveBy(300,140);
+  myWindow.moveBy(300, 140);
 }
 
 //  bom screen
 //select dom element
 
-const windows = document.getElementById('demo');
-const width = document.getElementById('width');
-const height = document.getElementById('height');
-const availHeight = document.getElementById('availHeight');
-const availWidth = document.getElementById('availWidth');
-const colorDepth  = document.getElementById('colorDepth');
-const pixelDepth= document.getElementById('pixelDepth');
+const windows = document.getElementById("demo");
+const width = document.getElementById("width");
+const height = document.getElementById("height");
+const availHeight = document.getElementById("availHeight");
+const availWidth = document.getElementById("availWidth");
+const colorDepth = document.getElementById("colorDepth");
+const pixelDepth = document.getElementById("pixelDepth");
 
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
-// const width = document.getElementById('width');
+const href = document.getElementById("href");
+const hostname = document.getElementById("hostname");
+const pathname = document.getElementById("pathname");
+const port = document.getElementById("port");
+const protocol = document.getElementById("protocol");
+const host = document.getElementById("host");
+const hash = document.getElementById("hash");
+const reload = document.getElementById("reload");
+const replace = document.getElementById("replace");
+const search = document.getElementById("search");
+const assign = document.getElementById("assign");
 
 //show window screen property
 
-windows.innerHTML = "Screen height: " + window.innerHeight + ' px';
-windows.innerHTML = "Screen width: " + window.innerWidth + ' px';
-width.innerHTML = "Screen width: " + screen.width + ' px';
-height.innerHTML = "Screen height: " + screen.height + ' px';
-availWidth.innerHTML = "Screen avialWidth: " + screen.availWidth + ' px';
-colorDepth.innerHTML = "Screen colorDepth: " + screen.colorDepth + ' px';
-pixelDepth.innerHTML = "Screen pixelDepth: " + screen.pixelDepth + ' px';
-// width.innerHTML = "Screen width: " + screen.width + 'px';
-// width.innerHTML = "Screen width: " + screen.width + 'px';
-// width.innerHTML = "Screen width: " + screen.width + 'px';
-// width.innerHTML = "Screen width: " + screen.width + 'px';
+windows.innerHTML = "Screen height: " + window.innerHeight + " px";
+windows.innerHTML = "Screen width: " + window.innerWidth + " px";
+width.innerHTML = "Screen width: " + screen.width + " px";
+height.innerHTML = "Screen height: " + screen.height + " px";
+availWidth.innerHTML = "Screen avialWidth: " + screen.availWidth + " px";
+colorDepth.innerHTML = "Screen colorDepth: " + screen.colorDepth + " px";
+pixelDepth.innerHTML = "Screen pixelDepth: " + screen.pixelDepth + " px";
 
+//location
+
+href.innerHTML = "window href: " + location.href;
+hostname.innerHTML = "window hostname: " + location.hostname;
+pathname.innerHTML = "window pathname: " + location.pathname;
+port.innerHTML = "window port: " + location.port;
+protocol.innerHTML = "window protocol: " + location.protocol;
+host.innerHTML = "window host: " + location.host;
+hash.innerHTML = "window hash: " + location.hash;
+search.innerHTML = "window search: " + location.search;
+//assign.innerHTML = "window assign: " + location.assign("https://developer.mozilla.org/en-US/docs/Web/API/Location/assign");
+//reload.innerHTML = "window reload: " + location.reload();
+//replace.innerHTML = "window replace: " + location.replace('http://facebook.com');
