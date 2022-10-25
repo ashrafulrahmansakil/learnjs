@@ -1545,3 +1545,10 @@ search.innerHTML = "window search: " + location.search;
 //assign.innerHTML = "window assign: " + location.assign("https://developer.mozilla.org/en-US/docs/Web/API/Location/assign");
 //reload.innerHTML = "window reload: " + location.reload();
 //replace.innerHTML = "window replace: " + location.replace('http://facebook.com');
+
+function back() {
+  window.history.back();
+}
+function forward() {
+  window.history.forward();
+}
