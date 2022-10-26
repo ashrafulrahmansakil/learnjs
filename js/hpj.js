@@ -1477,7 +1477,12 @@ var remove1 = document.getElementById("remove1");
 remove.removeChild(remove1);
 remove.childNodes[4].remove();
 
-// BOM Start
+/*
+ *
+ * BOM Start
+ *
+ *
+ */
 let myWindow;
 
 function openWindow() {
@@ -1552,3 +1557,36 @@ function back() {
 function forward() {
   window.history.forward();
 }
+let length = history.length;
+document.getElementById("length").innerHTML = length;
+
+// navigator series
+
+let language = navigator.language;
+document.getElementById("navigator").innerHTML = language;
+let brower = navigator.appCodeName;
+document.getElementById("navigator").innerHTML = brower;
+
+let navigators =
+  "<p> Browser Codename: " + navigator.appCodeName + "</p>" + "<br>" +
+  "<p> Browser Name: " + navigator.appName + "</p>" + "<br>" +
+  "<p> Browser version: " + navigator.appVersion + "</p>" + "<br>" +
+  "<p> Browser Enabled: " + navigator.cookieEnabled + "</p>" + "<br>" +
+  "<p> Browser Online: " + navigator.onLine + "</p>" + "<br>" +
+  "<p> Browser platform: " + navigator.platform + "</p>" + "<br>" +
+  "<p> Browser product: " + navigator.product + "</p>" + "<br>" +
+  "<p> Browser javaEnabled: " + navigator.javaEnabled() + "</p>" + "<br>" +
+  "<p> Browser user-agent: " + navigator.userAgent + "</p>";
+
+document.getElementById("navigator").innerHTML = navigators;
+
+// let b = "<p>Browser CodeName: " + navigator.appCodeName + "</p>" +
+// "<p>Browser Name: " + navigator.appName + "</p>" +
+// "<p>Browser Version: " + navigator.appVersion + "</p>" +
+// "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>" +
+// "<p>Browser Language: " + navigator.language + "</p>" +
+// "<p>Browser Online: " + navigator.onLine + "</p>" +
+// "<p>Platform: " + navigator.platform + "</p>" +
+// "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+// document.getElementById("navigator").innerHTML = b;

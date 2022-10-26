@@ -3066,38 +3066,12 @@ img.addEventListener("error", () => {
 ৯৩. JavaScript BOM History
 */
 
-
-
 /*
  * ৯০. JavaScript BOM -window হলো ব্রাউজার অবজেক্ট মডেল। ডম বমের একটি অংশ। এটা ব্যবহার করলে নতুন উইন্ডো খোলা ও বন্ধ করা যাবে। এগুলো রেফারেন্স এ প্রচুর আছে।
-
- */
-let myWindow;
-
-function openWindow() {
-  myWindow=window.open("https://google.com");
-}
-
-function closeWindow() {
-  myWindow.close();
-}
-
-
-/*
- * ৯১. JavaScript BOM Screen
-
-*/
-
-
-
-/*
- * ৯২. JavaScript BOM
- */
-
-
-
-/*
- * ৯৩. JavaScript BOM
+ 
+ 
+ বমগুলো index.html,hpj.js ফাইলে লোড করা হয়েছে।
+ 
  */
 
 
