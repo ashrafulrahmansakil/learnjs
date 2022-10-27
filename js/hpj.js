@@ -1544,6 +1544,7 @@ hostname.innerHTML = "window hostname: " + location.hostname;
 pathname.innerHTML = "window pathname: " + location.pathname;
 port.innerHTML = "window port: " + location.port;
 protocol.innerHTML = "window protocol: " + location.protocol;
+origin.innerHTML = "window origin: " + location.origin;
 host.innerHTML = "window host: " + location.host;
 hash.innerHTML = "window hash: " + location.hash;
 search.innerHTML = "window search: " + location.search;
@@ -1568,25 +1569,23 @@ let brower = navigator.appCodeName;
 document.getElementById("navigator").innerHTML = brower;
 
 let navigators =
-  "<p> Browser Codename: " + navigator.appCodeName + "</p>" + "<br>" +
-  "<p> Browser Name: " + navigator.appName + "</p>" + "<br>" +
-  "<p> Browser version: " + navigator.appVersion + "</p>" + "<br>" +
-  "<p> Browser Enabled: " + navigator.cookieEnabled + "</p>" + "<br>" +
-  "<p> Browser Online: " + navigator.onLine + "</p>" + "<br>" +
-  "<p> Browser platform: " + navigator.platform + "</p>" + "<br>" +
-  "<p> Browser product: " + navigator.product + "</p>" + "<br>" +
-  "<p> Browser javaEnabled: " + navigator.javaEnabled() + "</p>" + "<br>" +
+  "<p> Browser AppCodeName: " + navigator.appCodeName + "</p>" +
+  "<p> Browser Language: " + navigator.language + "</p>" +
+  "<p> Browser Name: " + navigator.appName + "</p>" +
+  "<p> Browser version: " + navigator.appVersion + "</p>" +
+  "<p> Browser Enabled: " + navigator.cookieEnabled + "</p>" +
+  "<p> Browser Online: " + navigator.onLine + "</p>" +
+  "<p> Browser platform: " + navigator.platform + "</p>" +
+  "<p> Browser product: " + navigator.product + "</p>" +
+  "<p> Browser javaEnabled: " + navigator.javaEnabled() + "</p>" +
   "<p> Browser user-agent: " + navigator.userAgent + "</p>";
+  //"<p> Browser taintEnable:" + navigator.taintEnabled() "</p>";
 
 document.getElementById("navigator").innerHTML = navigators;
 
-// let b = "<p>Browser CodeName: " + navigator.appCodeName + "</p>" +
-// "<p>Browser Name: " + navigator.appName + "</p>" +
-// "<p>Browser Version: " + navigator.appVersion + "</p>" +
-// "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>" +
-// "<p>Browser Language: " + navigator.language + "</p>" +
-// "<p>Browser Online: " + navigator.onLine + "</p>" +
-// "<p>Platform: " + navigator.platform + "</p>" +
-// "<p>User-agent header: " + navigator.userAgent + "</p>";
+// console
+console.assert(1 == 1, "error"); 
+console.assert(2 == 21, "ভুল দিছত কেরে"); // যদি দুদিকে সমান হয় তাহলে সত্য ইরর দিবে না হলে ইরর মেসেজ দিবে।
 
-// document.getElementById("navigator").innerHTML = b;
+console.clear();
+console.count();
