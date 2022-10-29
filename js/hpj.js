@@ -1569,23 +1569,68 @@ let brower = navigator.appCodeName;
 document.getElementById("navigator").innerHTML = brower;
 
 let navigators =
-  "<p> Browser AppCodeName: " + navigator.appCodeName + "</p>" +
-  "<p> Browser Language: " + navigator.language + "</p>" +
-  "<p> Browser Name: " + navigator.appName + "</p>" +
-  "<p> Browser version: " + navigator.appVersion + "</p>" +
-  "<p> Browser Enabled: " + navigator.cookieEnabled + "</p>" +
-  "<p> Browser Online: " + navigator.onLine + "</p>" +
-  "<p> Browser platform: " + navigator.platform + "</p>" +
-  "<p> Browser product: " + navigator.product + "</p>" +
-  "<p> Browser javaEnabled: " + navigator.javaEnabled() + "</p>" +
-  "<p> Browser user-agent: " + navigator.userAgent + "</p>";
-  //"<p> Browser taintEnable:" + navigator.taintEnabled() "</p>";
+  "<p> Browser AppCodeName: " +
+  navigator.appCodeName +
+  "</p>" +
+  "<p> Browser Language: " +
+  navigator.language +
+  "</p>" +
+  "<p> Browser Name: " +
+  navigator.appName +
+  "</p>" +
+  "<p> Browser version: " +
+  navigator.appVersion +
+  "</p>" +
+  "<p> Browser Enabled: " +
+  navigator.cookieEnabled +
+  "</p>" +
+  "<p> Browser Online: " +
+  navigator.onLine +
+  "</p>" +
+  "<p> Browser platform: " +
+  navigator.platform +
+  "</p>" +
+  "<p> Browser product: " +
+  navigator.product +
+  "</p>" +
+  "<p> Browser javaEnabled: " +
+  navigator.javaEnabled() +
+  "</p>" +
+  "<p> Browser user-agent: " +
+  navigator.userAgent +
+  "</p>";
+//"<p> Browser taintEnable:" + navigator.taintEnabled() "</p>";
 
 document.getElementById("navigator").innerHTML = navigators;
 
 // console
-console.assert(1 == 1, "error"); 
-console.assert(2 == 21, "ভুল দিছত কেরে"); // যদি দুদিকে সমান হয় তাহলে সত্য ইরর দিবে না হলে ইরর মেসেজ দিবে।
+console.assert(1 == 1, "error");
+console.assert(2 == 21, "ভুল দিছো কেন"); // যদি দুদিকে সমান হয় তাহলে সত্য ইরর দিবে না হলে ইরর মেসেজ দিবে।
 
 console.clear();
 console.count();
+console.group("a group console");
+const countVar = "hello";
+console.count(countVar);
+console.count(countVar);
+console.error("this is error");
+console.groupCollapsed();
+console.log("hello i am [ group collapsed ]");
+console.groupEnd();
+console.log("hi i am group End");
+console.info(" hello it's simple");
+
+// onclick
+function showBtn() {
+  alert("hello i am passed");
+  console.log("hello i am passed");
+  console.clear();
+}
+
+// addEventListener
+document.addEventListener("click", myButton);
+function myButton() {
+  document.getElementById("btn").innerHTML = "it's work";
+  console.log("button work succesfully");
+  console.clear();
+}
