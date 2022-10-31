@@ -1477,6 +1477,54 @@ var remove1 = document.getElementById("remove1");
 remove.removeChild(remove1);
 remove.childNodes[4].remove();
 
+// Event Elements start
+
+// onclick
+function showBtn() {
+  // alert("hello i am passed");
+  console.log("hello i am passed");
+  alert("i am ok");
+}
+
+// addEventListener
+let button = document.querySelector(".btn1");
+button.addEventListener("click", function (e) {
+  //alert("hello i am event");
+  console.log("hello, working event");
+});
+
+let list = document.getElementById("list");
+
+button.addEventListener("click", function (e) {
+  let item = list.lastElementChild.cloneNode(true);
+  item.innerHTML = "new create";
+  list.appendChild(item);
+});
+
+// [...list.children].forEach(li => {
+//   li.onclick = function (e) {
+//     e.target.remove();
+//   }
+// });
+
+list.addEventListener("click", function (e) {
+  if (this.contains(e.target)) {
+    e.target.remove();
+  }
+});
+
+let comName = document.getElementById("name");
+comName.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    document.querySelector(
+      "#showName"
+    ).innerHTML = `my name is ${event.target.value}`;
+    event.target.value = "";
+  }
+});
+
+// Event Elements end
+
 /*
  *
  * BOM Start
@@ -1619,18 +1667,3 @@ console.log("hello i am [ group collapsed ]");
 console.groupEnd();
 console.log("hi i am group End");
 console.info(" hello it's simple");
-
-// onclick
-function showBtn() {
-  alert("hello i am passed");
-  console.log("hello i am passed");
-  console.clear();
-}
-
-// addEventListener
-document.addEventListener("click", myButton);
-function myButton() {
-  document.getElementById("btn").innerHTML = "it's work";
-  console.log("button work succesfully");
-  console.clear();
-}
