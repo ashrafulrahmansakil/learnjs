@@ -1667,3 +1667,48 @@ console.log("hello i am [ group collapsed ]");
 console.groupEnd();
 console.log("hi i am group End");
 console.info(" hello it's simple");
+console.log(" 'yeah i am console boss' ");
+
+let self = " 'Ashraful Rahman Sakil' ";
+console.log(`My name is ${self}`);
+console.log(
+  "%cmy name is sakil",
+  "font-size:30px; background-color:blue; padding:15px"
+);
+console.log(
+  "%c my name is sakil",
+  "font-size:25px; background-color:grey; color:orange; padding:15px"
+);
+
+console.log(
+  "%c এখানে কিছুই পাবেন না, পেতে হলে প্রচুর পরিশ্রম করতে হবে",
+  "font-size:25px; background-color:grey; color:orange; padding:15px"
+);
+
+const myData = ["ashraful", "siam", "arif", "junayed"];
+console.table(myData);
+
+const myInfo = {
+  name: "ashraful rahman sakil",
+  age: 24,
+  gender: "male",
+  job: "study",
+  nationality: "Bangladeshi",
+};
+console.table(myInfo);
+
+console.time();
+for (var i = 0; i < 100; i++) {
+  console.log("fake time");
+}
+console.timeEnd();
+
+console.warn("hi it's worning");
+
+function myBtn() {
+  myOthersFunction();
+}
+
+function myOthersFunction() {
+  console.trace();
+}
