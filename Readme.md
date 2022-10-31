@@ -38,7 +38,7 @@
 #### Websites
 
 - https://devsonket.com/
-- https://js.zonayed.me/
+- https://with.zonayed.me/
 - https://udemy.com
 - https://www.skillshare.com
 - https://w3schools.com
