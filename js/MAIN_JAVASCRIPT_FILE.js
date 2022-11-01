@@ -37,14 +37,17 @@ Object.keys(nameGroup).forEach((key) => {
 
        ###Task---01
 
-* ১. জাভাক্রিপ্ট কি?
+0১. জাভাক্রিপ্ট কি?
+0২. জাভাক্রিপ্ট কেন ব্যবহার করা হয়?
+0৩. জাভাক্রিপ্ট আউটপুট কোথায় দেখা যায়?
 
+* জাভাক্রিপ্ট কি?
 >>> জাভাক্রিপ্ট হলো একটি হাই লেভেল ল্যাংগুয়েজ। । এটি ওয়েবে ব্যবহ্দত হয়।
 
-** ২. জাভাক্রিপ্ট কেন ব্যবহার করা হয়?
+**  জাভাক্রিপ্ট কেন ব্যবহার করা হয়?
 >>> ওয়েব ডিজাইন ও ডেভেলপমেন্টের মাদার হলো জাভাক্রিপ্ট প্রোগ্রামিং ল্যাংগুয়েজ । এটি দিয়ে যে কোনো ধরনের ওয়েবসাইট ,ওয়েব এপ্লিকেশন,সফটওয়্যার বানানো যায়। যে কেউ খুব সহজে শিখতে পারে,সিনটেক্স সহজ
 
-*** ৩. জাভাক্রিপ্ট আউটপুট কোথায় দেখা যায়?
+** জাভাক্রিপ্ট আউটপুট কোথায় দেখা যায়?
 >>> জাভাক্রিপ্টকে সাধারণত দুইভাবে দেখা যায় , এক ব্রাউজারের কনসোলে , দুই নোট জে এস রানটাইমের সাহায্যে টার্মিনালে।
 
 আর আউটপুট কমান্ডগুলো হলো 
@@ -71,7 +74,10 @@ console.log("this is a javascript");
 
 /*
 
-###Task---02
+###Task---02 
+০৪. JavaScript Statements
+০৫. JavaScript Syntex
+০৬. JavaScript comments
 
 ৪. Javascript Statements
 হলো Values , Expressions , Variables , Operators, Comments এর সমন্বয়
@@ -152,6 +158,10 @@ first_name, last_name
 
 /*
    ### Task---03
+
+০৭. JavaScript Veriables
+০৮. JavaScript Let
+০৯. JavaScript const
 
    ৭.Javascript Veriables
    ভ্যারিয়েবল হলো জাভাক্রিপ্টের বিভিন্ন মানের ভ্যালু রাখার জায়গা আর এটি সর্বত্র ব্যবহার করা যায়।
@@ -241,6 +251,10 @@ console.log(cars);
 /*
 
 ###Task---04
+
+১০. JavaScript Operators.
+১১. JavaScript Arithmetic Operator
+১২. JavaScript অ্যাসাইনমেন্ট অপারেটর
 
 ১০. JavaScript Operators.
 
@@ -350,6 +364,9 @@ console.log(myUser);
 /*
 
 ###Task---05
+১৩. JavaScript Data Type
+১৪. JavaScript Function 
+
 
 ১৩. JavaScript Data Type. > কোনো কিছুর মানকে ডেটা বলে।
 জাভাক্রিপ্টে ডাটা টাইপ প্রধানত দুই ধরনের।
@@ -361,7 +378,6 @@ console.log(myUser);
  (C) বুলিয়ান (Boolean) : ‍সত্য (true) বা মিথ্যা (false) সিকুয়েন্স। সবকিছু ছোট হাতের।
  (D) আন-ডিফাইন্ড (Undefined) : কোনো কিছু ডিক্লেয়ার / ডিফাইন করা হলেও কোনো ভ্যালু এসাইন বা দেওয়া না হলে ইরর বা আন-ডিফাইন্ড দেখাবে।
  (E) নাল (Null) : এটার প্রকৃত কোনো মূল্য নাই কিন্তু আন-ডিফাইন্ড  বা মান কোনো কিছু না দেখাতে চাইলে দেওয়া যেতে পারে।
-
 
  (ii) নন-প্রিমিটিভ ডেটা টাইপ (Non-Primitive Data Type) / রেফারেন্স (Reference) :
 
@@ -397,7 +413,7 @@ var goSome = null;
 console.log(goSome);
 
 /*
-  ১৪.  JavaScript Function. > জাভাক্রিপ্টে সবকিছু অবজেক্ট । ফাংশনও অবজেক্ট , এটাকে ফাস্ট ক্লাস ফাংশন বলা হয়। 
+  ১৪.  JavaScript Function > জাভাক্রিপ্টে সবকিছু অবজেক্ট । ফাংশনও অবজেক্ট , এটাকে ফাস্ট ক্লাস ফাংশন বলা হয়। 
 
 বিভিন্নভাবে ফাংশকে লেখা যায়। ফাংশনকে যেভাবে ডিক্লেয়ার করা হয় > প্রথমে function > ফাংশন নাম > কার্লি ব্র্যাকেট দিয়ে শুরু পরে যা করতে ইচ্ছা তা দিতে হবে স্টেটমেন্ট এ যাবে পরে আবার কার্লি ব্র্যাকেট দিয়ে শেষ।
 
@@ -481,6 +497,7 @@ storName(" javascript", hello);
 /*
 
 ###Task---06
+১৫. JavaScript Objects
 
 ১৫. JavaScript Objects. > 
 জাভাক্রিপ্টের সবকিছুই অবজেক্ট। অবজেক্ট ব্যবহার করা অকে
@@ -576,8 +593,12 @@ console.log(arrObj);
 
 /*
 ###Task---07
+১৬. JavaScript Strings
+১৭. JavaScript Strings Method
+১৮. JavaScript Strings Search
+১৯. JavaScript Strings Templates
 
-১৭. JavaScript Strings হলো টেক্সট নাম্বারসহ ক্যৗারেক্টারের সিকুয়েন্স। আর এটি সিংঙ্গেল (''),ডাবল("") বা ক্যারেট (``) সাইনের ভিতরে থাকে। এর ভিতরে অবজেক্টও থাকতে পারে।
+১৬. JavaScript Strings হলো টেক্সট নাম্বারসহ ক্যৗারেক্টারের সিকুয়েন্স। আর এটি সিংঙ্গেল (''),ডাবল("") বা ক্যারেট (``) সাইনের ভিতরে থাকে। এর ভিতরে অবজেক্টও থাকতে পারে।
 */
 
 let art = "bangladesh" + " is our country";
@@ -594,7 +615,7 @@ console.log(a);
 
 /*
 
-১৮. JavaScript Strings Method. বিভিন্ন ধরনের কাজের জন্যে বিভিন্ন ধরনের স্ট্রিং মেথড ব্যবহার করা হয়।
+১৭. JavaScript Strings Method. বিভিন্ন ধরনের কাজের জন্যে বিভিন্ন ধরনের স্ট্রিং মেথড ব্যবহার করা হয়।
 */
 
 //JavaScript String Length
@@ -670,7 +691,7 @@ let text = "a,b,c,d,e,f";
 const myArray = text.split(",");
 console.log(myArray[5]);
 
-/* ১৯. JavaScript Strings Search হলো স্ট্রিং মেথডের ভিতরে কোনো কিছু খোঁজা
+/* ১৮. JavaScript Strings Search হলো স্ট্রিং মেথডের ভিতরে কোনো কিছু খোঁজা
 বিভিন্নভাবে স্ট্রিং সার্চ করা যায়।
 
 (i) String indexOf() কোনো নির্দিষ্ট প্রথম স্ট্রিং কততম সংখ্যায় উপস্থিত তা নির্দেশ করে।
@@ -721,7 +742,7 @@ console.log(myStr.match("name"));
 var a = "\n";
 console.log(a);
 
-/* ২০.JavaScript Strings Templates. হলো স্ট্রিং ভ্যারিয়েবলসহ কোনো কিছু প্রিন্ট করতে চাইলে কনক্যাট ( [plus] (+) ) করে নিতে হয়।
+/* ১৯.JavaScript Strings Templates. হলো স্ট্রিং ভ্যারিয়েবলসহ কোনো কিছু প্রিন্ট করতে চাইলে কনক্যাট ( [plus] (+) ) করে নিতে হয়।
 সাথে কোটেশন (’,”)(’ দেওয়ার জন্যে আবার \ দিতে হয়) নিতে হয় । এভাবে দিলে অনেক সময় কোটেশন না দিলে বা কোড দেখতে ঝামেলাপূর্ণ মনে হয় তার জন্যে সমাধান 
 
 হলো ( [ `` ] ব্যাকটিক বা ক্যারেট সাইন দেওয়া, ${}) দিলে কোড দেখতে ও করতে সহজ হয়।
@@ -775,8 +796,13 @@ function aFunc(String, _name, _age) {
 
 /*
 ###Task-- - 08
+২০. JavaScript Numbers
+২১. JavaScript Number Methods
+২২. JavaScript Array
+২৩ JavaScript Array Methods
 
-/*২১. JavaScript Numbers বিভিন্ন ধরনের হয়ে থাকে।
+
+/*২০. JavaScript Numbers বিভিন্ন ধরনের হয়ে থাকে।
 
 সংখ্যা দুই প্রকার। যথাঃ
 1* বাস্তব সংখ্যা
@@ -844,7 +870,7 @@ var a = "apple";
 var b = " 10";
 console.log(a / b);
 
-//২২ JavaScript Number Methods. বিভিন্ন ধরেনের মেথড রয়েছে
+//২১ JavaScript Number Methods. বিভিন্ন ধরেনের মেথড রয়েছে
 
 //The toString() Method এটা কি তা বোঝায়
 var a = 125;
@@ -903,11 +929,12 @@ let numbers = [20, 30, 10, 50, 100, 500, 150, 5000, 100000];
 
 var a = -1 / 0;
 console.log(a);
+
 //JavaScript POSITIVE_INFINITY
 //JavaScript NEGATIVE_INFINITY
 //JavaScript NaN - Not a Number
 
-//২৩ JavaScript Array.
+//২২ JavaScript Array.
 /**
  * অ্যারো হলো প্রচুর পরিমাণ ডাটা স্টোর করার সহজ মাধ্যম
  * অ্যারেকে সাধারণ ডাটা স্ট্রাকচার বলা হয়। বুলিয়ান,স্ট্রিং,ভেরিয়েবল নিয়ে অ্যারে বানানো হয়।
@@ -1022,7 +1049,7 @@ function myFunction(value) {
 
 fruits.forEach(myFunction);
 
-//২৪ JavaScript Array Methods
+//২৩ JavaScript Array Methods
 
 var flower = ["Abutilon", "Forsythia", "Rose", "Sunflower", "Daisy"];
 console.log(flower);
@@ -1087,10 +1114,12 @@ var total = mobile.concat(flower);
 console.log(total);
 //tostring() এটা করতে হলে DOM লাগবে
 /*
+
+
 ###Task--- 09
-২৫. JavaScript Array Sort.
-২৬.JavaScript Array Iteration.
-২৭.JavaScript Array Const.
+২৪. JavaScript Array Sort.
+২৫.JavaScript Array Iteration.
+২৬.JavaScript Array Const.
 */
 
 /**
@@ -1320,10 +1349,10 @@ console.log(i.includes("desktop"));
 
 /*
 ###Task--- 10 সময় নিয়ে বিস্তারিত
-২৮. JavaScript Dates.
-২৯. JavaScript Date Formats.
-৩০. JavaScript Date Get Method.
-৩১. JavaScript Date Set Method.
+২৭. JavaScript Dates.
+২৮. JavaScript Date Formats.
+২৯. JavaScript Date Get Method.
+৩০. JavaScript Date Set Method.
 */
 
 /*JavaScript Dates. 
@@ -1429,9 +1458,13 @@ console.log(d.setTime());
 
 /*
 ###Task--- 11
-৩২. JavaScript Math
+৩১. JavaScript Math
+৩২.JavaScript Random
+৩৩.JavaScript Booleans
+৩৪.JavaScript Comparisons
+*/
 
-JavaScript Math Constants
+/* JavaScript Math Constants
 
 Math.E: 2.718281828459045
 Math.PI: 3.141592653589793
@@ -1441,10 +1474,6 @@ Math.LN2: 0.6931471805599453
 Math.LN10: 2.302585092994046
 Math.LOG2E: 1.4426950408889634
 Math.Log10E: 0.4342944819032518
-
-৩৩.JavaScript Random
-৩৪.JavaScript Booleans
-৩৫.JavaScript Comparisons
 */
 
 //JavaScript Math বিভিন্ন ধরনের গাণিতিক সমস্যা সমাধানের জন্য ম্যাথ
@@ -1593,10 +1622,9 @@ console.log(a == 9);
 
 /*
 ###Task--- 12
-৩৬. JavaScript Conditional Operator/Statements
-
-৩৭.JavaScript Array Iteration.
-৩৮.JavaScript Array Const.
+৩৫. JavaScript Conditional Operator/Statements
+৩৬.JavaScript Array Iteration.
+৩৭.JavaScript Array Const.
 ৩৮.JavaScript Array Const.
 */
 //JavaScript Conditional Operator/Statements প্রাত্যহিক লাইফে বিবিন্ন ডিসিশন নিতে বিভিন্ন হা বা নায়ের সাহায্য নিতে হয় তেমনি প্রোগ্রামিং ও ডিসিশন নিতে বিভিন্ন স্টেটমেন্ট রয়েছে
@@ -1855,8 +1883,6 @@ JavaScript Bitwise Operators
 >>	Signed right shift	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
 >>>	Zero fill right shift	Shifts right by pushing zeros in from the left, and let the rightmost bits fall off
 
-
-
 বাইনারি,দশমিক,ডেসিমেল,হেক্সাডেসিমেল
 
 
@@ -1865,6 +1891,8 @@ JavaScript Bitwise Operators
 /*
  * JavaScript RegExp পরে করবো
  */
+
+
 
 /*
 ###Task--- 15
@@ -2621,6 +2649,7 @@ class mySelf {
   }
 }
 console.log(mySelf.MeMy());
+
 // কিন্তু এই ক্লাস দিয়ে তৈরি অবজেক্ট কখনও এক্সেস করতে পারবো না ইরর দিবে। কারণ এই static মেথড শুধু মেইন ক্লাস দিয়ে অ্যাক্সেস পাওয়া যায়।
 
 /*
@@ -2632,6 +2661,7 @@ console.log(mySelf.MeMy());
 */
 
 //JavaScript Asynchronous জাভাক্রিপ্টমহ প্রায় সকল ভাষায় চলে সিনক্রোনাস পদ্ধতিতে। তবে কিছু ক্ষেত্রে অ্যাসিনক্রোনাস পদ্ধতিও লাগে। কারণ কিছু কাজ করতে গেলে সরাসরি রেসপন্স না করে একটু ঘুরিয়ে করা লাগে বিশেষত সার্ভার থেকে ডাটা আনতে গেলে। আর এটা মূলত হয়ে থাকে সার্ভার কোনো কারণে লোড হতে দেরি হলে যাতে সঠিক সময়ের আগে যেন কন্টেন্ট না আসে তার জন্যে এটা ব্যবহার করা হয়।
+
 let asyn;
 setTimeout(function () {
   value = 12;
