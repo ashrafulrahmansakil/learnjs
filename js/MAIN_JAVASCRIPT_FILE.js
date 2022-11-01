@@ -3087,6 +3087,73 @@ img.addEventListener("error", () => {
 
 //৯৫. JavaScript console ডেভেলপার কন্সোল! এগুলো আমাদের জাভাস্ক্রিপ্ট ডেভেলপমেন্ট এর লাইফে সবচেয়ে বেশী কাজে লাগে। বিশেষ করে ব্রাউজারের কন্সোলগুলো। কারণ ব্যবহার করা সহজ আর যেকোনো জায়গা থেকেই অ্যাক্সেস করা যায়। এতোদিন আমরা দেখেছিও কিভাবে আমাদের এই কন্সোল আমাদের সাহায্য করতে পারে। আর ক্রোমের ডেভেলপার কন্সোল বেশ পাওয়ারফুল হওয়ার কারণে আমি আমার সব লেখায় এটাই ব্যবহার করেছি। আপনি ফলো করে থাকলে হয়তো দেখবেন এই ক্রোমের ডেভেলপার কন্সোল কতটা কাজে লাগে ডেভেলপমেন্ট এর সময়। কিন্তু এর বাইরেও ক্রোমের(সাথে অন্যান্য ব্রাউজেরেরও) এই কন্সোলে আরো অনেক কাজ করা যায়। আজকে এই পর্বে আমরা সেগুলোই দেখবো একটা একটা করে।
 
+// console এর সকল ইলিমেন্ট
+console.assert(1 == 1, "error");
+console.assert(2 == 21, "ভুল দিছো কেন"); // যদি দুদিকে সমান হয় তাহলে সত্য ইরর দিবে না হলে ইরর মেসেজ দিবে।
+console.clear(); // সবকিছু ক্লিয়ার করে দিবে কনসোলের
+console.count(); // কোনোকিছু গণনা করতে কাজেলঅগে
+console.group("a group console"); // গ্রুপ ভিত্তিকভাবে কাজ করতে সহায়তা করে থাকে।
+const countVar = "hello";
+console.count(countVar);
+console.count(countVar);
+console.error("this is error"); // ভুল মেসেজ দেখাতে কাজে লাগে
+console.groupCollapsed(); // গ্রুপের কোনো কিছু ট্রগল করে রাখতে ব্যবহার করে
+console.log("hello i am [ group collapsed ]");
+console.groupEnd(); //গ্রুপের কার্য শেষ করতে লাগে।
+console.log("hi i am group End");
+console.info(" hello it's simple"); // সিম্পল ইনফো টাইপের ম্যাসেজ দেখানোর জন্যে
+console.log(" 'yeah i am console boss' "); // পরিচিত টার্ম, এটি কনসোলের প্রধান
+
+// এটা একটু স্পেশাল ইফেক্টের মতো কাহজ করে থাকে (%c) দিয়ে অনেক কাজ করতে পারবেন
+
+let self = " 'Ashraful Rahman Sakil' ";
+console.log(`My name is ${self}`);
+console.log(
+  "%cmy name is sakil",
+  "font-size:30px; background-color:blue; padding:15px"
+);
+console.log(
+  "%c my name is sakil",
+  "font-size:25px; background-color:grey; color:orange; padding:15px"
+);
+
+console.log(
+  "%c এখানে কিছুই পাবেন না, পেতে হলে প্রচুর পরিশ্রম করতে হবে",
+  "font-size:25px; background-color:grey; color:orange; padding:15px"
+);
+
+// টেবিলের মতো বিভিন্ন ডাটা সাজিয়ে কনসোলে দেখাতে পারবেন
+
+const myData = ["ashraful", "siam", "arif", "junayed"];
+console.table(myData);
+
+const myInfo = {
+  name: "ashraful rahman sakil",
+  age: 24,
+  gender: "male",
+  job: "study",
+  nationality: "Bangladeshi",
+};
+console.table(myInfo);
+
+//এই দুইটা মেথড এর মধ্যে আপনি আপনার জাভাস্ক্রিপ্ট কোড দিবেন, তারপর রান করানোর পর এটা আপনাকে বলে দিবে আপনার কোডের অপারেশন শেষ করতে কত সময় লেগেছে।
+console.time();
+for (var i = 0; i < 100; i++) {
+  console.log("fake time");
+}
+console.timeEnd();
+
+// কন্সোলে ওয়ার্নিং আকারে ম্যাসেজ দেখানোর জন্যে
+console.warn("hi it's worning");
+
+function myBtn() {
+  myOthersFunction();
+}
+
+function myOthersFunction() {
+  console.trace();
+}
+
 //৯৬. JavaScript timing / popup > বিভিন্ন ধরনের ইসস্টেন্ট মেসেজ দেখানো বা সতর্কতা মূলক ভুল ধরিয়ে দিতে বা রিমাইন্ডার দিতে ব্যবহার করা হয়।
 
 //৯৭. JavaScript cookies এটা সবচেয়ে বেশি গুরুত্বপূর্ণ বিষয়। এটা ইউজারের মৌলিক ডেটা লোকাল স্টোরেজ এ কুকিজ হিসেবে স্টোর করে রাখে। 

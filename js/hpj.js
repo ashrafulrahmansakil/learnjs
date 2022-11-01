@@ -1651,23 +1651,24 @@ let navigators =
 
 document.getElementById("navigator").innerHTML = navigators;
 
-// console
+// console এর সকল ইলিমেন্ট
 console.assert(1 == 1, "error");
 console.assert(2 == 21, "ভুল দিছো কেন"); // যদি দুদিকে সমান হয় তাহলে সত্য ইরর দিবে না হলে ইরর মেসেজ দিবে।
-
-console.clear();
-console.count();
-console.group("a group console");
+console.clear(); // সবকিছু ক্লিয়ার করে দিবে কনসোলের
+console.count(); // কোনোকিছু গণনা করতে কাজেলঅগে
+console.group("a group console"); // গ্রুপ ভিত্তিকভাবে কাজ করতে সহায়তা করে থাকে।
 const countVar = "hello";
 console.count(countVar);
 console.count(countVar);
-console.error("this is error");
-console.groupCollapsed();
+console.error("this is error"); // ভুল মেসেজ দেখাতে কাজে লাগে
+console.groupCollapsed(); // গ্রুপের কোনো কিছু ট্রগল করে রাখতে ব্যবহার করে
 console.log("hello i am [ group collapsed ]");
-console.groupEnd();
+console.groupEnd(); //গ্রুপের কার্য শেষ করতে লাগে।
 console.log("hi i am group End");
-console.info(" hello it's simple");
-console.log(" 'yeah i am console boss' ");
+console.info(" hello it's simple"); // সিম্পল ইনফো টাইপের ম্যাসেজ দেখানোর জন্যে
+console.log(" 'yeah i am console boss' "); // পরিচিত টার্ম, এটি কনসোলের প্রধান
+
+// এটা একটু স্পেশাল ইফেক্টের মতো কাহজ করে থাকে (%c) দিয়ে অনেক কাজ করতে পারবেন
 
 let self = " 'Ashraful Rahman Sakil' ";
 console.log(`My name is ${self}`);
@@ -1685,6 +1686,8 @@ console.log(
   "font-size:25px; background-color:grey; color:orange; padding:15px"
 );
 
+// টেবিলের মতো বিভিন্ন ডাটা সাজিয়ে কনসোলে দেখাতে পারবেন
+
 const myData = ["ashraful", "siam", "arif", "junayed"];
 console.table(myData);
 
@@ -1697,12 +1700,14 @@ const myInfo = {
 };
 console.table(myInfo);
 
+//এই দুইটা মেথড এর মধ্যে আপনি আপনার জাভাস্ক্রিপ্ট কোড দিবেন, তারপর রান করানোর পর এটা আপনাকে বলে দিবে আপনার কোডের অপারেশন শেষ করতে কত সময় লেগেছে।
 console.time();
 for (var i = 0; i < 100; i++) {
   console.log("fake time");
 }
 console.timeEnd();
 
+// কন্সোলে ওয়ার্নিং আকারে ম্যাসেজ দেখানোর জন্যে
 console.warn("hi it's worning");
 
 function myBtn() {
