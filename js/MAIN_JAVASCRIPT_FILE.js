@@ -2671,6 +2671,7 @@ console.log(asyn);
 
 //JavaScript Callbacks এটা হলো সিরিয়ালভাবে ডিক্লেয়ার না করে আগেরটা পরে, পরেরটা আগে ফলাফল দিয়ে থাকে।
 
+
 //JavaScript Promises
 
 //JavaScript Async/Await

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #373535;
+    background-color: #5d5757;
     color: #fff;
     font-family: monospace;
     font-size: 1.1rem;
@@ -41,15 +41,16 @@ strong{
 .btn,input{
     font-size: 25px;
     color: #fff;
-    background-color: #808394;
-    padding: 5px 10px;
+    background-color: #0889a6;
+    padding: 5px 20px;
     margin: 10px 0px;
     cursor: pointer;
     border: none;
     outline: none;
+    text-transform: capitalize;
 }
 
 input:hover{
-    background-color: rgb(5, 127, 152);
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
