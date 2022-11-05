@@ -1908,14 +1908,55 @@ JavaScript Bitwise Operators
 3. finally
 4. throw
 
-The ’try’ statement defines a code block to run (to try).
+* The ’try’ statement defines a code block to run (to try).
+* The ’catch’ statement defines a code block to handle any error.
+* The ’finally’ statement defines a code block to run regardless of the result.
+* The ’throw’ statement defines a custom error.
 
-The ’catch’ statement defines a code block to handle any error.
+//ইরর হ্যান্ডেলিং
 
-The ’finally’ statement defines a code block to run regardless of the result.
+// 1. try এটা ব্যবহার করা হয় ইররের সম্ভাবনা তৈরি হলে
+try {
+  console.log("this is an error");
+} //এখন শুধু এই ট্রাই ব্লকের কোড একা রান করবে না, এর সাথে আপনার আরেকটা স্টেটমেন্টও থাকা লাগবে।
+catch (error) {
+  console.log("do anything here");
+}
 
-The ’throw’ statement defines a custom error.
+// 2. catch এখানে ইউজারকে খুবই সুন্দরভাবে বোঝানো যাবে যে আপনার কোথাও সমস্যা হচ্ছে তা পরিবর্তন করুন
+try {
+  console.log('hello, sir you can\'t use right info');
+} catch (error) {
+  console.log('yeah, it\'s error')
+}
 
+// 3. throw এই স্টেটমেন্ট দিয়ে আমরা কাস্টম এরর থ্রো করতে পারি। আমাদের কোডে কোনো কন্ডিশনের উপরে ভিত্তি করে আমরা কাস্টম এরর দেখাতে পারিঃ
+const myAge = 36;
+try {
+  if (myAge < 26) {
+    throw 'you are too young'
+  } else if (myAge<=26) {
+    console.log(' you & me are same');
+  }else {
+    console.log('you are adult')
+  }
+} catch(err) {
+  console.log(err);
+}
+
+// 4. finally এই স্টেটমেন্ট এর ভিতরের কোড সবসময়েই রান করবে, এরর হউক বা নাই হউকঃ
+try {
+  throw 'an error'
+} catch (err) {
+  console.log('i am your error friend');  
+} finally {
+  console.log('i will try ignore error but i always run in developer lifetime');
+}
+
+// আরেকটি আছে সেটা নিজেই ইরর অবজেক্ট থ্রো করে
+
+const errorFriend = new Error('this is a error object');
+console.log(errorFriend);
 
 */
 
@@ -2673,6 +2714,7 @@ console.log(asyn);
 
 
 //JavaScript Promises
+
 
 //JavaScript Async/Await
 

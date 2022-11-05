@@ -1718,25 +1718,5 @@ function myOthersFunction() {
   console.trace();
 }
 
-// Callback
 
-// Encode > Decode
-
-let inputEle = document.getElementById("input");
-inputEle.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    document.getElementById(
-      "clickPara"
-    ).innerHTML = `Your name is ' ${event.target.value} '`;
-
-    let text = event.target.value;
-    let encoded = window.btoa(text);
-    let decoded = window.atob(encoded);
-
-    document.getElementById("clickEvent").innerHTML =
-      "Encoded: " + encoded + "<br>" + "Decoded: " + decoded;
-    event.target.value = "";
-    alert("mission finished");
-    console.log("mission finished");
-  }
-});
+// callback
