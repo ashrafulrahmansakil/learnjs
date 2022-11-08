@@ -2701,21 +2701,169 @@ console.log(mySelf.MeMy());
 ৮৫. JavaScript Async / Await
 */
 
-//JavaScript Callbacks এটা হলো সিরিয়ালভাবে ডিক্লেয়ার না করে আগেরটা পরে, পরেরটা আগে ফলাফল দিয়ে থাকে।
+//JavaScript Callbacks এটা হলো সিরিয়ালভাবে ডিক্লেয়ার না করে আগেরটা পরে, পরেরটা আগে ফলাফল দিয়ে থাকে। 
 
-//JavaScript Asynchronous জাভাক্রিপ্ট প্রায় সকল ভাষায় চলে সিনক্রোনাস পদ্ধতিতে। তবে কিছু ক্ষেত্রে অ্যাসিনক্রোনাস পদ্ধতিও লাগে। কারণ কিছু কাজ করতে গেলে সরাসরি রেসপন্স না করে একটু ঘুরিয়ে করা লাগে বিশেষত সার্ভার থেকে ডাটা আনতে গেলে। আর এটা মূলত হয়ে থাকে সার্ভার কোনো কারণে লোড হতে দেরি হলে যাতে সঠিক সময়ের আগে যেন কন্টেন্ট না আসে তার জন্যে এটা ব্যবহার করা হয়।
+// callback basic
 
-let asyn;
-setTimeout(function () {
-  value = 12;
-}, 1000);
+function display(some) {
+  console.log(some);
+}
+function calcutator(num1, num2) {
+  let sum = num1 + num2;
+  display(sum);
+}
+calcutator(24, 22);
 
-console.log(asyn);
+// // part - 2
 
-//JavaScript Promises
+let callBack = (someting) => {
+  console.log(someting);
+};
+let backFun = (Name, Class, CallBackFun) => {
+  let detalis = `My name is ${Name} & i read in depertment of ${Class}`;
+  CallBackFun(detalis);
+};
+backFun("sakil", "computer enginner", callBack);
+
+let sakilWork = (callback) => {
+  setTimeout(() => {
+    console.log("you work callback");
+    callback();
+  }, 1000);
+};
+let sakiljob = () => {
+  console.log("sakil job awesome");
+};
+
+sakilWork(sakiljob);
+
+console.log("callback function understand 1");
+
+//asynchrounous function of settimeout
+
+setTimeout(() => {
+  console.log("callback function understand 2");
+}, 2000);
+console.log("callback function understand 3");
+
+//JavaScript Asynchronous জাভাক্রিপ্ট প্রায় সকল ভাষায় চলে সিনক্রোনাস পদ্ধতিতে। তবে কিছু ক্ষেত্রে অ্যাসিনক্রোনাস পদ্ধতিও লাগে। কারণ কিছু কাজ করতে গেলে সরাসরি রেসপন্স না করে একটু ঘুরিয়ে করা লাগে বিশেষত সার্ভার থেকে ডাটা আনতে গেলে। আর এটা মূলত হয়ে থাকে সার্ভার কোনো কারণে লোড হতে দেরি হলে যাতে সঠিক সময়ের আগে যেন কন্টেন্ট না আসে তার জন্যে এটা ব্যবহার করা হয়। এটাতে কলব্যাক হেল হতে পারে, হলে প্রমিজটা ব্যবহার করা হয়
+
+//Asynchronous callback
+
+//const marks = 10;
+//const result = false;
+
+const result = true;
+const marks = 100;
+
+function diplomaExam(callback) {
+  console.log("if you work hard, then you got a bright future");
+
+  setTimeout(() => {
+    if (result) {
+      callback();
+    } else {
+      console.log("if you can\'t achive much number then diploma enginnering Exam failed");
+    }
+  }, 1000);
+}
+
+function diplomaExamPaper(callback) {
+  console.log("Diploma exam paper processing....");
+
+  setTimeout(() => {
+    if (marks >= 80) {
+      callback();
+    } else {
+      console.log("you can't good result in Diploma Enginnering");
+    }
+  }, 2000);
+}
+
+function diplomaResult() {
+  console.log("your result is good");
+  setTimeout(() => {
+    console.log("your certificate comming soon....");
+  }, 3000);
+}
+
+// anonomous function
+
+diplomaExam(() => {
+  diplomaExamPaper(diplomaResult);
+})
+
+//JavaScript Promises > এটা ব্যবহার করা হয় হ্যাসেল ফ্রি করার জন্য যদি কোনো সমস্যা হয় তাহলে await ব্যভহার করে স্পষ্টভাবে ও সঠিকভাবে েোড করা যায় কোনো সমস্যা ছাড়া
+
+const outcome = true;
+const spot = 110;
+
+function diplomaExamHall() {
+  console.log("if you work hard, then you got a bright future");
+  const promise = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+    if (outcome) {
+     resolve();
+    } else {
+      reject("you can\'t achive much number then diploma enginnering Exam failed");
+    }
+  }, 1000);
+  });
+  return promise;
+}
+
+function diplomaExamPaper() {
+  console.log("Diploma exam paper processing....");
+  const promise = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      if (spot >= 80) {
+        resolve();
+      } else {
+        reject("you are Refed in Exam of 3 subject");
+      }
+    }, 2000);
+  });
+  return promise;
+}
+
+function diplomaResult() {
+  console.log("your result is good");
+  const promise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Congraculation, your certificate comming soon....");
+    }, 3000);
+  });
+  return promise;
+}
+
+// Beauti of promise
+
+diplomaExamHall()
+  .then(diplomaExamPaper)
+  .then(diplomaResult)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 
-//JavaScript Async/Await
+//JavaScript Async/Await 
+
+//asyn await function
+async function diploma() {
+  try {
+    await diplomaExamHall();
+    await diplomaExamPaper();
+    const message = await diplomaResult();
+    console.log(message);
+  } catch(error) {
+    console.log(error);
+  }
+}
+diploma();
+
 
 /*
 ###Task--- 25

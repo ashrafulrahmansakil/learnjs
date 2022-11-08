@@ -1718,5 +1718,112 @@ function myOthersFunction() {
   console.trace();
 }
 
-// callback
+//Asynchronous callback
 
+const outcome= true;
+const spot = 10;
+
+function diplomaExam(callback) {
+  console.log("1.if you work hard, then you got a bright future");
+
+  setTimeout(() => {
+    if (outcome) {
+      callback();
+    } else {
+      console.log("1.you can\'t achive much number then diploma enginnering Exam failed");
+    }
+  }, 1000);
+}
+
+function diplomaExamPaper(callback) {
+  console.log("1.Diploma exam paper processing....");
+
+  setTimeout(() => {
+    if (spot >= 80) {
+      callback();
+    } else {
+      console.log("1.you can't good result in Diploma Enginnering");
+    }
+  }, 2000);
+}
+
+function diplomaResult() {
+  console.log("1.your result is good");
+  setTimeout(() => {
+    console.log("1.your certificate comming soon....");
+  }, 3000);
+}
+
+// anonomous function
+
+diplomaExam(() => {
+  diplomaExamPaper(diplomaResult);
+})
+
+//promise
+
+const result = true;
+const marks = 110;
+
+function diplomaExamHall() {
+  console.log("2.if you work hard, then you got a bright future");
+  const promise = new Promise(function (resolve, reject) {
+      setTimeout(() => {
+    if (result) {
+     resolve();
+    } else {
+      reject("2.you can\'t achive much number then diploma enginnering Exam failed");
+    }
+  }, 1000);
+  });
+  return promise;
+}
+
+function diplomaExamPaper() {
+  console.log("2.Diploma exam paper processing....");
+  const promise = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      if (marks >= 80) {
+        resolve();
+      } else {
+        reject("2.you are Refed in Exam of 3 subject");
+      }
+    }, 2000);
+  });
+  return promise;
+}
+
+function diplomaResult() {
+  console.log("2.your result is good");
+  const promise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("2.Congraculation, your certificate comming soon....");
+    }, 3000);
+  });
+  return promise;
+}
+
+// Beauti of promise
+
+diplomaExamHall()
+  .then(diplomaExamPaper)
+  .then(diplomaResult)
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//asyn await function
+async function diploma() {
+  try {
+    await diplomaExamHall();
+    await diplomaExamPaper();
+    const message = await diplomaResult();
+    console.log(message);
+  } catch(error) {
+    console.log(error);
+  }
+}
+diploma();
