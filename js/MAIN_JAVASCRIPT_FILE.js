@@ -1892,8 +1892,6 @@ JavaScript Bitwise Operators
  * JavaScript RegExp পরে করবো
  */
 
-
-
 /*
 ###Task--- 15
 ৪৫. JavaScript Errors
@@ -2701,7 +2699,7 @@ console.log(mySelf.MeMy());
 ৮৫. JavaScript Async / Await
 */
 
-//JavaScript Callbacks এটা হলো সিরিয়ালভাবে ডিক্লেয়ার না করে আগেরটা পরে, পরেরটা আগে ফলাফল দিয়ে থাকে। 
+//JavaScript Callbacks এটা হলো সিরিয়ালভাবে ডিক্লেয়ার না করে আগেরটা পরে, পরেরটা আগে ফলাফল দিয়ে থাকে।
 
 // callback basic
 
@@ -2763,7 +2761,9 @@ function diplomaExam(callback) {
     if (result) {
       callback();
     } else {
-      console.log("if you can\'t achive much number then diploma enginnering Exam failed");
+      console.log(
+        "if you can't achive much number then diploma enginnering Exam failed"
+      );
     }
   }, 1000);
 }
@@ -2791,7 +2791,7 @@ function diplomaResult() {
 
 diplomaExam(() => {
   diplomaExamPaper(diplomaResult);
-})
+});
 
 //JavaScript Promises > এটা ব্যবহার করা হয় হ্যাসেল ফ্রি করার জন্য যদি কোনো সমস্যা হয় তাহলে await ব্যভহার করে স্পষ্টভাবে ও সঠিকভাবে েোড করা যায় কোনো সমস্যা ছাড়া
 
@@ -2801,13 +2801,15 @@ const spot = 110;
 function diplomaExamHall() {
   console.log("if you work hard, then you got a bright future");
   const promise = new Promise(function (resolve, reject) {
-      setTimeout(() => {
-    if (outcome) {
-     resolve();
-    } else {
-      reject("you can\'t achive much number then diploma enginnering Exam failed");
-    }
-  }, 1000);
+    setTimeout(() => {
+      if (outcome) {
+        resolve();
+      } else {
+        reject(
+          "you can't achive much number then diploma enginnering Exam failed"
+        );
+      }
+    }, 1000);
   });
   return promise;
 }
@@ -2848,8 +2850,7 @@ diplomaExamHall()
     console.log(error);
   });
 
-
-//JavaScript Async/Await 
+//JavaScript Async/Await
 
 //asyn await function
 async function diploma() {
@@ -2858,12 +2859,11 @@ async function diploma() {
     await diplomaExamPaper();
     const message = await diplomaResult();
     console.log(message);
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
 }
 diploma();
-
 
 /*
 ###Task--- 25
@@ -2872,7 +2872,6 @@ diploma();
 ৮৮. JavaScript DOM at all
 ৮৯. JavaScript Events / Listener
 */
-
 
 /**
  * ৮৬. JavaScript Dom Documents
@@ -2885,8 +2884,6 @@ diploma();
 /**
  * ৮৮. JavaScript DOM at all
  */
-
-
 
 /* ৮৯. JavaScript Events / Listener
 
@@ -3276,8 +3273,6 @@ img.addEventListener("error", () => {
   console.log("img not success");
 });
 
-
-
 /*
 ###Task--- 26
 ৯০. JavaScript BOM window হলো ব্রাউজারে উইন্ডোতে বিভিন্ন ধরনের ডেটা থাকে বা অবজেক্ট কাজ করতে হয়।
@@ -3292,7 +3287,6 @@ img.addEventListener("error", () => {
  বমগুলো index.html,hpj.js ফাইলে লোড করা হয়েছে।
  
  */
-
 
 /*
 ###Task--- 27
@@ -3376,18 +3370,550 @@ function myOthersFunction() {
 
 //৯৬. JavaScript timing / popup > বিভিন্ন ধরনের ইসস্টেন্ট মেসেজ দেখানো বা সতর্কতা মূলক ভুল ধরিয়ে দিতে বা রিমাইন্ডার দিতে ব্যবহার করা হয়।
 
-//৯৭. JavaScript cookies এটা সবচেয়ে বেশি গুরুত্বপূর্ণ বিষয়। এটা ইউজারের মৌলিক ডেটা লোকাল স্টোরেজ এ কুকিজ হিসেবে স্টোর করে রাখে। 
+//৯৭. JavaScript cookies এটা সবচেয়ে বেশি গুরুত্বপূর্ণ বিষয়। এটা ইউজারের মৌলিক ডেটা লোকাল স্টোরেজ এ কুকিজ হিসেবে স্টোর করে রাখে।
 
 /*
 ###Task--- 28
 
 ৯৮. JavaScript Bom Object
-৯৯. JavaScript
-১০০. JavaScript 
-১০১. JavaScript
+৯৯. JavaScript API
+১০০. JavaScript Json
 */
 
+/*JavaScript API Making & Calling
+ 4 Way Of API XhrHttpRequest, fetch, axios> ajax, jquery >
+ API MAKING
+*/
 
+console.log(
+  "%c 1. XMLHttpRequest api এর সব মেথড এখানে",
+  "font-size:25px; background-color:purple; color:white; padding:15px"
+);
+
+// XMLHttpRequest -> OLD Formula
+/**
+ * event onload(), onerror()
+ * property- response, responseText, responseType, responseURL, status, statusText
+ * function - open(), send(),
+ */
+
+ const makeRequest = (method, url, data) => {
+  // xhr প্রমিজ থাকে না বানিয়ে নিতে হয়
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("content-type", "application/json");
+
+    xhr.onload = () => {
+      let data = xhr.response;
+      // console.log(xhr.status);
+      // console.log(xhr.statusText);
+      // console.log(xhr.response);
+      // console.log(xhr.responseURL);
+      // console.log(xhr.statusText);
+      console.log(JSON.parse(data));
+    };
+
+    xhr.onerror = () => {
+      console.log("error code");
+    };
+    xhr.send(JSON.stringify(data));
+  });
+};
+
+// API => CALLING
+
+console.log(
+  "%c Api Calling ' 1>2>3>4 ' ",
+  "font-size:25px; background-color:purple; color:white; padding:15px"
+);
+// // GET => xhr only যদি প্রমিজ না বানাই
+
+// const getData = () => {
+//   makeRequest("GET", "https://jsonplaceholder.typicode.com/posts/")
+//     .then(
+//     (res) => console.log(res)
+//   );
+// };
+
+// getData();
+
+// API CALLING - এটা নরমাল ডাটা রির্টান করে
+//GET
+
+const getData = () => {
+  makeRequest("GET", "https://jsonplaceholder.typicode.com/posts/")
+    .then(
+    (res) => console.log(res)
+  );
+};
+
+getData();
+
+//এর পরে থেকে পরিবর্তন হবে কারণ সেখানে সকল প্রকার ইনফো পরিবর্তনশীল
+
+//POST - ডাটা তৈরি করতে
+
+const sentData = () => {
+  makeRequest("POST", "https://jsonplaceholder.typicode.com/posts/", {
+    title: "name",
+    body: "username",
+    id: 1,
+    address: "city",
+    userId: 1,
+  }).then((res) => console.log(res));
+};
+
+sentData();
+
+//PUT - তৈরিকৃত ডাটা আপডেট করতে
+
+const updateData = () => {
+  makeRequest("PUT", "https://jsonplaceholder.typicode.com/posts/1", {
+    title: "name",
+    body: "username",
+    id: 1,
+    address: "city",
+    userId: 1,
+  }).then((res) => console.log(res));
+};
+
+updateData();
+
+//PATCH - কোনো সিঙ্গেল ডাটাকে আপডেট করতে
+
+const patchData = () => {
+  makeRequest("PATCH", "https://jsonplaceholder.typicode.com/posts/1", {
+    title: "name",
+    body: "username",
+    id: 1,
+    address: "megacity",
+    userId: 1,
+  });
+};
+
+patchData();
+
+//DELETE - সবকিছু মুছে দিতে
+
+const deleteData = () => {
+  makeRequest("DELETE", "https://jsonplaceholder.typicode.com/posts/1");
+};
+
+deleteData();
+
+//fetch API
+
+console.log(
+  "%c 2. fetch api এর সব মেথড এখানে",
+  "font-size:25px; background-color:purple; color:white; padding:15px"
+);
+
+// fetch() has replaced XMLHttpRequest
+// fetch() - global method for making HTTP Request
+// 2 ways to call - then, async await
+
+// + fetch() is easy to use compare to XMLHttpRequest
+// + fetch() returns a promise
+// - returned promise can only handle network error
+// - does not support all the older browser
+
+//normal fetch
+
+// fetch("https://jsonplaceholder.typicode.com/posts/")
+//   .then((res) => {
+//     if (!res.ok) {
+//       const message = `Error : ${res.status}`;
+//       throw new Error(message);
+//     }
+//     return res.json();
+//   })
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
+
+// fetch("https://jsonplaceholder.typicode.com/posts/", {
+//   method: "POST",
+//   headers: { "Content-type": "application/json; Charset=UTF-8" },
+//   body: JSON.stringify({
+//     title:'name',
+//     body: 'username',
+//     userId:1
+
+//   }),
+// })
+//   .then((res) => {
+//     if (!res.ok) {
+//       const message = `Error : ${res.status}`;
+//       throw new Error(message);
+//     }
+//     return res.json();
+//   })
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
+
+// //async await fetch
+
+// const makeRequest = async (url, config) => {
+//   const res = await fetch(url, config);
+//   if (!res.ok) {
+//     const message = `Error : ${res.status}`;
+//     throw new Error(message);
+//   }
+//   const data = await res.json();
+//   return data;
+// };
+
+// // API CALLING - এটা নরমাল ডাটা রির্টান করে
+//GET
+
+// const getData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/")
+//     .then((res) => console.log(res))
+//     .catch((err) => console.log(err));
+// };
+
+// getData();
+
+// //এর পরে থেকে পরিবর্তন হবে কারণ সেখানে সকল প্রকার ইনফো পরিবর্তনশীল
+
+// //POST- ডাটা তৈরি করতে
+
+// const sentData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/users", {
+//     method: "POST",
+//     body: JSON.stringify({
+//       title: "name",
+//       body: "username",
+//       id: 1,
+//       userId: 1,
+//     }),
+//     headers: { "Content-type": "application/json; Charset=UTF-8" },
+//   })
+//     .then((res) => console.log(res))
+//     .catch((err) => console.log(err));
+// };
+
+// sentData();
+
+// //PUT- তৈরিকৃত ডাটা আপডেট করতে
+
+// const updateData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+//     method: "PUT",
+//     body: JSON.stringify({
+//       title: "name",
+//       body: "username",
+//       id: 1,
+//       address:'city',
+//       userId: 1,
+//     }),
+//     headers: { "Content-type": "application/json; Charset=UTF-8" },
+//   })
+//     .then((res) => console.log(res))
+//     .catch((err) => console.log(err));
+// };
+
+// updateData();
+
+// // PATCH - কোনো সিঙ্গেল ডাটাকে আপডেট করতে
+
+// const patchData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+//     method: "PATCH",
+//     body: JSON.stringify({
+//       title: "name",
+//       body: "username",
+//       id: 1,
+//       address:'megacity',
+//       userId: 1,
+//     }),
+//     headers: { "Content-type": "application/json; Charset=UTF-8" },
+//   })
+//     .then((res) => console.log(res))
+//     .catch((err) => console.log(err));
+// };
+
+// patchData();
+
+// //DELETE - সবকিছু মুছে দিতে
+
+// const deleteData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+//     method: "DELETE",
+//   })
+//     .then((res) => console.log(res))
+//     .catch((err) => console.log(err));
+// };
+
+// deleteData();
+
+// axios || ajax
+console.log(
+  "%c 3. ajaz/ axios api এর সব মেথড এখানে",
+  "font-size:25px; background-color:purple; color:white; padding:15px"
+);
+
+// axios is a js library
+// it helps to make request from browser (plain js/Vue/React/Angular), node.js
+
+// + very easy to use
+// + it supports all modern browser includig IE
+// + it returns promise
+// + throws error brilliantly
+// + No need to set header cause axios is intelligent
+
+// axios(config)
+// axios(url [, config])
+
+// axios.get(url [, config])
+// axios.post(url [, config])
+// axios.put(url [, config])
+// axios.patch(url [, config])
+// axios.delete(url [, config])
+
+// axios returns response object - data, status, statusText, headers, config
+
+// const makeRequest = async (config) => {
+//   return await axios(config);
+// };
+
+// // API CALLING - এটা নরমাল ডাটা রির্টান করে
+
+// const getData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/")
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
+
+// getData();
+
+// //এর পরে থেকে পরিবর্তন হবে কারণ সেখানে সকল প্রকার ইনফো পরিবর্তনশীল
+
+// //POST- ডাটা তৈরি করতে
+
+// const createData = () => {
+//   makeRequest({
+//     url: "https://jsonplaceholder.typicode.com/posts/",
+//     method: "POST",
+//     data: JSON.stringify({
+//       title: "name",
+//       body: "username",
+//       id: 1,
+//       userId: 1,
+//     }),
+//   })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
+
+// createData();
+
+// //PUT- তৈরিকৃত ডাটা আপডেট করতে
+
+// const updateData = () => {
+//   makeRequest({
+//     url: "https://jsonplaceholder.typicode.com/posts/1",
+//     method: "PUT",
+//     data: JSON.stringify({
+//       title: "name",
+//       body: "username",
+//       id: 1,
+//       address:'city',
+//       userId: 1,
+//     }),
+//   })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
+
+// updateData();
+
+// // PATCH - কোনো সিঙ্গেল ডাটাকে আপডেট করতে
+
+// const patchData = () => {
+//   makeRequest({
+//     url: "https://jsonplaceholder.typicode.com/posts/1",
+//     method: "PATCH",
+//     data: JSON.stringify({
+//       title: "name",
+//       body: "username",
+//       id: 1,
+//       address: "megacity",
+//       userId: 1,
+//     }),
+//   })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
+
+// patchData();
+
+// //DELETE - সবকিছু মুছে দিতে
+
+// const deleteData = () => {
+//   makeRequest({
+//     url: "https://jsonplaceholder.typicode.com/posts/1",
+//     method: "DELETE",
+//     })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// };
+
+// deleteData();
+
+//simple way of Ajax
+
+// axios
+//   .get("https://jsonplaceholder.typicode.com/posts/")
+//   .then((res) => console.log(res.data))
+//   .catch((err) => console.log(err));
+
+// axios
+//   .post("https://jsonplaceholder.typicode.com/posts/", {
+//     body: JSON.stringify({
+//       title: "foo",
+//       body: "bar",
+//       userId: 1,
+//     }),
+//   })
+//   .then((res) => console.log(res.data))
+//   .catch((err) => console.log(err));
+
+// axios
+//   .put("https://jsonplaceholder.typicode.com/posts/1", {
+//     body: JSON.stringify({
+//       id: 1,
+//       title: "foo",
+//       body: "bar",
+//       userId: 1,
+//     }),
+//   })
+//   .then((res) => console.log(res.data))
+//   .catch((err) => console.log(err));
+
+// axios
+//   .patch("https://jsonplaceholder.typicode.com/posts/1", {
+//     body: JSON.stringify({
+//       title: "foo",
+//       body: "barb",
+//       userId: 1,
+//     }),
+//   })
+//   .then((res) => console.log(res.data))
+//   .catch((err) => console.log(err));
+
+// axios
+//   .delete("https://jsonplaceholder.typicode.com/posts/1")
+//   .then((res) => console.log(res.data))
+//   .catch((err) => console.log(err));
+
+// jquery
+console.log(
+  "%c 4. jquery api এর সব মেথড এখানে",
+  "font-size:25px; background-color:purple; color:white; padding:15px"
+);
+/**
+ * add jquery libraray cdn
+ * ajax - asynchronous javascript and xml
+ */
+
+// RAW API FORMULA
+
+// const makeRequest = async (url, method, data) => {
+//   // (... এর ভিতরে .. .. .. দিয়ে বিভিন্ন একশন সম্পন্ন করার জন্য দেওয়া হয়)
+//   try {
+//     const result = await $.ajax({
+//       url: url,
+//       method: method,
+//       data: data,
+//     });
+//     return result;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+
+// // API CALLING - এটা নরমাল ডাটা রির্টান করে
+//GET
+
+// const getData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/", "GET").then(
+//     (res) => console.log(res)
+//   );
+// };
+
+// getData();
+
+// //এর পরে থেকে পরিবর্তন হবে কারণ সেখানে সকল প্রকার ইনফো পরিবর্তনশীল
+
+// //POST - ডাটা তৈরি করতে
+
+// const createData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/", "POST", {
+//     title: "name",
+//     body: "username",
+//     id: 1,
+//     userId: 1,
+//   }).then((res) => console.log(res));
+// };
+// createData();
+
+// //PUT - তৈরিকৃত ডাটা আপডেট করতে
+
+// const updateData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/1", "PUT", {
+//     title: "name",
+//     body: "username",
+//     id: 1,
+//     address: "city",
+//     userId: 1,
+//   }).then((res) => console.log(res));
+// };
+// updateData();
+
+// // PATCH - কোনো সিঙ্গেল ডাটাকে আপডেট করতে
+
+// const singlePatchData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/1", "PATCH", {
+//     title: "name",
+//     body: "username",
+//     id: 1,
+//     address: "megacity",
+//     userId: 1,
+//   }).then((res) => console.log(res));
+// };
+// singlePatchData();
+
+// //DELETE - সবকিছু মুছে দিতে
+
+// const deleteData = () => {
+//   makeRequest("https://jsonplaceholder.typicode.com/posts/1", "DELETE").then(
+//     (res) => console.log(res)
+//   );
+// };
+// deleteData();
+
+//JavaScript Json
 
 /*
 ###Task--- 29
@@ -3396,115 +3922,3 @@ function myOthersFunction() {
 ১০৪. JavaScript 
 ১০৫. JavaScript
 */
-
-
-
-/*
-###Task--- 30
-১০৬. JavaScript 
-১০৭. JavaScript
-১০৮. JavaScript 
-১০৯. JavaScript
-*/
-
-
-
-/*
-###Task--- 31
-১১০. JavaScript 
-১১১. JavaScript
-১১২. JavaScript 
-১১৩. JavaScript
-*/
-
-
-
-/*
-###Task--- 32
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 33
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 34
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 35
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 36
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 37
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 38
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 39
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-
-
-/*
-###Task--- 40
-১১৪. JavaScript 
-১১৫. JavaScript
-১১৬. JavaScript 
-১১৭. JavaScript
-*/
-
-

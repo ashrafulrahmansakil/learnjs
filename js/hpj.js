@@ -5,6 +5,8 @@
 
 */
 
+// import { reset } from "nodemon";
+
 //বিজোড়
 
 for (var i = 1; i < 5; i++) {
@@ -1702,7 +1704,7 @@ console.table(myInfo);
 
 //এই দুইটা মেথড এর মধ্যে আপনি আপনার জাভাস্ক্রিপ্ট কোড দিবেন, তারপর রান করানোর পর এটা আপনাকে বলে দিবে আপনার কোডের অপারেশন শেষ করতে কত সময় লেগেছে।
 console.time();
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 10; i++) {
   console.log("fake time");
 }
 console.timeEnd();
@@ -1720,110 +1722,121 @@ function myOthersFunction() {
 
 //Asynchronous callback
 
-const outcome= true;
-const spot = 10;
+// const outcome = true;
+// const spot = 10;
 
-function diplomaExam(callback) {
-  console.log("1.if you work hard, then you got a bright future");
+// function diplomaExam(callback) {
+//   console.log("1.if you work hard, then you got a bright future");
 
-  setTimeout(() => {
-    if (outcome) {
-      callback();
-    } else {
-      console.log("1.you can\'t achive much number then diploma enginnering Exam failed");
-    }
-  }, 1000);
-}
+//   setTimeout(() => {
+//     if (outcome) {
+//       callback();
+//     } else {
+//       console.log(
+//         "1.you can't achive much number then diploma enginnering Exam failed"
+//       );
+//     }
+//   }, 1000);
+// }
 
-function diplomaExamPaper(callback) {
-  console.log("1.Diploma exam paper processing....");
+// function diplomaExamPaper(callback) {
+//   console.log("1.Diploma exam paper processing....");
 
-  setTimeout(() => {
-    if (spot >= 80) {
-      callback();
-    } else {
-      console.log("1.you can't good result in Diploma Enginnering");
-    }
-  }, 2000);
-}
+//   setTimeout(() => {
+//     if (spot >= 80) {
+//       callback();
+//     } else {
+//       console.log("1.you can't good result in Diploma Enginnering");
+//     }
+//   }, 2000);
+// }
 
-function diplomaResult() {
-  console.log("1.your result is good");
-  setTimeout(() => {
-    console.log("1.your certificate comming soon....");
-  }, 3000);
-}
+// function diplomaResult() {
+//   console.log("1.your result is good");
+//   setTimeout(() => {
+//     console.log("1.your certificate comming soon....");
+//   }, 3000);
+// }
 
-// anonomous function
+// // anonomous function
 
-diplomaExam(() => {
-  diplomaExamPaper(diplomaResult);
-})
+// diplomaExam(() => {
+//   diplomaExamPaper(diplomaResult);
+// });
 
-//promise
+// //promise
 
-const result = true;
-const marks = 110;
+// const result = true;
+// const marks = 110;
 
-function diplomaExamHall() {
-  console.log("2.if you work hard, then you got a bright future");
-  const promise = new Promise(function (resolve, reject) {
-      setTimeout(() => {
-    if (result) {
-     resolve();
-    } else {
-      reject("2.you can\'t achive much number then diploma enginnering Exam failed");
-    }
-  }, 1000);
-  });
-  return promise;
-}
+// function diplomaExamHall() {
+//   console.log("2.if you work hard, then you got a bright future");
+//   const promise = new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//       if (result) {
+//         resolve();
+//       } else {
+//         reject(
+//           "2.you can't achive much number then diploma enginnering Exam failed"
+//         );
+//       }
+//     }, 1000);
+//   });
+//   return promise;
+// }
 
-function diplomaExamPaper() {
-  console.log("2.Diploma exam paper processing....");
-  const promise = new Promise(function (resolve, reject) {
-    setTimeout(() => {
-      if (marks >= 80) {
-        resolve();
-      } else {
-        reject("2.you are Refed in Exam of 3 subject");
-      }
-    }, 2000);
-  });
-  return promise;
-}
+// function diplomaExamPaper() {
+//   console.log("2.Diploma exam paper processing....");
+//   const promise = new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//       if (marks >= 80) {
+//         resolve();
+//       } else {
+//         reject("2.you are Refed in Exam of 3 subject");
+//       }
+//     }, 2000);
+//   });
+//   return promise;
+// }
 
-function diplomaResult() {
-  console.log("2.your result is good");
-  const promise = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("2.Congraculation, your certificate comming soon....");
-    }, 3000);
-  });
-  return promise;
-}
+// function diplomaResult() {
+//   console.log("2.your result is good");
+//   const promise = new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve("2.Congraculation, your certificate comming soon....");
+//     }, 3000);
+//   });
+//   return promise;
+// }
 
-// Beauti of promise
+// // Beauti of promise
 
-diplomaExamHall()
-  .then(diplomaExamPaper)
-  .then(diplomaResult)
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// diplomaExamHall()
+//   .then(diplomaExamPaper)
+//   .then(diplomaResult)
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
-//asyn await function
-async function diploma() {
-  try {
-    await diplomaExamHall();
-    await diplomaExamPaper();
-    const message = await diplomaResult();
-    console.log(message);
-  } catch(error) {
-    console.log(error);
-  }
-}
-diploma();
+// //asyn await function
+// async function diploma() {
+//   try {
+//     await diplomaExamHall();
+//     await diplomaExamPaper();
+//     const message = await diplomaResult();
+//     console.log(message);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// diploma();
+
+/// API MAKING PROCESSING
+
+//professional way of async await
+
+
+// //json

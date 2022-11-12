@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> ---> Learn-Js <---- </title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"
+                integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <link rel="shortcut icon" href="../learn.ico" type="image/x-icon">
             <link rel="stylesheet" href="./style.css" />
 </head>
@@ -192,7 +198,7 @@
 
         <br>
         <!-- Window Navigator start -->
-        <h1>05.Navigator </h1>
+        <h1> 05.Navigator </h1>
         <!-- এখানে সকল প্রকার বমের কাজ সেভ করা আছে -->
         <p id="navigator"></p>
 
@@ -219,7 +225,8 @@
         <br>
         <!-- JavaScript Cookies start -->
         <h1> 08.JavaScript Cookies </h1>
-
+        <button id="button" class="btn">btn</button>
+        <p id="api"></p>
 
         <!-- JavaScript Cookies End -->
         <br><br><br><br><br><br><br><br>
@@ -228,26 +235,26 @@
     <script src="./hpj.js"></script>
 
     <script>
-// Encode > Decode
+        // Encode > Decode
 
-let inputEle = document.getElementById("input");
-inputEle.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    document.getElementById(
-      "clickPara"
-    ).innerHTML = `Your name is ' ${event.target.value} '`;
+        let inputEle = document.getElementById("input");
+        inputEle.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                document.getElementById(
+                    "clickPara"
+                ).innerHTML = `Your name is ' ${event.target.value} '`;
 
-    let text = event.target.value;
-    let encoded = window.btoa(text);
-    let decoded = window.atob(encoded);
+                let text = event.target.value;
+                let encoded = window.btoa(text);
+                let decoded = window.atob(encoded);
 
-    document.getElementById("clickEvent").innerHTML =
-      "Encoded: " + encoded + "<br>" + "Decoded: " + decoded;
-    event.target.value = "";
-    alert("mission finished");
-    console.log("mission finished");
-  }
-});
+                document.getElementById("clickEvent").innerHTML =
+                    "Encoded: " + encoded + "<br>" + "Decoded: " + decoded;
+                event.target.value = "";
+                alert("mission finished");
+                console.log("mission finished");
+            }
+        });
 
     </script>
 </body>
