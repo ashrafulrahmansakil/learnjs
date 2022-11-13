@@ -1,40 +1,32 @@
-//    Create new http Server
+/**
+ * Perfect Raw node server by anisul islam sir
+ */
 
-// import { createServer } from "http";
-// const PORT = 3000;
-// const hostname = "127.0.0.1";
-// import fs from "fs";
-// const handelReadFile = (fileName, statuscode, req, res) => {
-//   fs.readFile(fileName, "utf-8", (err, data) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.writeHead(200, { "Content-Type": "text/html" });
-//       res.write(data);
-//       res.end();
-//     }
-//   });
-// };
-// const server = createServer((req, res) => {
-//   if (req.url == "/") {
-//     handelReadFile("js/server.js", 200, req, res);
-//   }
-//   else if (req.url == "/js/index.html") {
-//     handelReadFile("js/index.html", 200, req, res);
-//   }
-// });
-
-// server.listen(PORT, hostname, () => {
-//   console.log(`server successfully http://${hostname}:${PORT}`);
-// });
-
-import { createServer } from "http";
+const http = require("http");
+const fs = require("fs");
 const PORT = 3000;
-const hostname = "127.0.0.1";
-const server = createServer((req, res) => {
-  res.end("hi i am server");
+const address = "127.0.1.1";
+
+const server = http.createServer((req, res) => {
+  const handelReadFile = (statusCode, fileLocation) => {
+    fs.readFile(fileLocation, (err, data) => {
+      res.writeHead(statusCode, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    });
+  };
+
+  if (req.url === "/") {
+    handelReadFile(200, "index.html");
+  } else if (req.url === "/about") {
+    handelReadFile(200, "./about.html");
+  } else if (req.url === "/depertment") {
+    handelReadFile(200, "./depertment.html");
+  } else {
+    handelReadFile(404, "./error.html");
+  }
 });
 
-server.listen(PORT, hostname, () => {
-  console.log(`server is running ${PORT} ${hostname}`);
+server.listen(PORT, address, () => {
+  console.log(`server is running http://${address}:${PORT}`);
 });
