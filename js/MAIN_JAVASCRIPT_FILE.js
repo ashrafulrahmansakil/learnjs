@@ -2348,8 +2348,8 @@ Displaying the Object using JSON.stringify() > স্ট্রিং এ কন�
 /*
 ###Task--- 20
 ৬৫. JavaScript Object Accessors
-৬৬.JavaScript Object Constructors
-৬৭.JavaScript Object Prototypes
+৬৬. JavaScript Object Constructors
+৬৭. JavaScript Object Prototypes
 ৬৮. JavaScript Iterables
 /*
 
@@ -2357,7 +2357,6 @@ Displaying the Object using JSON.stringify() > স্ট্রিং এ কন�
 Getters and setters allow you to define Object Accessors (Computed Properties).
 
 কোনো কিছু নিতে চাইলে getter object ব্যবহার করা হয়।
-
 
 
 // এক্সেসসর 
@@ -2405,9 +2404,11 @@ console.log(sakib.fullName());
 console.log(sakil.fullName());
 
 
-//JavaScript Object Prototypes  ===> advanced tutorials form lws
+//JavaScript Object Prototypes
 
-//JavaScript Iterables ===> advanced tutorials form lws
+
+
+//JavaScript Iterables
 
 Iterables হলো স্টেপ বাই স্টেপ করে লাইন বাই লাইন করে যাওয়াকে বোঝায়
 
