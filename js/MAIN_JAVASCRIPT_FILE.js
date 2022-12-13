@@ -3398,7 +3398,7 @@ console.log(
  * function - open(), send(),
  */
 
- const makeRequest = (method, url, data) => {
+const makeRequest = (method, url, data) => {
   // xhr প্রমিজ থাকে না বানিয়ে নিতে হয়
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -3443,8 +3443,7 @@ console.log(
 //GET
 
 const getData = () => {
-  makeRequest("GET", "https://jsonplaceholder.typicode.com/posts/")
-    .then(
+  makeRequest("GET", "https://jsonplaceholder.typicode.com/posts/").then(
     (res) => console.log(res)
   );
 };
@@ -3566,6 +3565,10 @@ console.log(
 
 // // API CALLING - এটা নরমাল ডাটা রির্টান করে
 //GET
+
+// const makeRequest = async (config) => {
+//   return await axios(config);
+// };
 
 // const getData = () => {
 //   makeRequest("https://jsonplaceholder.typicode.com/posts/")
